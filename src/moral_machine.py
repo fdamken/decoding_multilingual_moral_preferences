@@ -5,6 +5,7 @@ from typing import Iterable, Optional
 import pandas as pd
 
 import path_util
+from experiment import ex
 
 _languages = ["ar", "de", "en", "es", "fr", "ja", "kr", "pt", "ru", "zh"]
 
@@ -26,7 +27,8 @@ class Game:
     scenarios: list[Scenario]
 
 
-def load_games(language: str, *, num_games: Optional[int] = None, scenarios_per_game: int = 13) -> list[Game]:
+@ex.capture
+def load_games(language: str, num_games: Optional[int], scenarios_per_game: int) -> list[Game]:
     assert language in get_available_languages(), f"language '{language}' not available"
     df = pd.read_csv(path_util.get_data_path(language))
     games = []

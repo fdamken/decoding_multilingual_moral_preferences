@@ -12,4 +12,4 @@ class Agent:
 
     @staticmethod
     def _make_prompt(scenario: Scenario) -> str:
-        return f"{scenario.desc_left}\n\n\n\n\n{scenario.desc_right}"  # TODO
+        return f"1: {scenario.desc_left}\n\n\n\n\n2: {scenario.desc_right}"
