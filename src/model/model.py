@@ -1,9 +1,8 @@
 import json
 import logging
 import os
-import time
+import warnings
 from abc import ABC, abstractmethod
-from datetime import datetime, timedelta
 
 import path_util
 from api_usage import APIUsage
@@ -17,7 +16,7 @@ class Model(ABC):
     def __init__(self, language: str, _log: logging.Logger) -> None:
         self._dry_run = not bool(os.getenv("NO_DRY_RUN", False))
         if not self.dry_run:
-            _log.warning(f"Running model NOT in dry mode! This will consume API tokens and may cost money. MAKE SURE TO RUN IN DRY MODE FIRST TO GET AN ESTIMATE!")
+            warnings.warn(f"Running model NOT in dry mode! This will consume API tokens and may cost money. MAKE SURE TO RUN IN DRY MODE FIRST TO GET AN ESTIMATE!")
 
         with open(path_util.data_dir / "system_prompts.json") as f:
             system_prompts = json.load(f)
