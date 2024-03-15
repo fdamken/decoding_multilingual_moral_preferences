@@ -1,5 +1,6 @@
+import traceback
 from logging import Logger
-from typing import Any, Optional
+from typing import Any
 
 from tqdm import tqdm
 
@@ -12,12 +13,15 @@ from experiment import ex
 
 def _run_game(game: moral_machine.Game, model_name: str) -> tuple[list[str], APIUsage]:
     agent = Agent(model_name)
-    result = agent.play(game)
+    try:
+        result = agent.play(game)
+    except Exception:
+        result = traceback.format_exc()
     return result, agent.report_api_usage()
 
 
 @ex.automain
-def main(model_name: str, language: str, num_workers: Optional[int], _log: Logger) -> Any:
+def main(model_name: str, language: str, _log: Logger) -> Any:
     assert model_name in model.get_available_models(), f"model '{model_name}' not available"
     assert language in moral_machine.get_available_languages(), f"language '{language}' not available"
 
@@ -34,7 +38,3 @@ def main(model_name: str, language: str, num_workers: Optional[int], _log: Logge
         api_usage=api_usage,
         api_usage_total=api_usage_total,
     )
-
-    # games = moral_machine.load_games()
-    # with mp.Pool(num_workers) as pool:
-    #     return pool.map(partial(_run_game, model_name=model_name), games)

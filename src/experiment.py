@@ -21,6 +21,3 @@ def default_config():
 
     # number of scenarios per game, Moral Machine has 13 scenarios per game
     scenarios_per_game = 13
-
-    # number of workers to use, None means use all available cores
-    num_workers = None
