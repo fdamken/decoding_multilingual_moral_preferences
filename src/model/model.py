@@ -13,9 +13,6 @@ from experiment import ex
 class Model(ABC):
     """Abstract base class for LLMs."""
 
-    _num_input_tokens: int
-    _num_output_tokens: int
-
     @ex.capture
     def __init__(self, language: str, _log: logging.Logger) -> None:
         self._dry_run = not bool(os.getenv("NO_DRY_RUN", False))
@@ -28,18 +25,17 @@ class Model(ABC):
         assert system_prompt, f"no system prompt for language '{language}'"
         self._system_prompt = system_prompt
 
+        self._num_input_tokens = 0
+        self._num_output_tokens = 0
         self._calls = []
 
     @abstractmethod
     def prompt(self, prompt: str) -> str:
         """Prompts the model."""
-        ...
 
     @abstractmethod
     def reset(self) -> None:
         """Reset the model (e.g., to start a new game)."""
-        self._num_input_tokens = 0
-        self._num_output_tokens = 0
 
     @abstractmethod
     def report_api_usage(self) -> APIUsage:

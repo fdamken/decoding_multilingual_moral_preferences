@@ -82,7 +82,8 @@ class OpenAIModel(Model):
     @retry(wait=wait_random_exponential(min=1, max=60), retry=retry_if_exception_type(openai.RateLimitError))
     @ex.capture
     def _fetch(self, _log: Logger) -> str:
-        RateLimit.wait(500, 60)
+        if not self.dry_run:
+            RateLimit.wait(500, 60)
 
         estimated_num_input_tokens, estimated_num_output_tokens = self._estimate_tokens()
 

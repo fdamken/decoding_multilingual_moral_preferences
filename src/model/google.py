@@ -62,7 +62,8 @@ class GoogleModel(Model):
 
     @ex.capture
     def _fetch(self, prompt: str, _log: Logger) -> str:
-        RateLimit.wait(60, 60)
+        if not self.dry_run:
+            RateLimit.wait(60, 60)
         if self.dry_run:
             return "?"  # dry run, return a placeholder
         return self._chat.send_message(prompt).text
