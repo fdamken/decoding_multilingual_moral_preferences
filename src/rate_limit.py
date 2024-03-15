@@ -19,8 +19,6 @@ class RateLimit:
             RateLimit._calls = [call for call in RateLimit._calls if call >= expired_calls]
             rate_limit_exceeded = len(RateLimit._calls) >= max_calls
             if rate_limit_exceeded:
-                print(f"waiting for rate limit ({len(RateLimit._calls) - max_calls + 1} requests pending)...")
                 # on average, we need to wait period/max_calls seconds per call
                 time.sleep(period / max_calls)
-        print("continuing execution")
         RateLimit._calls.append(datetime.now())
