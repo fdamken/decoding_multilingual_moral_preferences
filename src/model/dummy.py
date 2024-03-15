@@ -3,6 +3,7 @@ from .model import Model
 
 class DummyModel(Model):
     def __init__(self, answer: str) -> None:
+        super().__init__()
         self._answer = answer
 
     def prompt(self, prompt: str) -> str:

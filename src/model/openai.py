@@ -1,8 +1,6 @@
-import json
 import logging
 import os
 from enum import Enum
-from functools import cached_property
 from logging import Logger
 from typing import Final
 
@@ -11,22 +9,10 @@ from openai import OpenAI
 from openai.types.chat import ChatCompletionMessageParam
 from tenacity import retry, wait_random_exponential
 
-import path_util
 from api_usage import APIUsage
 from experiment import ex
+from noop import NoOp
 from .model import Model
-
-
-class DryRunOpenAI(OpenAI):
-    # noinspection PyMissingConstructor
-    def __init__(self):
-        pass
-
-    def __getattr__(self, *args, **kwargs) -> None:
-        raise NotImplementedError(f"__setattr__ in dry run ({args}, {kwargs})")
-
-    def __setattr__(self, *args, **kwargs) -> None:
-        raise NotImplementedError(f"__setattr__ in dry run ({args}, {kwargs})")
 
 
 class OpenAIRole(Enum):
@@ -46,24 +32,14 @@ class OpenAIModel(Model):
     }
 
     _model_name: str
-    _system_prompt: str
-    _history: list[ChatCompletionMessageParam]
-    _num_input_tokens: int
-    _num_output_tokens: int
 
     _openai: OpenAI
+    _history: list[ChatCompletionMessageParam]
 
     def __init__(self, model_name: str):
         super().__init__()
-
         self._model_name = model_name
-        self._system_prompt = self._load_system_prompt()
-        self._history = []
-        self._num_input_tokens = 0
-        self._num_output_tokens = 0
-
-        # reduce logging verbosity
-        logging.getLogger("httpx").setLevel(logging.WARNING)
+        logging.getLogger("httpx").setLevel(logging.WARNING)  # reduce logging verbosity
 
     def prompt(self, prompt: str) -> str:
         self._add(OpenAIRole.USER, prompt)
@@ -74,11 +50,13 @@ class OpenAIModel(Model):
     @ex.capture
     def reset(self, language: str) -> None:
         if self.dry_run:
-            # replace OpenAI with a dry-run implementation to make sure no real
-            # API calls are made
-            self._openai = DryRunOpenAI()
+            # make sure no real API calls are made in dry run
+            # noinspection PyTypeChecker
+            self._openai = NoOp()
         else:
-            self._openai = OpenAI(api_key=self._api_key)
+            api_key = os.getenv("OPENAI_API_KEY")
+            assert api_key, "OPENAI_API_KEY environment variable not set or empty"
+            self._openai = OpenAI(api_key=api_key)
         self._history = []
         self._add(OpenAIRole.SYSTEM, self._system_prompt)
 
@@ -108,6 +86,7 @@ class OpenAIModel(Model):
     @ex.capture
     def _fetch(self, _log: Logger) -> str:
         estimated_num_input_tokens, estimated_num_output_tokens = self._estimate_tokens()
+
         if self.dry_run:
             self._num_input_tokens += estimated_num_input_tokens
             self._num_output_tokens += estimated_num_output_tokens
@@ -118,41 +97,27 @@ class OpenAIModel(Model):
             max_tokens=1,  # generate at most one token (we just want a single number, 1 or 2)
             n=1,  # generate a single completion
         )
+
         num_input_tokens = response.usage.prompt_tokens
         num_output_tokens = response.usage.completion_tokens
         if num_input_tokens != estimated_num_input_tokens:
             _log.warning(f"expected {estimated_num_input_tokens} input tokens, got {num_input_tokens}")
         if num_output_tokens != estimated_num_output_tokens:
             _log.warning(f"expected {estimated_num_output_tokens} output tokens, got {num_output_tokens}")
+
         self._num_input_tokens += num_input_tokens
         self._num_output_tokens += num_output_tokens
+
         return response.choices[0].message.content
 
     def _add(self, role: OpenAIRole, content: str) -> None:
         self._history.append(dict(role=role.value, content=content))
 
     def _estimate_tokens(self) -> tuple[int, int]:
+        encoding = tiktoken.encoding_for_model(self._model_name)
         num_tokens = 0
         for message in self._history:
             num_tokens += 3
             for value in message.values():
-                num_tokens += len(self._token_encoding.encode(value))
+                num_tokens += len(encoding.encode(value))
         return num_tokens + 3, 1
-
-    @ex.capture
-    def _load_system_prompt(self, language: str) -> str:
-        with open(path_util.data_dir / "system_prompts.json") as f:
-            system_prompts = json.load(f)
-        system_prompt = system_prompts.get(language)
-        assert system_prompt, f"no system prompt for language '{language}'"
-        return system_prompt
-
-    @cached_property
-    def _token_encoding(self) -> tiktoken.Encoding:
-        return tiktoken.encoding_for_model(self._model_name)
-
-    @cached_property
-    def _api_key(self) -> str:
-        api_key = os.getenv("OPENAI_API_KEY")
-        assert api_key, "OPENAI_API_KEY environment variable not set or empty"
-        return api_key

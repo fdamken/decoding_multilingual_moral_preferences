@@ -2,9 +2,9 @@ from logging import Logger
 from typing import Callable
 
 from experiment import ex
-from .dummy_model import DummyModel
+from .dummy import DummyModel
 from .model import Model
-from .openai_model import OpenAIModel
+from .openai import OpenAIModel
 
 _model_maker_registry: dict[str, Callable[[], Model]] = {}
 
@@ -34,16 +34,16 @@ def make_dummy():
     return DummyModel("1")
 
 
+def _register_openai_model(model_name: str) -> None:
+    @model_maker(model_name)
+    @ex.capture
+    def make_openai_model(_log: Logger) -> OpenAIModel:
+        _log.debug(f"creating OpenAI model '{model_name}'")
+        return OpenAIModel(model_name)
+
+
 for _model_name in OpenAIModel.SUPPORTED_MODELS:
-    def foo(bounded_model_name: str) -> None:
-        @model_maker(bounded_model_name)
-        @ex.capture
-        def make_openai_model(_log: Logger) -> OpenAIModel:
-            _log.debug(f"creating openai-model '{bounded_model_name}'")
-            return OpenAIModel(bounded_model_name)
-
-
-    foo(_model_name)
+    _register_openai_model(_model_name)
 
 __all__ = [
     "Model",
