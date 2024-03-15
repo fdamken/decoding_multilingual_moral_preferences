@@ -4,14 +4,16 @@ from enum import Enum
 from logging import Logger
 from typing import Final
 
+import openai
 import tiktoken
 from openai import OpenAI
 from openai.types.chat import ChatCompletionMessageParam
-from tenacity import retry, wait_random_exponential
+from tenacity import retry, retry_if_exception_type, wait_random_exponential
 
 from api_usage import APIUsage
 from experiment import ex
 from noop import NoOp
+from rate_limit import RateLimit
 from .model import Model
 
 
@@ -82,9 +84,11 @@ class OpenAIModel(Model):
             cost,
         )
 
-    @retry(wait=wait_random_exponential(min=1, max=60))
+    @retry(wait=wait_random_exponential(min=1, max=60), retry=retry_if_exception_type(openai.RateLimitError))
     @ex.capture
     def _fetch(self, _log: Logger) -> str:
+        RateLimit.wait(500, 60)
+
         estimated_num_input_tokens, estimated_num_output_tokens = self._estimate_tokens()
 
         if self.dry_run:

@@ -1,7 +1,9 @@
 import json
 import logging
 import os
+import time
 from abc import ABC, abstractmethod
+from datetime import datetime, timedelta
 
 import path_util
 from api_usage import APIUsage
@@ -25,6 +27,8 @@ class Model(ABC):
         system_prompt = system_prompts.get(language)
         assert system_prompt, f"no system prompt for language '{language}'"
         self._system_prompt = system_prompt
+
+        self._calls = []
 
     @abstractmethod
     def prompt(self, prompt: str) -> str:

@@ -5,11 +5,11 @@ from typing import Final
 
 import google.generativeai as genai
 from google.generativeai.types import HarmBlockThreshold, HarmCategory
-from tenacity import retry, wait_random_exponential
 
 from api_usage import APIUsage
 from experiment import ex
 from noop import NoOp
+from rate_limit import RateLimit
 from .model import Model
 
 
@@ -60,9 +60,9 @@ class GoogleModel(Model):
     def report_api_usage(self) -> APIUsage:
         return APIUsage(f"google_{self._model_name}", -1, -1, -1.)
 
-    @retry(wait=wait_random_exponential(min=1, max=60))
     @ex.capture
     def _fetch(self, prompt: str, _log: Logger) -> str:
+        RateLimit.wait(60, 60)
         if self.dry_run:
             return "?"  # dry run, return a placeholder
         return self._chat.send_message(prompt).text
