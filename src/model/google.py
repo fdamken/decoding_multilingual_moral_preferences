@@ -58,7 +58,7 @@ class GoogleModel(Model):
         _log.debug(f"system prompt response: {system_prompt_response}")
 
     def report_api_usage(self) -> APIUsage:
-        return APIUsage(f"google_{self._model_name}", -1, -1, -1.)
+        return APIUsage(self._model_name, -1, -1, -1.)
 
     @ex.capture
     def _fetch(self, prompt: str, _log: Logger) -> str:

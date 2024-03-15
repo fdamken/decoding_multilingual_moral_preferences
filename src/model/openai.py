@@ -77,12 +77,7 @@ class OpenAIModel(Model):
             case _:
                 assert False, f"unsupported model: {self._model_name}"
         cost = (self._num_input_tokens * input_token_cost + self._num_output_tokens * output_token_cost) / 1_000_000
-        return APIUsage(
-            f"openai_{self._model_name}",
-            self._num_input_tokens,
-            self._num_output_tokens,
-            cost,
-        )
+        return APIUsage(self._model_name, self._num_input_tokens, self._num_output_tokens, cost)
 
     @retry(wait=wait_random_exponential(min=1, max=60), retry=retry_if_exception_type(openai.RateLimitError))
     @ex.capture
