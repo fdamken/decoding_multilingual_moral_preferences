@@ -16,8 +16,8 @@ def default_config():
     # language, can be one of moral_machine.get_available_languages()
     language = None
 
-    # number of games to play, None means all games
-    num_games = None
+    # number of games to play, defaults to 100 games
+    num_games = 100
 
     # number of scenarios per game, Moral Machine has 13 scenarios per game
     scenarios_per_game = 13
