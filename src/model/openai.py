@@ -58,7 +58,7 @@ class OpenAIModel(Model):
             assert api_key, "OPENAI_API_KEY environment variable not set or empty"
             self._openai = OpenAI(api_key=api_key)
         self._history = []
-        self._add(OpenAIRole.SYSTEM, self._system_prompt)
+        self._add(OpenAIRole.SYSTEM, self.system_prompt)
 
     def report_api_usage(self) -> APIUsage:
         # input_token_cost and output_token_cost are $ / 1M tokens

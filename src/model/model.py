@@ -11,7 +11,6 @@ from experiment import ex
 class Model(ABC):
     """Abstract base class for LLMs."""
 
-    _system_prompt: str
     _num_input_tokens: int
     _num_output_tokens: int
 
@@ -35,7 +34,6 @@ class Model(ABC):
     @abstractmethod
     def reset(self) -> None:
         """Reset the model (e.g., to start a new game)."""
-        self._history = []
         self._num_input_tokens = 0
         self._num_output_tokens = 0
 
@@ -46,3 +44,7 @@ class Model(ABC):
     @property
     def dry_run(self) -> bool:
         return self._dry_run
+
+    @property
+    def system_prompt(self) -> str:
+        return self._system_prompt
