@@ -3,6 +3,7 @@ from typing import Callable
 
 from experiment import ex
 from .dummy import DummyModel
+from .google import GoogleModel
 from .model import Model
 from .openai import OpenAIModel
 
@@ -42,8 +43,19 @@ def _register_openai_model(model_name: str) -> None:
         return OpenAIModel(model_name)
 
 
+def _register_google_model(model_name: str) -> None:
+    @model_maker(model_name)
+    @ex.capture
+    def make_google_model(_log: Logger) -> GoogleModel:
+        _log.debug(f"creating Google model '{model_name}'")
+        return GoogleModel(model_name)
+
+
 for _model_name in OpenAIModel.SUPPORTED_MODELS:
     _register_openai_model(_model_name)
+
+for _model_name in GoogleModel.SUPPORTED_MODELS:
+    _register_google_model(_model_name)
 
 __all__ = [
     "Model",
