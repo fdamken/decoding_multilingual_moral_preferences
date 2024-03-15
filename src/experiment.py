@@ -10,9 +10,17 @@ ex.observers.append(FileStorageObserver(path_util.results_dir))
 # noinspection PyUnusedLocal
 @ex.config
 def default_config():
-    model = None
-    language = "en"
+    # name of the model to use, can be one of model_factory.get_available_models()
+    model_name = None
+
+    # language, can be one of moral_machine.get_available_languages()
+    language = None
+
+    # number of games to play, None means all games
     num_games = None
+
+    # number of scenarios per game, Moral Machine has 13 scenarios per game
     scenarios_per_game = 13
+
+    # number of workers to use, None means use all available cores
     num_workers = None
-    openai_api_key = None

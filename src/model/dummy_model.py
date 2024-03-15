@@ -1,4 +1,4 @@
-from model.model import Model
+from .model import Model
 
 
 class DummyModel(Model):
@@ -10,3 +10,6 @@ class DummyModel(Model):
 
     def reset(self) -> None:
         pass
+
+    def report_api_usage(self) -> str:
+        return "dummy model; no API usage"

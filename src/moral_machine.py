@@ -1,6 +1,6 @@
 import uuid
 from dataclasses import dataclass
-from typing import Iterable, Optional
+from typing import Optional
 
 import pandas as pd
 
