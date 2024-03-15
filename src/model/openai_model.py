@@ -9,6 +9,7 @@ from typing import Final
 import tiktoken
 from openai import OpenAI
 from openai.types.chat import ChatCompletionMessageParam
+from tenacity import retry, wait_random_exponential
 
 import path_util
 from api_usage import APIUsage
@@ -103,6 +104,7 @@ class OpenAIModel(Model):
             cost,
         )
 
+    @retry(wait=wait_random_exponential(min=1, max=60))
     @ex.capture
     def _fetch(self, _log: Logger) -> str:
         estimated_num_input_tokens, estimated_num_output_tokens = self._estimate_tokens()
