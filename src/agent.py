@@ -5,10 +5,7 @@ from tenacity import after_log, before_sleep_log, retry, retry_if_exception_type
 from api_usage import APIUsage
 from model import make_model
 from moral_machine import Game, Scenario
-
-
-class UnexpectedAnswerException(Exception):
-    pass
+from util import UnexpectedAnswerException
 
 
 class Agent:

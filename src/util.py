@@ -1,0 +1,2 @@
+class UnexpectedAnswerException(Exception):
+    pass

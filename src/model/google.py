@@ -10,6 +10,7 @@ from api_usage import APIUsage
 from experiment import ex
 from noop import NoOp
 from rate_limit import RateLimit
+from util import UnexpectedAnswerException
 from .model import Model
 
 
@@ -71,4 +72,4 @@ class GoogleModel(Model):
             return response.text
         else:
             _log.warning(f"unexpected response: {response}")
-            return "-"
+            raise UnexpectedAnswerException()
