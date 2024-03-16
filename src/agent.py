@@ -1,6 +1,6 @@
 import logging
 
-from tenacity import after_log, before_sleep_log, retry, retry_if_exception_type
+from tenacity import after_log, before_sleep_log, retry, retry_if_exception_type, stop_after_attempt
 
 from api_usage import APIUsage
 from model import make_model
@@ -19,6 +19,7 @@ class Agent:
         after=after_log(logging.root, logging.WARNING),
         before_sleep=before_sleep_log(logging.root, logging.INFO),
         retry=retry_if_exception_type(UnexpectedAnswerException),
+        stop=stop_after_attempt(10),
     )
     def play(self, game: Game) -> list[str]:
         self._model.reset()
