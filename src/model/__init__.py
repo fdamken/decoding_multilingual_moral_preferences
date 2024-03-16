@@ -31,10 +31,6 @@ def model_maker(name: str) -> Callable[[Callable[[], Model]], Callable[[], Model
     return model_maker_decorator
 
 
-@model_maker("dummy")
-def make_dummy():
-    return DummyModel("1")
-
 
 def _register_google_model(model_name: str) -> None:
     @model_maker(model_name)

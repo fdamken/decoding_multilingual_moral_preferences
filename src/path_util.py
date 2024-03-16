@@ -1,8 +1,11 @@
 from pathlib import Path
 from typing import Final
 
-data_dir: Final[Path] = Path(__file__).parent.parent / "data"
-results_dir: Final[Path] = Path(__file__).parent.parent / "results"
+project_root_dir: Final[Path] = Path(__file__).parent.parent
+data_dir: Final[Path] = project_root_dir / "data"
+results_dir: Final[Path] = project_root_dir / "results"
+experiment_results_dir: Final[Path] = project_root_dir / "experiments" / "results"
+cleansed_experiment_results_dir: Final[Path] = experiment_results_dir / "cleansed"
 
 
 def get_data_path(language: str) -> Path:

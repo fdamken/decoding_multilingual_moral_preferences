@@ -19,5 +19,8 @@ def default_config():
     # number of games to play, defaults to 100 games
     num_games = 100
 
+    # play only the listed game indices; defaults to None (all)
+    game_indices = None
+
     # number of scenarios per game, Moral Machine has 13 scenarios per game
     scenarios_per_game = 13
