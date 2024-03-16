@@ -59,6 +59,10 @@ def _validate_result(model: str, language: str) -> Optional[list[int]]:
         return None
     erroneous_games = []
     for game_idx, answers in enumerate(games):
+        if answers == "PROMPT BLOCKED":
+            _log_error(model, language, game_idx, error="prompt blocked")
+            erroneous_games.append(game_idx)
+            continue
         if type(answers) is not list:
             _log_error(model, language, game_idx, error=f"unexpected type of answer list (is {type(answers)}, should be list)")
             erroneous_games.append(game_idx)

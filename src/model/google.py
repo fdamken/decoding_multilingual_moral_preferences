@@ -66,4 +66,9 @@ class GoogleModel(Model):
             RateLimit.wait(60, 60)
         if self.dry_run:
             return "?"  # dry run, return a placeholder
-        return self._chat.send_message(prompt).text
+        response = self._chat.send_message(prompt)
+        try:
+            return response.text
+        except ValueError:
+            _log.warning(f"unexpected response", exc_info=True)
+            return "invalid response"
