@@ -13,10 +13,10 @@ from experiment import ex
 
 def _run_game(game: moral_machine.Game, model_name: str) -> tuple[list[str], APIUsage]:
     agent = Agent(model_name)
-    try:
-        result = agent.play(game)
-    except Exception:
-        result = traceback.format_exc()
+    # try:
+    result = agent.play(game)
+    # except Exception:
+    #     result = traceback.format_exc()
     return result, agent.report_api_usage()
 
 

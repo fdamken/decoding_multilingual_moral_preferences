@@ -5,6 +5,7 @@ from experiment import ex
 from .dummy import DummyModel
 from .google import GoogleModel
 from .model import Model
+from .mpt import MPTModel
 from .openai import OpenAIModel
 
 _model_maker_registry: dict[str, Callable[[], Model]] = {}
@@ -35,14 +36,6 @@ def make_dummy():
     return DummyModel("1")
 
 
-def _register_openai_model(model_name: str) -> None:
-    @model_maker(model_name)
-    @ex.capture
-    def make_openai_model(_log: Logger) -> OpenAIModel:
-        _log.debug(f"creating OpenAI model '{model_name}'")
-        return OpenAIModel(model_name)
-
-
 def _register_google_model(model_name: str) -> None:
     @model_maker(model_name)
     @ex.capture
@@ -51,11 +44,30 @@ def _register_google_model(model_name: str) -> None:
         return GoogleModel(model_name)
 
 
-for _model_name in OpenAIModel.SUPPORTED_MODELS:
-    _register_openai_model(_model_name)
+def _register_mpt_model(model_name: str) -> None:
+    @model_maker(model_name)
+    @ex.capture
+    def make_mpt_model(_log: Logger) -> MPTModel:
+        _log.debug(f"creating MPT model '{model_name}'")
+        return MPTModel(model_name)
+
+
+def _register_openai_model(model_name: str) -> None:
+    @model_maker(model_name)
+    @ex.capture
+    def make_openai_model(_log: Logger) -> OpenAIModel:
+        _log.debug(f"creating OpenAI model '{model_name}'")
+        return OpenAIModel(model_name)
+
 
 for _model_name in GoogleModel.SUPPORTED_MODELS:
     _register_google_model(_model_name)
+
+for _model_name in MPTModel.SUPPORTED_MODELS:
+    _register_mpt_model(_model_name)
+
+for _model_name in OpenAIModel.SUPPORTED_MODELS:
+    _register_openai_model(_model_name)
 
 __all__ = [
     "Model",
