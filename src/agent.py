@@ -5,7 +5,7 @@ from tenacity import after_log, before_sleep_log, retry, retry_if_exception_type
 from api_usage import APIUsage
 from model import make_model
 from moral_machine import Game, Scenario
-from util import UnexpectedAnswerException
+from util import LogGameStateDetailsException, UnexpectedAnswerException
 
 
 class Agent:
@@ -20,12 +20,18 @@ class Agent:
     )
     def play(self, game: Game) -> list[str]:
         self._model.reset()
-        return [self._prompt(self._make_prompt(scenario)) for scenario in game.scenarios]
+        answers = []
+        for scenario_idx, scenario in enumerate(game.scenarios):
+            try:
+                answers.append(self._prompt(self._make_prompt(scenario)))
+            except LogGameStateDetailsException as exc:
+                raise Exception(f"failed to prompt for scenario {scenario_idx}; answers so for: {answers}") from exc
+        return answers
 
     def report_api_usage(self) -> APIUsage:
         return self._model.report_api_usage()
 
-    def _prompt(self, prompt) -> str:
+    def _prompt(self, prompt: str) -> str:
         result = self._model.prompt(prompt)
         if result not in {"1", "2"}:
             raise UnexpectedAnswerException(f"expected 1 or 2, got {result}")

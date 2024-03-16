@@ -4,13 +4,13 @@ from logging import Logger
 from typing import Final
 
 import google.generativeai as genai
-from google.generativeai.types import HarmBlockThreshold, HarmCategory
+from google.generativeai.types import BlockedPromptException, HarmBlockThreshold, HarmCategory
 
 from api_usage import APIUsage
 from experiment import ex
 from noop import NoOp
 from rate_limit import RateLimit
-from util import UnexpectedAnswerException
+from util import LogGameStateDetailsException, UnexpectedAnswerException
 from .model import Model
 
 
@@ -67,7 +67,11 @@ class GoogleModel(Model):
             RateLimit.wait(60, 60)
         if self.dry_run:
             return "?"  # dry run, return a placeholder
-        response = self._chat.send_message(prompt)
+        try:
+            response = self._chat.send_message(prompt)
+        except BlockedPromptException as exc:
+            _log.warning(f"blocked prompt {prompt}: {exc}")
+            raise LogGameStateDetailsException() from exc
         if response.parts:
             return response.text
         else:
