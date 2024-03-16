@@ -67,8 +67,8 @@ class GoogleModel(Model):
         if self.dry_run:
             return "?"  # dry run, return a placeholder
         response = self._chat.send_message(prompt)
-        try:
+        if response.candidates:
             return response.text
-        except ValueError:
-            _log.warning(f"unexpected response", exc_info=True)
-            return "invalid response"
+        else:
+            _log.warning(f"unexpected response: {response}")
+            return "-"
