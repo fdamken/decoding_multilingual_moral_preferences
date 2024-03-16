@@ -38,12 +38,12 @@ def main(model_name: str, language: str, game_indices: Optional[int | list[int]]
         for game_idx, game in enumerate(games):
             if game_idx is None or game_idx in game_indices:
                 game_answers, game_api_usage = _run_game(game, model_name)
+                pbar.update()
             else:
                 game_answers, game_api_usage = f"skipped; only playing games {game_indices}", APIUsage(model_name, 0, 0, 0)
             answers.append(game_answers)
             api_usage.append(game_api_usage)
         api_usage_total = APIUsage.merge(*api_usage)
-        pbar.update()
 
     return dict(
         answers=answers,
