@@ -1,0 +1,974 @@
+{
+  "artifacts": [],
+  "command": "main",
+  "experiment": {
+    "base_dir": "/home/fdamken/Development/study/tinypaper/src",
+    "dependencies": [
+      "numpy==1.26.4",
+      "sacred==0.8.5"
+    ],
+    "mainfile": "experiment.py",
+    "name": "tinypaper",
+    "repositories": [
+      {
+        "commit": "47b97b474e4e42eb85e649faf65a5d43805bc97d",
+        "dirty": false,
+        "url": "ssh://github/fdamken/tinypaper_code.git"
+      },
+      {
+        "commit": "47b97b474e4e42eb85e649faf65a5d43805bc97d",
+        "dirty": false,
+        "url": "ssh://github/fdamken/tinypaper_code.git"
+      }
+    ],
+    "sources": [
+      [
+        "experiment.py",
+        "_sources/experiment_53cb47ea4e258fffe054312558792be5.py"
+      ],
+      [
+        "path_util.py",
+        "_sources/path_util_1d8e00c842a56528e6b1e574c1a835bf.py"
+      ]
+    ]
+  },
+  "heartbeat": "2024-03-16T17:05:43.865536",
+  "host": {
+    "ENV": {},
+    "cpu": "Intel(R) Core(TM) i7-10700K CPU @ 3.80GHz",
+    "gpus": {
+      "driver_version": "525.147.05",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce RTX 3080",
+          "persistence_mode": false,
+          "total_memory": 10240
+        }
+      ]
+    },
+    "hostname": "crush",
+    "os": [
+      "Linux",
+      "Linux-6.5.0-25-generic-x86_64-with-glibc2.38"
+    ],
+    "python_version": "3.11.8"
+  },
+  "meta": {
+    "command": "main",
+    "config_updates": {
+      "game_indices": [
+        17,
+        37,
+        48,
+        65,
+        74
+      ],
+      "language": "kr",
+      "model_name": "gpt-3.5-turbo-0125"
+    },
+    "named_configs": [],
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--id": null,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [
+        "model_name=gpt-3.5-turbo-0125",
+        "language=kr",
+        "game_indices=17,37,48,65,74"
+      ],
+      "help": false,
+      "with": true
+    }
+  },
+  "resources": [],
+  "result": {
+    "answers": [
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      [
+        "1",
+        "1",
+        "2",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "2",
+        "2",
+        "1"
+      ],
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      [
+        "1",
+        "1",
+        "2",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "2",
+        "1",
+        "1"
+      ],
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "2",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "Traceback (most recent call last):\n  File \"/home/fdamken/.cache/pypoetry/virtualenvs/non-package-mode-KIJk1VAA-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fdamken/Development/study/tinypaper/src/agent.py\", line 26, in play\n    return [self._prompt(self._make_prompt(scenario)) for scenario in game.scenarios]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fdamken/Development/study/tinypaper/src/agent.py\", line 26, in <listcomp>\n    return [self._prompt(self._make_prompt(scenario)) for scenario in game.scenarios]\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fdamken/Development/study/tinypaper/src/agent.py\", line 34, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nagent.UnexpectedAnswerException: expected 1 or 2, got \n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/fdamken/Development/study/tinypaper/scripts/experiments/run.py\", line 17, in _run_game\n    result = agent.play(game)\n             ^^^^^^^^^^^^^^^^\n  File \"/home/fdamken/.cache/pypoetry/virtualenvs/non-package-mode-KIJk1VAA-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fdamken/.cache/pypoetry/virtualenvs/non-package-mode-KIJk1VAA-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fdamken/.cache/pypoetry/virtualenvs/non-package-mode-KIJk1VAA-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x77d5f21d4250 state=finished raised UnexpectedAnswerException>]\n",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "2",
+        "1",
+        "1",
+        "2",
+        "1"
+      ],
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]",
+      "skipped; only playing games [17, 37, 48, 65, 74]"
+    ],
+    "api_usage": [
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0112,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 22361,
+        "num_output_tokens": 13,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.013566,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 27063,
+        "num_output_tokens": 23,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.037634,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 75118,
+        "num_output_tokens": 50,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0544735,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 108677,
+        "num_output_tokens": 90,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.010919,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 21799,
+        "num_output_tokens": 13,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 0,
+        "num_output_tokens": 0,
+        "py/object": "api_usage.APIUsage"
+      }
+    ],
+    "api_usage_total": {
+      "cost": 0.1277925,
+      "name": "gpt-3.5-turbo-0125",
+      "num_input_tokens": 255018,
+      "num_output_tokens": 189,
+      "py/object": "api_usage.APIUsage"
+    }
+  },
+  "start_time": "2024-03-16T17:03:18.040622",
+  "status": "COMPLETED",
+  "stop_time": "2024-03-16T17:05:43.864069"
+}
