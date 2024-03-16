@@ -30,7 +30,7 @@ class Agent:
     def _prompt(self, prompt) -> str:
         result = self._model.prompt(prompt)
         if result not in {"1", "2"}:
-            raise UnexpectedAnswerException("expected 1 or 2, got {result}")
+            raise UnexpectedAnswerException(f"expected 1 or 2, got {result}")
         return result
 
     @staticmethod
