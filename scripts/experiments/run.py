@@ -36,7 +36,7 @@ def main(model_name: str, language: str, game_indices: Optional[int | list[int]]
     total = len(game_indices) if game_indices is not None else len(games)
     with tqdm(total=total) as pbar:
         for game_idx, game in enumerate(games):
-            if game_idx is None or game_idx in game_indices:
+            if game_indices is None or game_idx in game_indices:
                 game_answers, game_api_usage = _run_game(game, model_name)
                 pbar.update()
             else:
