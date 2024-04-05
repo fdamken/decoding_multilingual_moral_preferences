@@ -6,6 +6,7 @@ data_dir: Final[Path] = project_root_dir / "data"
 results_dir: Final[Path] = project_root_dir / "results"
 experiment_results_dir: Final[Path] = project_root_dir / "experiments" / "results"
 cleansed_experiment_results_dir: Final[Path] = experiment_results_dir / "cleansed"
+preprocessed_experiment_results_dir: Final[Path] = experiment_results_dir / "preprocessed"
 
 
 def get_data_path(language: str) -> Path:
