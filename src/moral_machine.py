@@ -7,7 +7,21 @@ import pandas as pd
 import path_util
 from experiment import ex
 
-_languages = ["ar", "de", "en", "es", "fr", "ja", "kr", "pt", "ru", "zh"]
+_languages = [
+    "ar",
+    "de",
+    "en",
+    "en-western",
+    "en-eastern",
+    "en-southern",
+    "es",
+    "fr",
+    "ja",
+    "kr",
+    "pt",
+    "ru",
+    "zh",
+]
 
 
 def get_available_languages() -> list[str]:
