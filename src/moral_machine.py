@@ -44,6 +44,7 @@ class Game:
 @ex.capture
 def load_games(language: str, num_games: Optional[int], scenarios_per_game: int) -> list[Game]:
     assert language in get_available_languages(), f"language '{language}' not available"
+    language = language.split("-")[0]  # strip region to load the dataset in correct language
     df = pd.read_csv(path_util.get_data_path(language))
     games = []
     scenarios = []
