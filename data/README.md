@@ -3,7 +3,9 @@ This directory contains the data used for querying the models.
 Subdirectory `raw` contains the raw data (generated using the process described below).
 Subdirectory `preprocessed` contains the preprocessed data that is actually used for querying.
 
-**Note that the exact data used in the experiments is not included in this repository, and it is not necessary to perform these steps.**
+**Note that the exact data used in the experiments is included in this repository, and it is not necessary to perform these steps.**
+
+**Also note that the order of the scenarios is _extremely_ important and the dataset shall not be randomized! Each consecutive 13 scenarios have to be faced in one game.**
 
 
 ## Raw Data

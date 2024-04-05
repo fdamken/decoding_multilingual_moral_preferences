@@ -42,7 +42,7 @@ class Game:
 
 
 @ex.capture
-def load_games(language: str, num_games: Optional[int], scenarios_per_game: int) -> list[Game]:
+def load_games(language: str, num_games: Optional[int]) -> list[Game]:
     assert language in get_available_languages(), f"language '{language}' not available"
     language = language.split("-")[0]  # strip region to load the dataset in correct language
     df = pd.read_csv(path_util.get_data_path(language))
@@ -51,7 +51,7 @@ def load_games(language: str, num_games: Optional[int], scenarios_per_game: int)
     for _, row in df.iterrows():
         scenario_id, desc_left, desc_right = row["id"], row["desc_left"], row["desc_right"]
         scenarios.append(Scenario(scenario_id, desc_left, desc_right))
-        if len(scenarios) == scenarios_per_game:
+        if len(scenarios) == 13:
             games.append(Game(str(uuid.uuid4()), scenarios))
             scenarios = []
         if num_games is not None and len(games) == num_games:
