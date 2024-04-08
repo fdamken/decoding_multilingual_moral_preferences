@@ -25,16 +25,9 @@ class MPTModel(Model):
 
     def __init__(self, model_name: str):
         super().__init__()
+
         self._model_name = model_name
 
-    def prompt(self, prompt: str) -> str:
-        self._history.append(prompt)
-        message = self._complete()
-        self._history.append(message)
-        return message
-
-    @ex.capture
-    def reset(self, _log: Logger) -> None:
         config = transformers.AutoConfig.from_pretrained(
             self._model_config[self._model_name]["model"],
             trust_remote_code=True,
@@ -47,6 +40,15 @@ class MPTModel(Model):
         )
         tokenizer = transformers.AutoTokenizer.from_pretrained(self._model_config[self._model_name]["tokenizer"])
         self._pipe = transformers.pipeline("text-generation", model=model, tokenizer=tokenizer)
+
+    def prompt(self, prompt: str) -> str:
+        self._history.append(prompt)
+        message = self._complete()
+        self._history.append(message)
+        return message
+
+    @ex.capture
+    def reset(self, _log: Logger) -> None:
         self._history = [self.system_prompt]
 
     def _complete(self) -> str:
