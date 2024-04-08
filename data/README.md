@@ -13,11 +13,11 @@ This section describes how you can generate the raw data yourself.
 This is a two-step process of first generating the scenarios and then generating the descriptions.
 
 ### Scenario Generation
-On the MoralMachine's website, click on “Judge” and then paste the following snippet into the console.
-This will generate 13 scenarios per iteration (i.e., 13000 scenarios overall) and save them in the `scenarios` array.
+On the MoralMachine's website, click on “Start judging” and then paste the following snippet into the console.
+This will generate 13 scenarios per iteration (i.e., 1300 scenarios overall) and save them in the `scenarios` array.
 
 ```javascript
-const num_samples = 13000;
+const num_samples = 1300;
 const scenarios = [];
 for (let i = 0; i < num_samples / 13; i++) {
     scenarios.push(...Helpers.generateScenarios());
