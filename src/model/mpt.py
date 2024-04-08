@@ -1,6 +1,7 @@
 from logging import Logger
 from typing import Final
 
+import torch
 import transformers
 
 from api_usage import APIUsage
@@ -28,18 +29,23 @@ class MPTModel(Model):
 
         self._model_name = model_name
 
+        self._device = "cuda"
+
         config = transformers.AutoConfig.from_pretrained(
             self._model_config[self._model_name]["model"],
             trust_remote_code=True,
         )
+        config.attn_config["attn_impl"] = "triton"
+        config.init_device = self._device
         config.max_seq_len = 16384
         model = transformers.AutoModelForCausalLM.from_pretrained(
             self._model_config[self._model_name]["model"],
             config=config,
+            torch_dtype=torch.bfloat16,
             trust_remote_code=True,
         )
         tokenizer = transformers.AutoTokenizer.from_pretrained(self._model_config[self._model_name]["tokenizer"])
-        self._pipe = transformers.pipeline("text-generation", model=model, tokenizer=tokenizer)
+        self._pipe = transformers.pipeline("text-generation", model=model, tokenizer=tokenizer, device=self._device)
 
     def prompt(self, prompt: str) -> str:
         self._history.append(prompt)
@@ -52,12 +58,13 @@ class MPTModel(Model):
         self._history = [self.system_prompt]
 
     def _complete(self) -> str:
-        result = self._pipe(
-            "\n\n".join(self._history),
-            max_new_tokens=1,
-            do_sample=True,
-            use_cache=True,
-        )
+        with torch.autocast(self._device, dtype=torch.bfloat16):
+            result = self._pipe(
+                "\n\n".join(self._history),
+                max_new_tokens=1,
+                do_sample=True,
+                use_cache=True,
+            )
         return result
 
     def report_api_usage(self) -> APIUsage:
