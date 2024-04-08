@@ -11,8 +11,7 @@ from api_usage import APIUsage
 from experiment import ex
 
 
-def _run_session(session: moral_machine.Session, model_name: str) -> tuple[list[str], APIUsage]:
-    agent = Agent(model_name)
+def _run_session(agent: Agent, session: moral_machine.Session) -> tuple[list[int], APIUsage]:
     try:
         result = agent.play(session)
     except Exception:
@@ -30,14 +29,15 @@ def main(model_name: str, language: str, session_indices: Optional[int | list[in
             session_indices = [session_indices]
         _log.info(f"playing only sessions {session_indices}")
 
-    answers: list[list[str]] = []
+    answers: list[list[int]] = []
     api_usage: list[APIUsage] = []
     sessions = moral_machine.load_sessions(language)
+    agent = Agent(model_name)
     total = len(session_indices) if session_indices is not None else len(sessions)
     with tqdm(total=total) as pbar:
         for session_idx, session in enumerate(sessions):
             if session_indices is None or session_idx in session_indices:
-                session_answers, session_api_usage = _run_session(session, model_name)
+                session_answers, session_api_usage = _run_session(agent, session)
                 pbar.update()
             else:
                 session_answers, session_api_usage = f"skipped; only playing sessions {session_indices}", APIUsage(model_name, 0, 0, 0)
