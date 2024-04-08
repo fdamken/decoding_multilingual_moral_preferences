@@ -52,14 +52,12 @@ class MPTModel(Model):
         self._history = [self.system_prompt]
 
     def _complete(self) -> str:
-        with torch.autocast(dtype=torch.float32):
-            result = self._pipe(
-                "\n\n".join(self._history),
-                max_new_tokens=1,
-                do_sample=True,
-                use_cache=True,
-            )
-        return result
+        return self._pipe(
+            "\n\n".join(self._history),
+            max_new_tokens=1,
+            do_sample=True,
+            use_cache=True,
+        )
 
     def report_api_usage(self) -> APIUsage:
         return APIUsage(self._model_name, -1, -1, 0.)
