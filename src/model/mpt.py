@@ -35,7 +35,6 @@ class MPTModel(Model):
             self._model_config[self._model_name]["model"],
             trust_remote_code=True,
         )
-        config.attn_config["attn_impl"] = "triton"
         config.init_device = self._device
         config.max_seq_len = 16384
         model = transformers.AutoModelForCausalLM.from_pretrained(
