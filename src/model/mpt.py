@@ -40,7 +40,7 @@ class MPTModel(Model):
         model = transformers.AutoModelForCausalLM.from_pretrained(
             self._model_config[self._model_name]["model"],
             config=config,
-            torch_dtype=torch.bfloat16,
+            torch_dtype=torch.float32,
             trust_remote_code=True,
         )
         tokenizer = transformers.AutoTokenizer.from_pretrained(self._model_config[self._model_name]["tokenizer"])
@@ -57,7 +57,7 @@ class MPTModel(Model):
         self._history = [self.system_prompt]
 
     def _complete(self) -> str:
-        with torch.autocast(self._device, dtype=torch.bfloat16):
+        with torch.autocast(self._device, dtype=torch.float32):
             result = self._pipe(
                 "\n\n".join(self._history),
                 max_new_tokens=1,
