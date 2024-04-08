@@ -26,3 +26,8 @@ retried and the step of manual data imputation became unnecessary. However, to
 avoid repeated experiments, we decided to keep the imputed data as the retry
 approach did not majorly change the experiment setup and results are still
 comparable. But things are easier now.
+
+## `preprocessed`
+This directory contains preprocessed results. That is, CSV files extracted from
+the JSON format of the cleansed results. These also link every played scenario
+to a scenario ID to be used for analysis.
