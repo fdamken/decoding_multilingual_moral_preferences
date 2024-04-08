@@ -4,9 +4,10 @@ from typing import Callable
 from experiment import ex
 from .dummy import DummyModel
 from .google import GoogleModel
+from .hf import HFModel
 from .model import Model
-from .mpt import MPTModel
 from .openai import OpenAIModel
+from .transformers import TransformersModel
 
 _model_maker_registry: dict[str, Callable[[], Model]] = {}
 
@@ -31,7 +32,6 @@ def model_maker(name: str) -> Callable[[Callable[[], Model]], Callable[[], Model
     return model_maker_decorator
 
 
-
 def _register_google_model(model_name: str) -> None:
     @model_maker(model_name)
     @ex.capture
@@ -40,12 +40,20 @@ def _register_google_model(model_name: str) -> None:
         return GoogleModel(model_name)
 
 
-def _register_mpt_model(model_name: str) -> None:
+def _register_hf_model(model_name: str) -> None:
     @model_maker(model_name)
     @ex.capture
-    def make_mpt_model(_log: Logger) -> MPTModel:
-        _log.debug(f"creating MPT model '{model_name}'")
-        return MPTModel(model_name)
+    def make_hf_model(_log: Logger) -> HFModel:
+        _log.debug(f"creating HuggingFace model '{model_name}'")
+        return HFModel(model_name)
+
+
+def _register_transformers_model(model_name: str) -> None:
+    @model_maker(model_name)
+    @ex.capture
+    def make_mpt_model(_log: Logger) -> TransformersModel:
+        _log.debug(f"creating Transformers model '{model_name}'")
+        return TransformersModel(model_name)
 
 
 def _register_openai_model(model_name: str) -> None:
@@ -59,8 +67,11 @@ def _register_openai_model(model_name: str) -> None:
 for _model_name in GoogleModel.SUPPORTED_MODELS:
     _register_google_model(_model_name)
 
-for _model_name in MPTModel.SUPPORTED_MODELS:
-    _register_mpt_model(_model_name)
+for _model_name in HFModel.SUPPORTED_MODELS:
+    _register_hf_model(_model_name)
+
+for _model_name in TransformersModel.SUPPORTED_MODELS:
+    _register_transformers_model(_model_name)
 
 for _model_name in OpenAIModel.SUPPORTED_MODELS:
     _register_openai_model(_model_name)
