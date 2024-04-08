@@ -34,7 +34,7 @@ class Model(ABC):
 
     @abstractmethod
     def reset(self) -> None:
-        """Reset the model (e.g., to start a new game)."""
+        """Reset the model (e.g., to start a new session)."""
 
     @abstractmethod
     def report_api_usage(self) -> APIUsage:

@@ -5,7 +5,7 @@ Subdirectory `preprocessed` contains the preprocessed data that is actually used
 
 **Note that the exact data used in the experiments is included in this repository, and it is not necessary to perform these steps.**
 
-**Also note that the order of the scenarios is _extremely_ important and the dataset shall not be randomized! Each consecutive 13 scenarios have to be faced in one game.**
+**Also note that the order of the scenarios is _extremely_ important and the dataset shall not be randomized! Each consecutive 13 scenarios have to be faced in one session.**
 
 
 ## Raw Data

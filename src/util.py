@@ -2,5 +2,5 @@ class UnexpectedAnswerException(Exception):
     pass
 
 
-class LogGameStateDetailsException(Exception):
+class LogSessionStateDetailsException(Exception):
     pass

@@ -1,4 +1,3 @@
-import uuid
 from dataclasses import dataclass
 from typing import Optional
 
@@ -30,30 +29,29 @@ def get_available_languages() -> list[str]:
 
 @dataclass
 class Scenario:
-    id: str
-    desc_left: str
-    desc_right: str
+    profile_left: str
+    profile_right: str
+    left_right_swapped: int
 
 
 @dataclass
-class Game:
-    id: str
+class Session:
     scenarios: list[Scenario]
 
 
 @ex.capture
-def load_games(language: str, num_games: Optional[int]) -> list[Game]:
+def load_sessions(language: str, num_sessions: Optional[int]) -> list[Session]:
     assert language in get_available_languages(), f"language '{language}' not available"
     language = language.split("-")[0]  # strip region to load the dataset in correct language
     df = pd.read_csv(path_util.get_data_path(language))
-    games = []
+    sessions = []
     scenarios = []
     for _, row in df.iterrows():
-        scenario_id, desc_left, desc_right = row["id"], row["desc_left"], row["desc_right"]
-        scenarios.append(Scenario(scenario_id, desc_left, desc_right))
+        profile_left, profile_right, left_right_swapped = row["desc_left"], row["desc_right"], row["left_right_swapped"]
+        scenarios.append(Scenario(profile_left, profile_right, left_right_swapped))
         if len(scenarios) == 13:
-            games.append(Game(str(uuid.uuid4()), scenarios))
+            sessions.append(Session(scenarios))
             scenarios = []
-        if num_games is not None and len(games) == num_games:
+        if num_sessions is not None and len(sessions) == num_sessions:
             break
-    return games
+    return sessions

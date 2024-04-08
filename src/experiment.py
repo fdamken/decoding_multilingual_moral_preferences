@@ -4,7 +4,7 @@ from sacred.observers import FileStorageObserver
 import path_util
 
 ex = sacred.Experiment("tinypaper")
-ex.observers.append(FileStorageObserver(path_util.results_dir))
+ex.observers.append(FileStorageObserver(path_util.results_local_dir))
 
 
 # noinspection PyUnusedLocal
@@ -16,8 +16,8 @@ def default_config():
     # language, can be one of moral_machine.get_available_languages()
     language = None
 
-    # number of games to play, defaults to 100 games
-    num_games = 100
+    # number of sessions to play, defaults to 100
+    num_sessions = 100
 
-    # play only the listed game indices; defaults to None (all)
-    game_indices = None
+    # play only the listed session indices; defaults to None (all)
+    session_indices = None

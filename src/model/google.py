@@ -10,7 +10,7 @@ from api_usage import APIUsage
 from experiment import ex
 from noop import NoOp
 from rate_limit import RateLimit
-from util import LogGameStateDetailsException, UnexpectedAnswerException
+from util import LogSessionStateDetailsException, UnexpectedAnswerException
 from .model import Model
 
 
@@ -71,7 +71,7 @@ class GoogleModel(Model):
             response = self._chat.send_message(prompt)
         except BlockedPromptException as exc:
             _log.warning(f"blocked prompt {prompt}: {exc}")
-            raise LogGameStateDetailsException() from exc
+            raise LogSessionStateDetailsException() from exc
         if response.parts:
             return response.text
         else:

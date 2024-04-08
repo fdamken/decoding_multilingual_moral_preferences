@@ -11,38 +11,38 @@ from api_usage import APIUsage
 from experiment import ex
 
 
-def _run_game(game: moral_machine.Game, model_name: str) -> tuple[list[str], APIUsage]:
+def _run_session(session: moral_machine.Session, model_name: str) -> tuple[list[str], APIUsage]:
     agent = Agent(model_name)
     try:
-        result = agent.play(game)
+        result = agent.play(session)
     except Exception:
         result = traceback.format_exc()
     return result, agent.report_api_usage()
 
 
 @ex.automain
-def main(model_name: str, language: str, game_indices: Optional[int | list[int]], _log: Logger) -> Any:
+def main(model_name: str, language: str, session_indices: Optional[int | list[int]], _log: Logger) -> Any:
     assert model_name in model.get_available_models(), f"model '{model_name}' not available"
     assert language in moral_machine.get_available_languages(), f"language '{language}' not available"
 
-    if game_indices is not None:
-        if type(game_indices) is int:
-            game_indices = [game_indices]
-        _log.info(f"playing only games {game_indices}")
+    if session_indices is not None:
+        if type(session_indices) is int:
+            session_indices = [session_indices]
+        _log.info(f"playing only sessions {session_indices}")
 
     answers: list[list[str]] = []
     api_usage: list[APIUsage] = []
-    games = moral_machine.load_games(language)
-    total = len(game_indices) if game_indices is not None else len(games)
+    sessions = moral_machine.load_sessions(language)
+    total = len(session_indices) if session_indices is not None else len(sessions)
     with tqdm(total=total) as pbar:
-        for game_idx, game in enumerate(games):
-            if game_indices is None or game_idx in game_indices:
-                game_answers, game_api_usage = _run_game(game, model_name)
+        for session_idx, session in enumerate(sessions):
+            if session_indices is None or session_idx in session_indices:
+                session_answers, session_api_usage = _run_session(session, model_name)
                 pbar.update()
             else:
-                game_answers, game_api_usage = f"skipped; only playing games {game_indices}", APIUsage(model_name, 0, 0, 0)
-            answers.append(game_answers)
-            api_usage.append(game_api_usage)
+                session_answers, session_api_usage = f"skipped; only playing sessions {session_indices}", APIUsage(model_name, 0, 0, 0)
+            answers.append(session_answers)
+            api_usage.append(session_api_usage)
         api_usage_total = APIUsage.merge(*api_usage)
 
     return dict(

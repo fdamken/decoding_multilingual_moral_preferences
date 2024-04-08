@@ -5,15 +5,15 @@ import path_util
 from model import get_available_models
 from moral_machine import get_available_languages
 
-expected_num_games = 100
-expected_num_scenarios_per_game = 13
+expected_num_sessions = 100
+expected_num_scenarios_per_session = 13
 expected_answers = {"1", "2"}
 
 
 def _log_error(
     model: Optional[str] = None,
     language: Optional[str] = None,
-    game_idx: Optional[int] = None,
+    session_idx: Optional[int] = None,
     round_idx: Optional[int] = None,
     /,
     *,
@@ -25,11 +25,11 @@ def _log_error(
     if language is not None:
         assert model is not None, "language requires model"
         prefix += f", language {language}"
-    if game_idx is not None:
-        assert language is not None, "game_idx requires language"
-        prefix += f", game {game_idx:3d}"
+    if session_idx is not None:
+        assert language is not None, "session_idx requires language"
+        prefix += f", session {session_idx:3d}"
     if round_idx is not None:
-        assert game_idx is not None, "round_idx requires game_idx"
+        assert session_idx is not None, "round_idx requires session_idx"
         prefix += f", round {round_idx:2d}"
     if prefix:
         print(f"{prefix}: {error}")
@@ -52,49 +52,49 @@ def _validate_result(model: str, language: str) -> Optional[list[int]]:
         return None
     with open(result_dir / "run.json") as f:
         run = json.load(f)
-    games = run["result"]["answers"]
-    num_games = len(games)
-    if num_games != expected_num_games:
-        _log_error(model, language, error=f"unexpected number of games (is {num_games}, should be {expected_num_games})")
+    sessions = run["result"]["answers"]
+    num_sessions = len(sessions)
+    if num_sessions != expected_num_sessions:
+        _log_error(model, language, error=f"unexpected number of sessions (is {num_sessions}, should be {expected_num_sessions})")
         return None
-    erroneous_games = []
-    for game_idx, answers in enumerate(games):
+    erroneous_sessions = []
+    for session_idx, answers in enumerate(sessions):
         if type(answers) is str and answers.startswith("PROMPT BLOCKED"):
-            _log_error(model, language, game_idx, error="prompt blocked")
+            _log_error(model, language, session_idx, error="prompt blocked")
             continue
         if type(answers) is not list:
-            _log_error(model, language, game_idx, error=f"unexpected type of answer list (is {type(answers)}, should be list)")
-            erroneous_games.append(game_idx)
+            _log_error(model, language, session_idx, error=f"unexpected type of answer list (is {type(answers)}, should be list)")
+            erroneous_sessions.append(session_idx)
             continue
         num_scenarios = len(answers)
-        if num_scenarios != expected_num_scenarios_per_game:
-            _log_error(model, language, game_idx, error=f"unexpected number of rounds (is {num_scenarios}, should be {expected_num_scenarios_per_game})")
-            erroneous_games.append(game_idx)
+        if num_scenarios != expected_num_scenarios_per_session:
+            _log_error(model, language, session_idx, error=f"unexpected number of rounds (is {num_scenarios}, should be {expected_num_scenarios_per_session})")
+            erroneous_sessions.append(session_idx)
             continue
         unexpected_answers = [answer for answer in answers if answer not in expected_answers]
         if unexpected_answers:
-            _log_error(model, language, game_idx, error=f"contains unexpected answers: {unexpected_answers}")
-            erroneous_games.append(game_idx)
+            _log_error(model, language, session_idx, error=f"contains unexpected answers: {unexpected_answers}")
+            erroneous_sessions.append(session_idx)
             continue
-    return erroneous_games
+    return erroneous_sessions
 
 
 def _validate_results() -> None:
-    total_erroneous_games = []
+    total_erroneous_sessions = []
     rerun_arguments = []
     for model in get_available_models():
         if not (path_util.cleansed_experiment_results_dir / model).exists():
             _log_error(model, error="missing results")
             continue
         for language in get_available_languages():
-            erroneous_games = _validate_result(model, language)
-            if erroneous_games is not None:
-                total_erroneous_games += erroneous_games
-                if erroneous_games:
-                    rerun_arguments.append(f"with model_name={model} language={language} game_indices={','.join([str(game) for game in erroneous_games])}")
-    if total_erroneous_games:
+            erroneous_sessions = _validate_result(model, language)
+            if erroneous_sessions is not None:
+                total_erroneous_sessions += erroneous_sessions
+                if erroneous_sessions:
+                    rerun_arguments.append(f"with model_name={model} language={language} session_indices={','.join([str(session) for session in erroneous_sessions])}")
+    if total_erroneous_sessions:
         rerun_arguments_str = '\n'.join(rerun_arguments)
-        print(f"found {len(total_erroneous_games)} erroneous games\nrerun with the following arguments:\n{rerun_arguments_str}")
+        print(f"found {len(total_erroneous_sessions)} erroneous sessions\nrerun with the following arguments:\n{rerun_arguments_str}")
     else:
         print("all results are valid")
 
