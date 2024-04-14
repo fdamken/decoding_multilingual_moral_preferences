@@ -7,7 +7,7 @@ from moral_machine import get_available_languages
 
 expected_num_sessions = 100
 expected_num_scenarios_per_session = 13
-expected_answers = {"1", "2"}
+expected_answers = {1, 2}
 
 
 def _log_error(
