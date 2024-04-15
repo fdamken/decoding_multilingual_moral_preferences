@@ -51,7 +51,7 @@ class TransformersModel(Model):
         self._pipe = transformers.pipeline("text-generation", self._model_config[self._model_name], trust_remote_code=True)
 
     def prompt(self, prompt: str) -> str:
-        self._history.append(ChatMessage(ChatRole.USER, prompt))
+        self._history.append(ChatMessage(ChatRole.USER, prompt + f"\n\n{self.reinforcement_prompt}"))
         message = self._complete()
         print("message:", repr(message))
         quit()
@@ -68,7 +68,7 @@ class TransformersModel(Model):
             max_new_tokens=2,
             do_sample=True,
             use_cache=True,
-        )[0]["completed_message"]
+        )[0]["generated_text"]
 
     def report_api_usage(self) -> APIUsage:
         return APIUsage(self._model_name, -1, -1, 0.)

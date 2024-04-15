@@ -24,6 +24,12 @@ class Model(ABC):
         assert system_prompt, f"no system prompt for language '{language}'"
         self._system_prompt = system_prompt
 
+        with open(path_util.data_dir / "reinforcement_prompts.json") as f:
+            reinforcement_prompts = json.load(f)
+        reinforcement_prompt = reinforcement_prompts.get(language)
+        assert reinforcement_prompt, f"no reinforcement prompt for language '{language}'"
+        self._reinforcement_prompt = reinforcement_prompt
+
         self._num_input_tokens = 0
         self._num_output_tokens = 0
         self._calls = []
@@ -47,3 +53,7 @@ class Model(ABC):
     @property
     def system_prompt(self) -> str:
         return self._system_prompt
+
+    @property
+    def reinforcement_prompt(self) -> str:
+        return self._reinforcement_prompt

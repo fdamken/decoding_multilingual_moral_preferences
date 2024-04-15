@@ -1,3 +1,4 @@
+import sys
 import traceback
 from logging import Logger
 from typing import Any, Optional
@@ -16,6 +17,7 @@ def _run_session(agent: Agent, session: moral_machine.Session) -> tuple[list[int
         result = agent.play(session)
     except Exception:
         result = traceback.format_exc()
+        traceback.print_exc()
     return result, agent.report_api_usage()
 
 
