@@ -52,7 +52,9 @@ class TransformersModel(Model):
 
     def prompt(self, prompt: str) -> str:
         self._history.append(ChatMessage(ChatRole.USER, prompt + f"\n\n{self.reinforcement_prompt}"))
-        message = self._complete().split("<|im_start|>assistant")[-1].split("<|im_end|>")[0].strip()
+        complete = self._complete()
+        print("complete:", repr(complete))
+        message = complete.split("<|im_start|>assistant")[-1].split("<|im_end|>")[0].strip()
         print("message:", repr(message))
         quit()
         self._history.append(ChatMessage(ChatRole.ASSISTANT, message))
