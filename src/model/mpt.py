@@ -1,7 +1,7 @@
 import torch
 import transformers
 
-from . import TransformersModel
+from .transformers import TransformersModel
 
 
 class MPTModel(TransformersModel):
@@ -12,9 +12,7 @@ class MPTModel(TransformersModel):
 
     SUPPORTED_MODELS = set(_model_config.keys())
 
-    def __init__(self, model_name: str):
-        super().__init__(model_name)
-
+    def _init_model(self) -> None:
         config = transformers.AutoConfig.from_pretrained(
             self._model_config[self._model_name]["model"],
             trust_remote_code=True,
