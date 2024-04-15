@@ -4,7 +4,6 @@ from typing import Callable
 from experiment import ex
 from .dummy import DummyModel
 from .google import GoogleModel
-from .hf import HFModel
 from .model import Model
 from .mpt import MPTModel
 from .openai import OpenAIModel
@@ -41,13 +40,6 @@ def _register_google_model(model_name: str) -> None:
         return GoogleModel(model_name)
 
 
-def _register_hf_model(model_name: str) -> None:
-    @model_maker(model_name)
-    @ex.capture
-    def make_hf_model(_log: Logger) -> HFModel:
-        _log.debug(f"creating HuggingFace model '{model_name}'")
-        return HFModel(model_name)
-
 
 def _register_mpt_model(model_name: str) -> None:
     @model_maker(model_name)
@@ -75,8 +67,6 @@ def _register_transformers_model(model_name: str) -> None:
 
 for _model_name in GoogleModel.SUPPORTED_MODELS:
     _register_google_model(_model_name)
-for _model_name in HFModel.SUPPORTED_MODELS:
-    _register_hf_model(_model_name)
 for _model_name in MPTModel.SUPPORTED_MODELS:
     _register_mpt_model(_model_name)
 for _model_name in OpenAIModel.SUPPORTED_MODELS:

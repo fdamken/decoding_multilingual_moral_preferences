@@ -42,6 +42,11 @@ def _validate_result(model: str, language: str) -> Optional[list[int]]:
     if not result_dir.exists():
         _log_error(model, language, error="missing results")
         return None
+    files = {x.name for x in result_dir.iterdir()}
+    expected_files = {"config.json", "cout.txt", "metrics.json", "run.json"}
+    if files != expected_files:
+        _log_error(model, language, error=f"unexpected files: {files - expected_files}; missing files: {expected_files - files}")
+        return None
     with open(result_dir / "config.json") as f:
         config = json.load(f)
     if config["model_name"] != model:
