@@ -6,27 +6,27 @@ from uuid import uuid4
 
 import path_util
 
-CHARACTER_TYPES: Final[list[tuple[str, str]]] = [
-    ("txt_man", "Man"),
-    ("txt_woman", "Woman"),
-    ("txt_preg", "Pregnant"),
-    ("txt_baby", "Stroller"),
-    ("txt_oldman", "OldMan"),
-    ("txt_oldwoman", "OldWoman"),
-    ("txt_boy", "Boy"),
-    ("txt_girl", "Girl"),
-    ("txt_homeless", "Homeless"),
-    ("txt_lgwoman", "LargeWoman"),
-    ("txt_lgman", "LargeMan"),
-    ("txt_crim", "Criminal"),
-    ("txt_execm", "MaleExecutive"),
-    ("txt_execf", "FemaleExecutive"),
-    ("txt_athf", "FemaleAthlete"),
-    ("txt_athm", "MaleAthlete"),
-    ("txt_docf", "FemaleDoctor"),
-    ("txt_docm", "MaleDoctor"),
-    ("txt_dog", "Dog"),
-    ("txt_cat", "Cat"),
+TILE_TYPES: Final[list[tuple[str, str]]] = [
+    (0, "Man"),
+    (1, "Woman"),
+    (2, "Pregnant"),
+    (3, "Stroller"),
+    (4, "OldMan"),
+    (5, "OldWoman"),
+    (6, "Boy"),
+    (7, "Girl"),
+    (8, "Homeless"),
+    (9, "LargeWoman"),
+    (10, "LargeMan"),
+    (11, "Criminal"),
+    (12, "MaleExecutive"),
+    (13, "FemaleExecutive"),
+    (14, "FemaleAthlete"),
+    (15, "MaleAthlete"),
+    (16, "FemaleDoctor"),
+    (17, "MaleDoctor"),
+    (20, "Dog"),
+    (21, "Cat"),
 ]
 
 
@@ -42,12 +42,12 @@ def compute_number_of_characters(tiles):
     outcomes = []
     for outcome in {0, 1}:
         result = {}
-        for type_in_tile, type_in_out in CHARACTER_TYPES:
+        for type_in_tile, type_in_out in TILE_TYPES:
             result[type_in_out] = 0
             for tile in tiles:
                 if tile["outcome"] != outcome:
                     continue
-                if tile["charaterName"] == type_in_tile:
+                if tile["tile_type"] == type_in_tile:
                     result[type_in_out] += 1
         result["NumberOfCharacters"] = sum(result.values())
         outcomes.append(result)
