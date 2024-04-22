@@ -4,6 +4,8 @@
 # Output files: Country-level data, used as input for Fig.3-4, Extended Data Fig 4-5, ED Table 2 and SI Fig S6-S11
 ##############
 
+setwd("/home/fdamken/Development/study/tinypaper/scripts/moral_machine/Fig2")
+
 # First, run all of MMFunctionsShared.R
 source(file = "MMFunctionsShared.R")
 # Then,  follow below.
@@ -108,33 +110,6 @@ save(plotdata.main.TheoActu, file = "plotdataSIRobustTheoActu.rdata")
 # Plot it
 PlotAndSave.Split(plotdata.main.TheoActu, "Actual", F, filename)
 
-## Extended Data Fig 2
-## ED Fig 2 (a)
-#Robustness checks - External validity
-filename <- "RobustnessExternal"
-## Description is seen
-AttrLabel <- "Description is seen"
-r <- 9
-vals <- c(0:1)
-Coeffs <- GetEffectSizes.Inter.Others(profiles, r, profiles$DescriptionShown, vals)
-plotdata <- GetPlotData.Inter.Others(Coeffs, vals, F, F)
-# Save it
-save(plotdata, file = "plotdataSIRobustExternalDescription.rdata")
-# Plot it
-PlotAndSave.Split(plotdata, AttrLabel, F, filename)
-
-## ED Fig 2 (b)
-## Platform used
-AttrLabel <- "Template"
-r <- 9
-vals <- c("Desktop", "Mobile")
-Coeffs <- GetEffectSizes.Inter.Others(profiles, r, profiles$Template, vals)
-plotdata <- GetPlotData.Inter.Others(Coeffs, vals, F, F)
-# Save it
-save(plotdata, file = "plotdataSIRobustExternalTemplate.rdata")
-# Plot it
-PlotAndSave.Split(plotdata, AttrLabel, F, filename)
-
 ## ED Fig 2 (c)
 ## Dataset used
 ### all data
@@ -221,26 +196,4 @@ finaldata <- GetFinalDF(Coeffs, vals)
 # Save to a csv
 pt = proc.time()
 fwrite(file = "CountriesChangePr.csv", x = finaldata, row.names = T)
-proc.time() - pt
-
-
-###########
-# 2. Countries [did not read description] (was used to re-produce Extended Data Fig 4)
-## filter
-profiles.d <- profiles[DescriptionShown == "0",]
-
-# Use the first function to tinker with the threshold
-# For example, using 2500 records per country as a threshold will result with k countries. Is that enough?
-vals <- GetFilteredList(profiles.d, "UserCountry3", 100)
-k = length(vals)
-
-# Use the second function to calculate the effect sizes for each country. This returns a matrix
-Coeffs <- GetEffectSizes.Inter.Others(profiles.d, r, profiles.d$UserCountry3, vals)
-
-# Use the third function to prepare the final data frame that you want to save
-finaldata <- GetFinalDF(Coeffs, vals)
-
-# Save to a csv
-pt = proc.time()
-fwrite(file = "CountriesNoDescriptionChangePr.csv", x = finaldata, row.names = T)
 proc.time() - pt
