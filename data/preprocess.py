@@ -1,11 +1,8 @@
 import json
 import os.path
-import random
-import uuid
 from csv import DictWriter
 from pathlib import Path
 
-from markdownify import markdownify
 from tqdm import tqdm
 
 THIS_DIR = Path(os.path.dirname(__file__))
@@ -26,12 +23,13 @@ def preprocess_description(description: str) -> str:
         .strip()
 
 
-def preprocess_dataset(dataset_file: Path) -> None:
+def preprocess_dataset(dataset_file: Path, scenarios: list[dict]) -> None:
     with open(THIS_DIR / "preprocessed" / f"{dataset_file.stem}.csv", "w") as f:
         csv = DictWriter(f, ["desc_left", "desc_right", "left_right_swapped"])
         csv.writeheader()
-        for desc_left, desc_right in tqdm(load_dataset(dataset_file), desc=dataset_file.stem):
-            if left_right_swapped := random.choice([True, False]):
+        for (desc_left, desc_right), scenario in tqdm(zip(load_dataset(dataset_file), scenarios), desc=dataset_file.stem):
+            left_right_swapped = scenario["_id"] % 2 == 0
+            if left_right_swapped:
                 desc_left, desc_right = desc_right, desc_left
             csv.writerow(
                 dict(
@@ -43,9 +41,11 @@ def preprocess_dataset(dataset_file: Path) -> None:
 
 
 def main() -> None:
+    with open(THIS_DIR / "raw" / "scenarios.json", "r") as f:
+        scenarios = json.load(f)
     for dataset_file in (THIS_DIR / "raw").iterdir():
         if dataset_file.name.startswith("dataset_"):
-            preprocess_dataset(dataset_file)
+            preprocess_dataset(dataset_file, scenarios)
 
 
 if __name__ == "__main__":

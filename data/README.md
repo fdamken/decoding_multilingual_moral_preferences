@@ -3,9 +3,11 @@ This directory contains the data used for querying the models.
 Subdirectory `raw` contains the raw data (generated using the process described below).
 Subdirectory `preprocessed` contains the preprocessed data that is actually used for querying.
 
-**Note that the exact data used in the experiments is included in this repository, and it is not necessary to perform these steps.**
+**Note that the exact data used in the experiments is included in this repository, and it is not necessary to perform these steps.
+**
 
-**Also note that the order of the scenarios is _extremely_ important and the dataset shall not be randomized! Each consecutive 13 scenarios have to be faced in one session.**
+**Also note that the order of the scenarios is _extremely_ important and the dataset shall not be randomized! Each consecutive 13
+scenarios have to be faced in one session.**
 
 
 ## Raw Data
@@ -17,7 +19,7 @@ On the MoralMachine's website, click on “Start judging” and then paste the f
 This will generate 13 scenarios per iteration (i.e., 1300 scenarios overall) and save them in the `scenarios` array.
 
 ```javascript
-const num_samples = 1300;
+const num_samples = 13 * 100;
 const scenarios = [];
 for (let i = 0; i < num_samples / 13; i++) {
     scenarios.push(...Helpers.generateScenarios());
@@ -36,7 +38,8 @@ You should get a similar result to the data in `scenarios.json`.
 
 
 ### Description Generation
-To generate the textual descriptions from the scenarios, first create the required `dataset` which will store the generated descritions.
+To generate the textual descriptions from the scenarios, first create the required `dataset` which will store the generated
+descritions.
 
 ```javascript
 dataset = {};
