@@ -73,7 +73,12 @@ def _validate_result(model: str, language: str) -> Optional[list[int]]:
             continue
         num_scenarios = len(answers)
         if num_scenarios != expected_num_scenarios_per_session:
-            _log_error(model, language, session_idx, error=f"unexpected number of rounds (is {num_scenarios}, should be {expected_num_scenarios_per_session})")
+            _log_error(
+                model,
+                language,
+                session_idx,
+                error=f"unexpected number of rounds (is {num_scenarios}, should be {expected_num_scenarios_per_session})"
+            )
             erroneous_sessions.append(session_idx)
             continue
         unexpected_answers = [answer for answer in answers if answer not in expected_answers]
@@ -93,13 +98,21 @@ def _validate_results() -> None:
             continue
         for language in get_available_languages():
             erroneous_sessions = _validate_result(model, language)
-            if erroneous_sessions is not None:
+            if erroneous_sessions is None:
+                print(f"model {model}, language {language}: valid")
+            else:
                 total_erroneous_sessions += erroneous_sessions
                 if erroneous_sessions:
-                    rerun_arguments.append(f"with model_name={model} language={language} session_indices={','.join([str(session) for session in erroneous_sessions])}")
+                    rerun_arguments.append(
+                        f"with model_name={model} language={language} session_indices="
+                        f"{','.join([str(session) for session in erroneous_sessions])}"
+                    )
     if total_erroneous_sessions:
         rerun_arguments_str = '\n'.join(rerun_arguments)
-        print(f"found {len(total_erroneous_sessions)} erroneous sessions\nrerun with the following arguments:\n{rerun_arguments_str}")
+        print(
+            f"found {len(total_erroneous_sessions)} erroneous sessions\nrerun with the following arguments:\n"
+            f"{rerun_arguments_str}"
+        )
     else:
         print("all results are valid")
 
