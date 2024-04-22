@@ -140,26 +140,6 @@ PlotAndSave.Split(plotdata, AttrLabel, F, filename)
 ### all data
 load("plotdatamain.rdata")
 
-### First session only
-#### First load data
-pt = proc.time()
-profiles.FF <- fread(input = "SharedResponsesFullFirstSessions.csv")
-proc.time() - pt
-profiles.FF <- PreprocessProfiles(profiles.FF)
-
-Coeffs.main.FF <- GetMainEffectSizes(profiles.FF, T, 9)
-plotdata.main.FF <- GetPlotData(Coeffs.main.FF, T, 9)
-
-
-### Combine all
-plotdata.main.alldatasets <- rbind(cbind(plotdata.main, Attribute = "all data"),
-                                   cbind(plotdata.main.FF, Attribute = "full first-session data"),
-)
-# Save it
-save(plotdata.main.alldatasets, file = "plotdataSIRobustExternalAllDatasets.rdata")
-# Plot it
-PlotAndSave.Split(plotdata.main.alldatasets, "Dataset", F, filename)
-
 
 # Supplemential Information Figures
 ## Fig S3 (same as Fig 2 (a) w/ confidence intervals)
