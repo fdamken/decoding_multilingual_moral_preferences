@@ -25,11 +25,9 @@ profiles <- fread(input = "SharedResponses.csv")
 proc.time() - pt
 
 pt = proc.time()
-profiles.S <- fread(input = "SharedResponsesSurvey.csv")
 proc.time() - pt
 
 profiles <- PreprocessProfiles(profiles)
-profiles.S <- PreprocessProfiles(profiles.S)
 
 
 # Main Figure 2 - (a)
@@ -142,10 +140,6 @@ PlotAndSave.Split(plotdata, AttrLabel, F, filename)
 ### all data
 load("plotdatamain.rdata")
 
-### Survey takers responses only
-Coeffs.main.S <- GetMainEffectSizes(profiles.S, T, 9)
-plotdata.main.S <- GetPlotData(Coeffs.main.S, T, 9)
-
 ### First session only
 #### First load data
 pt = proc.time()
@@ -160,53 +154,11 @@ plotdata.main.FF <- GetPlotData(Coeffs.main.FF, T, 9)
 ### Combine all
 plotdata.main.alldatasets <- rbind(cbind(plotdata.main, Attribute = "all data"),
                                    cbind(plotdata.main.FF, Attribute = "full first-session data"),
-                                   cbind(plotdata.main.S, Attribute = "survey-only data"))
+)
 # Save it
 save(plotdata.main.alldatasets, file = "plotdataSIRobustExternalAllDatasets.rdata")
 # Plot it
 PlotAndSave.Split(plotdata.main.alldatasets, "Dataset", F, filename)
-
-
-## Extended Data Fig 3 (a-f)
-# Demographics
-profiles.S <- AddUserColumns(profiles.S)
-r <- 9
-savedata <- T
-plotdata.2.c <- NULL
-for (u in names(User.all)) {
-  vals <- User.all[u][[1]]
-  Coeffs <- GetEffectSizes.Inter.Others(profiles.S, r, profiles.S[, .SD, .SDcols = u], vals)
-  plotdata <- GetPlotData.Inter.Others(Coeffs, c("default", "nonDefault"), T, T)
-  plotdata <- plotdata[, c(1:3)] %>%
-    spread(Attribute, Estimates) %>%
-    mutate(UserAttribute = gsub("User", "User's ", u),
-           Group1 = gsub(" ", "\n ", paste0(toupper(substring(vals[1], 1, 1)), substring(vals[1], 2))),
-           Group2 = gsub(" ", "\n ", paste0(toupper(substring(vals[2], 1, 1)), substring(vals[2], 2))),
-           Difference = nonDefault - default)
-  plotdata.2.c <- rbind(plotdata.2.c, plotdata)
-
-  if (savedata) {
-    plotdata <- GetPlotData.Inter.Others(Coeffs, vals, F, T)
-    var.name <- paste("plotdata", u, sep = ".")
-    assign(var.name, plotdata)
-  }
-}
-
-## Save them
-save(plotdata.UserGender, file = "plotdataUserGender.rdata")
-save(plotdata.UserAge, file = "plotdataUserAge.rdata")
-save(plotdata.UserPolitical, file = "plotdataUserPolitical.rdata")
-save(plotdata.UserReligious, file = "plotdataUserReligious.rdata")
-save(plotdata.UserIncome, file = "plotdataUserIncome.rdata")
-save(plotdata.UserEducation, file = "plotdataUserEducation.rdata")
-
-## Plot them
-PlotAndSave.Split(plotdata.UserGender, "User Gender", F, "Inter")
-PlotAndSave.Split(plotdata.UserAge, "User Age", F, "Inter")
-PlotAndSave.Split(plotdata.UserPolitical, "User Political Views", F, "Inter")
-PlotAndSave.Split(plotdata.UserReligious, "User Religious Views", F, "Inter")
-PlotAndSave.Split(plotdata.UserIncome, "User Income", F, "Inter")
-PlotAndSave.Split(plotdata.UserEducation, "User Education", F, "Inter")
 
 
 # Supplemential Information Figures
