@@ -57,39 +57,34 @@ def compute_number_of_characters(tiles):
 
 
 def determine_attribute_level(scenario_type, number_of_characters, number_of_characters_other):
+    existing_character_types = {key for key, value in number_of_characters.items() if value > 0}
     match scenario_type:
         case "Utilitarian":
             if sum(number_of_characters.values()) < sum(number_of_characters_other.values()):
                 return "Less"
             return "More"
         case "Gender":
-            if any(key in {"Man", "OldMan", "Boy", "LargeMan", "MaleExecutive", "MaleAthlete", "MaleDoctor"} for key in number_of_characters.keys()):
+            if any(key in {"Man", "OldMan", "Boy", "LargeMan", "MaleExecutive", "MaleAthlete", "MaleDoctor"} for key in existing_character_types):
                 return "Male"
-            if any(key in {"Woman", "OldWoman", "Girl", "LargeWoman", "FemaleExecutive", "FemaleAthlete", "FemaleDoctor"} for key in number_of_characters.keys()):
+            if any(key in {"Woman", "OldWoman", "Girl", "LargeWoman", "FemaleExecutive", "FemaleAthlete", "FemaleDoctor"} for key in existing_character_types):
                 return "Female"
             assert False, f"unexpected gender scenario: {number_of_characters}"
         case "Fitness":
-            if any(key in {"FemaleAthlete", "MaleAthlete"} for key in number_of_characters.keys()):
+            if any(key in {"FemaleAthlete", "MaleAthlete"} for key in existing_character_types):
                 return "Fit"
-            if any(key in {"LargeWoman", "LargeMan"} for key in number_of_characters.keys()):
-                return "Fat"
-            assert False, f"unexpected fitness scenario: {number_of_characters}"
+            return "Fat"
         case "Age":
-            if any(key in {"Boy", "Girl"} for key in number_of_characters.keys()):
+            if any(key in {"Boy", "Girl"} for key in existing_character_types):
                 return "Young"
-            if any(key in {"OldMan", "OldWoman"} for key in number_of_characters.keys()):
-                return "Old"
-            assert False, f"unexpected age scenario: {number_of_characters}"
+            return "Old"
         case "Social Status":
-            if any(key in {"MaleExecutive", "FemaleExecutive"} for key in number_of_characters.keys()):
+            if any(key in {"MaleExecutive", "FemaleExecutive"} for key in existing_character_types):
                 return "High"
-            if any(key in {"Homeless"} for key in number_of_characters.keys()):
-                return "Low"
-            assert False, f"unexpected social status scenario: {number_of_characters}"
+            return "Low"
         case "Species":
-            if all(key not in {"Dog", "Cat"} for key in number_of_characters.keys()):
+            if all(key not in {"Dog", "Cat"} for key in existing_character_types):
                 return "Hoomans"
-            if any(key in {"Dog", "Cat"} for key in number_of_characters.keys()):
+            if any(key in {"Dog", "Cat"} for key in existing_character_types):
                 return "Pets"
             assert False, f"unexpected species scenario: {number_of_characters}"
         case "Random":
@@ -129,7 +124,6 @@ def prepare_round(responde_id, extended_session_id, user_id, language, round_idx
         "UserID": user_id,
         "ScenarioOrder": str(round_idx + 1),
         "PedPed": 1 if barrier == -1 else 0,
-        "Barrier": 0 if barrier == -1 else 1,
         "Template": "llm",
         "DescriptionShown": 1,
         "UserCountry3": language,  # exploit the country-handling of the MM code
@@ -168,6 +162,7 @@ def prepare_round(responde_id, extended_session_id, user_id, language, round_idx
         outcomes[outcome_idx] |= number_of_characters[outcome_idx]
         attribute_level = determine_attribute_level(scenario_type, number_of_characters[outcome_idx], number_of_characters[1 - outcome_idx])
         outcomes[outcome_idx] |= {
+            "Barrier": 1 if barrier == outcome_idx else 0,
             "AttributeLevel": attribute_level,
             "Intervention": outcome_idx,  # outcome 1 is always the swerving one
             "Saved": 1 if answer == outcome_idx else 0,
@@ -181,8 +176,10 @@ def prepare_round(responde_id, extended_session_id, user_id, language, round_idx
 def prepare(language, data):
     rows = []
     for session in data:
+        session_id = str(uuid4())
+        user_id = str(uuid4())
         for round_idx, round in enumerate(session["rounds"]):
-            rows += prepare_round(str(uuid4()), str(uuid4()), str(uuid4()), language, round_idx, round)
+            rows += prepare_round(str(uuid4()), session_id, user_id, language, round_idx, round)
     return rows
 
 
