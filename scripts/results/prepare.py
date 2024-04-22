@@ -4,6 +4,8 @@ from csv import DictWriter
 from typing import Final
 from uuid import uuid4
 
+import pandas as pd
+
 import path_util
 
 TILE_TYPES: Final[list[tuple[str, str]]] = [
@@ -64,9 +66,15 @@ def determine_attribute_level(scenario_type, number_of_characters, number_of_cha
                 return "Less"
             return "More"
         case "Gender":
-            if any(key in {"Man", "OldMan", "Boy", "LargeMan", "MaleExecutive", "MaleAthlete", "MaleDoctor"} for key in existing_character_types):
+            if any(
+                key in {"Man", "OldMan", "Boy", "LargeMan", "MaleExecutive", "MaleAthlete", "MaleDoctor"} for key in
+                existing_character_types
+            ):
                 return "Male"
-            if any(key in {"Woman", "OldWoman", "Girl", "LargeWoman", "FemaleExecutive", "FemaleAthlete", "FemaleDoctor"} for key in existing_character_types):
+            if any(
+                key in {"Woman", "OldWoman", "Girl", "LargeWoman", "FemaleExecutive", "FemaleAthlete", "FemaleDoctor"} for key in
+                existing_character_types
+            ):
                 return "Female"
             assert False, f"unexpected gender scenario: {number_of_characters}"
         case "Fitness":
@@ -99,6 +107,7 @@ def prepare_round(responde_id, extended_session_id, user_id, language, round_idx
     crossing_signal = scenario["options"]["crossing_signal"]
     barrier = scenario["options"]["barrier"]
     tiles = scenario["tiles"]
+    left_right_swapped = scenario["_id"] % 2 == 0
     answer = round["answer"]
     if scenario_type_idx in {0, 1}:
         scenario_type = "Utilitarian"
@@ -116,8 +125,14 @@ def prepare_round(responde_id, extended_session_id, user_id, language, round_idx
         scenario_type = "Random"
     else:
         assert False, f"unknown scenario type index: {scenario_type_idx}"
-    default_choice = {"Gender": "Male", "Fitness": "Fit", "Age": "Young", "Social Status": "High", "Species": "Hoomans", "Utilitarian": "More", "Random": None}[scenario_type]
-    non_default_choice = {"Gender": "Female", "Fitness": "Fat", "Age": "Old", "Social Status": "Old", "Species": "Pets", "Utilitarian": "Less", "Random": None}[scenario_type]
+    default_choice = {
+        "Gender": "Male", "Fitness": "Fit", "Age": "Young", "Social Status": "High", "Species": "Hoomans", "Utilitarian": "More",
+        "Random": None
+    }[scenario_type]
+    non_default_choice = {
+        "Gender": "Female", "Fitness": "Fat", "Age": "Old", "Social Status": "Old", "Species": "Pets", "Utilitarian": "Less",
+        "Random": None
+    }[scenario_type]
     shared_info = {
         "ResponseID": responde_id,
         "ExtendedSessionID": extended_session_id,
@@ -160,13 +175,18 @@ def prepare_round(responde_id, extended_session_id, user_id, language, round_idx
             assert False, f"unexpected barrier value: {barrier}"
         outcomes[outcome_idx] |= shared_info
         outcomes[outcome_idx] |= number_of_characters[outcome_idx]
-        attribute_level = determine_attribute_level(scenario_type, number_of_characters[outcome_idx], number_of_characters[1 - outcome_idx])
+        attribute_level = determine_attribute_level(
+            scenario_type,
+            number_of_characters[outcome_idx],
+            number_of_characters[1 - outcome_idx]
+        )
         outcomes[outcome_idx] |= {
             "Barrier": 1 if barrier == outcome_idx else 0,
             "AttributeLevel": attribute_level,
             "Intervention": outcome_idx,  # outcome 1 is always the swerving one
             "Saved": 1 if answer == outcome_idx else 0,
-            "LeftHand": 1 - outcome_idx,
+            # usually 0 is left, but if left/right are swapped, 0 is right
+            "LeftHand": outcome_idx if left_right_swapped else (1 - outcome_idx),
             "CrossingSignal": crossing_signal_int,
             "DefaultChoiceIsOmission": outcome_idx if attribute_level == default_choice else 1 - outcome_idx,
         }
@@ -183,6 +203,20 @@ def prepare(language, data):
     return rows
 
 
+def _validate(csv_file_name):
+    df = pd.read_csv(csv_file_name)
+    # we exclude "Age", "Fitness", "Social Status", "Species", "Gender" because we have too little data
+    characters = ["OldMan", "OldWoman", "Boy", "Girl", "LargeMan", "LargeWoman", "MaleAthlete", "FemaleAthlete", "MaleDoctor",
+                  "FemaleDoctor", "MaleExecutive", "FemaleExecutive", "Pregnant", "Stroller", "Homeless", "Criminal", "Dog",
+                  "Cat"]
+    df_filtered = df.loc[
+        (df["ScenarioType"] == "Random") & (df["ScenarioTypeStrict"] == "Random") & (df["NumberOfCharacters"] == 1)]
+    relevant_columns_sum = df_filtered[characters].sum()
+    missing_characters = list(relevant_columns_sum[relevant_columns_sum == 0].index)
+    if missing_characters:
+        print(f"missing characters in {csv_file_name.name}: {', '.join(missing_characters)}")
+
+
 def main():
     if path_util.prepared_experiment_results_dir.exists():
         shutil.rmtree(path_util.prepared_experiment_results_dir)
@@ -195,18 +229,25 @@ def main():
                 data = json.load(f)
                 rows += prepare(file_path.name.split(".")[0], data)
 
-        with open(path_util.prepared_experiment_results_dir / f"{model.name}.csv", "w") as f:
+        csv_file_name = path_util.prepared_experiment_results_dir / f"{model.name}.csv"
+        with open(csv_file_name, "w") as f:
             csv = DictWriter(
                 f,
-                ["ResponseID", "ExtendedSessionID", "UserID", "ScenarioOrder", "Intervention", "PedPed", "Barrier", "CrossingSignal", "AttributeLevel", "ScenarioTypeStrict",
-                 "ScenarioType", "DefaultChoice", "NonDefaultChoice", "DefaultChoiceIsOmission", "NumberOfCharacters", "DiffNumberOFCharacters", "Saved", "Template",
-                 "DescriptionShown", "LeftHand", "UserCountry3", "Man", "Woman", "Pregnant", "Stroller", "OldMan", "OldWoman", "Boy", "Girl", "Homeless", "LargeWoman", "LargeMan",
-                 "Criminal", "MaleExecutive", "FemaleExecutive", "FemaleAthlete", "MaleAthlete", "FemaleDoctor", "MaleDoctor", "Dog", "Cat"
+                ["ResponseID", "ExtendedSessionID", "UserID", "ScenarioOrder", "Intervention", "PedPed", "Barrier",
+                 "CrossingSignal", "AttributeLevel", "ScenarioTypeStrict",
+                 "ScenarioType", "DefaultChoice", "NonDefaultChoice", "DefaultChoiceIsOmission", "NumberOfCharacters",
+                 "DiffNumberOFCharacters", "Saved", "Template",
+                 "DescriptionShown", "LeftHand", "UserCountry3", "Man", "Woman", "Pregnant", "Stroller", "OldMan", "OldWoman",
+                 "Boy", "Girl", "Homeless", "LargeWoman", "LargeMan",
+                 "Criminal", "MaleExecutive", "FemaleExecutive", "FemaleAthlete", "MaleAthlete", "FemaleDoctor", "MaleDoctor",
+                 "Dog", "Cat"
                  ]
             )
             csv.writeheader()
             for row in rows:
                 csv.writerow(row)
+
+        _validate(csv_file_name)
 
 
 if __name__ == "__main__":
