@@ -2,8 +2,8 @@ from logging import Logger
 from typing import Callable
 
 from experiment import ex
-from .dummy import DummyModel
 from .google import GoogleModel
+from .mock import MockModel
 from .model import Model
 from .mpt import MPTModel
 from .openai import OpenAIModel
@@ -40,6 +40,14 @@ def _register_google_model(model_name: str) -> None:
         return GoogleModel(model_name)
 
 
+for _model_name in GoogleModel.SUPPORTED_MODELS:
+    _register_google_model(_model_name)
+
+
+@model_maker("mock")
+def _make_mock_model() -> MockModel:
+    return MockModel()
+
 
 def _register_mpt_model(model_name: str) -> None:
     @model_maker(model_name)
@@ -47,6 +55,10 @@ def _register_mpt_model(model_name: str) -> None:
     def make_mpt_model(_log: Logger) -> MPTModel:
         _log.debug(f"creating MPT model '{model_name}'")
         return MPTModel(model_name)
+
+
+for _model_name in MPTModel.SUPPORTED_MODELS:
+    _register_mpt_model(_model_name)
 
 
 def _register_openai_model(model_name: str) -> None:
@@ -57,6 +69,10 @@ def _register_openai_model(model_name: str) -> None:
         return OpenAIModel(model_name)
 
 
+for _model_name in OpenAIModel.SUPPORTED_MODELS:
+    _register_openai_model(_model_name)
+
+
 def _register_transformers_model(model_name: str) -> None:
     @model_maker(model_name)
     @ex.capture
@@ -65,12 +81,6 @@ def _register_transformers_model(model_name: str) -> None:
         return TransformersModel(model_name)
 
 
-for _model_name in GoogleModel.SUPPORTED_MODELS:
-    _register_google_model(_model_name)
-for _model_name in MPTModel.SUPPORTED_MODELS:
-    _register_mpt_model(_model_name)
-for _model_name in OpenAIModel.SUPPORTED_MODELS:
-    _register_openai_model(_model_name)
 for _model_name in TransformersModel.SUPPORTED_MODELS:
     _register_transformers_model(_model_name)
 
