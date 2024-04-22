@@ -5,6 +5,7 @@
 ##############
 
 # First, run all of MMFunctionsShared.R
+source(file = "MMFunctionsShared.R")
 # Then,  follow below.
 
 # Set up
