@@ -237,7 +237,7 @@ PlotAndSave <- function(plotdata.main, isMainFig, filename, plotdata.Util) {
             legend.text = element_text(size = 8),
             panel.border = element_rect(colour = "black", fill = NA, size = 1.5))
 
-    ggsave(file = paste0(filename, ".pdf"), width = 12, height = 6)
+    ggsave(file = paste0(filename, ".pdf"), width = 12, height = 6, device = cairo_pdf)
   }
   else {
     gg <- ggplot(plotdata.main, aes(Label, Estimates)) +
@@ -257,7 +257,7 @@ PlotAndSave <- function(plotdata.main, isMainFig, filename, plotdata.Util) {
             aspect.ratio = 1 / 2, axis.text.y = element_text(hjust = 0, color = "black"),
             legend.text = element_text(size = 8),
             panel.border = element_rect(colour = "black", fill = NA, size = 1.5))
-    ggsave(file = paste0(filename, "SI.pdf"), width = 12, height = 6)
+    ggsave(file = paste0(filename, "SI.pdf"), width = 12, height = 6, device = cairo_pdf)
   }
 }
 
@@ -347,7 +347,7 @@ PlotAndSave.Characters <- function(plotdata, charType, isMainFig, filename) {
             legend.position = "none", axis.title.x = element_text(size = 20),
             panel.border = element_rect(colour = "black", fill = NA, size = 1.5))
 
-    ggsave(file = paste0(filename, charType, ".pdf"), width = 9, height = 9)
+    ggsave(file = paste0(filename, charType, ".pdf"), width = 9, height = 9, device = cairo_pdf)
 
   } else {
     gg <- ggplot(plotdata, aes(CharacterType, Estimates, color = `No. of Characters`, fill = `No. of Characters`)) +
@@ -367,7 +367,7 @@ PlotAndSave.Characters <- function(plotdata, charType, isMainFig, filename) {
             aspect.ratio = 1 / 1, axis.text.y = element_text(hjust = 0, color = "black"),
             legend.text = element_text(size = 6), legend.position = "right",
             panel.border = element_rect(colour = "black", fill = NA, size = 1.5))
-    ggsave(file = paste0(filename, charType, "SI.pdf"), width = 9, height = 9)
+    ggsave(file = paste0(filename, charType, "SI.pdf"), width = 9, height = 9, device = cairo_pdf)
   }
 
 }
@@ -534,9 +534,9 @@ PlotAndSave.Split <- function(plotdata, AttrLabel, isMainFig, filename) {
           panel.border = element_rect(colour = "black", fill = NA, size = 1.5))
 
   if (isMainFig)
-    ggsave(file = paste0(filename, gsub(" ", "", AttrLabel), ".pdf"), width = 12, height = 6)
+    ggsave(file = paste0(filename, gsub(" ", "", AttrLabel), ".pdf"), width = 12, height = 6, device = cairo_pdf)
   else
-    ggsave(file = paste0(filename, gsub(" ", "", AttrLabel), "SI.pdf"), width = 12, height = 6)
+    ggsave(file = paste0(filename, gsub(" ", "", AttrLabel), "SI.pdf"), width = 12, height = 6, device = cairo_pdf)
 }
 
 ########################################
@@ -736,9 +736,9 @@ PlotAndSave.Split.Order <- function(plotdata, AttrLabel, isMainFig, filename) {
           legend.text = element_text(size = 7),
           panel.border = element_rect(colour = "black", fill = NA, size = 1.5))
   if (isMainFig)
-    ggsave(file = paste0(filename, gsub(" ", "", AttrLabel), ".pdf"), width = 12, height = 9)
+    ggsave(file = paste0(filename, gsub(" ", "", AttrLabel), ".pdf"), width = 12, height = 9, device = cairo_pdf)
   else
-    ggsave(file = paste0(filename, gsub(" ", "", AttrLabel), "SI.pdf"), width = 12, height = 9)
+    ggsave(file = paste0(filename, gsub(" ", "", AttrLabel), "SI.pdf"), width = 12, height = 9, device = cairo_pdf)
 
 }
 
@@ -816,9 +816,9 @@ PlotAndSave.Survey <- function(plotdata.2.c, AttrLabel, isMainFig, filename) {
 
 
   if (isMainFig)
-    ggsave(gg, file = paste0(filename, gsub(" ", "", AttrLabel), ".pdf"), height = 5, width = 8)
+    ggsave(gg, file = paste0(filename, gsub(" ", "", AttrLabel), ".pdf"), height = 5, width = 8, device = cairo_pdf)
   else
-    ggsave(gg, file = paste0(filename, gsub(" ", "", AttrLabel), "SI.pdf"), height = 5, width = 8)
+    ggsave(gg, file = paste0(filename, gsub(" ", "", AttrLabel), "SI.pdf"), height = 5, width = 8, device = cairo_pdf)
 }
 
 
@@ -855,9 +855,9 @@ PlotAndSave.Survey.old <- function(plotdata.2.c, AttrLabel, isMainFig, filename)
 
 
   if (isMainFig)
-    ggsave(file = paste0(filename, gsub(" ", "", AttrLabel), "OLD.pdf"), width = 12, height = 6)
+    ggsave(file = paste0(filename, gsub(" ", "", AttrLabel), "OLD.pdf"), width = 12, height = 6, device = cairo_pdf)
   else
-    ggsave(gg, file = paste0(filename, gsub(" ", "", AttrLabel), "SIOLD.pdf"), width = 12, height = 6)
+    ggsave(gg, file = paste0(filename, gsub(" ", "", AttrLabel), "SIOLD.pdf"), width = 12, height = 6, device = cairo_pdf)
 }
 
 
