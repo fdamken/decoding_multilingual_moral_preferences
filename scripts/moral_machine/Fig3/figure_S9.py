@@ -1,13 +1,12 @@
+import matplotlib.font_manager as fm
+import matplotlib.patches as mpatches
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-import matplotlib.font_manager as fm
-from sklearn.decomposition import PCA
+from mpl_toolkits.axes_grid1 import make_axes_locatable
 from scipy.cluster import hierarchy as hch
 from scipy.stats import pearsonr
-import matplotlib.patches as mpatches
-from mpl_toolkits.axes_grid1 import make_axes_locatable
+from sklearn.decomposition import PCA
 
 
 def vectorize(df):
@@ -22,10 +21,11 @@ def vectorize(df):
 
     X = df.values[:, 4:].astype(float)
 
-    #Normalize Values
+    # Normalize Values
     X = (X - np.mean(X, axis=0)) / np.std(X, axis=0)
 
     return X
+
 
 def pca_2D(df, savefig=True):
     prefs = df.columns[4:]
@@ -80,32 +80,35 @@ def pca_2D(df, savefig=True):
               "Eastern",
               "Southern"]
 
-
     pca = PCA(n_components=2)
     X2 = pca.fit_transform(X)
 
     grouping = np.array(grouping)
     grouped_X = list()
     for g in np.unique(grouping):
-        grouped_X.append(X2[::-1][grouping==g])
+        grouped_X.append(X2[::-1][grouping == g])
 
     x_min, x_max = np.min(X2), np.max(X2)
 
-    text_font_prop = fm.FontProperties(fname='fonts/RobotoCondensed-Regular.ttf', size=8,
-                              weight='extra bold')
+    text_font_prop = fm.FontProperties(
+        fname='fonts/RobotoCondensed-Regular.ttf', size=8,
+        weight='extra bold'
+    )
     label_font_prop = fm.FontProperties(fname='fonts/RobotoCondensed-Regular.ttf', size=20)
 
-    plt.figure(figsize=(12,12))
+    plt.figure(figsize=(12, 12))
     for j, X_c in enumerate(grouped_X):
-        plt.scatter(X_c[:,0], X_c[:,1], marker='o', s=200, c=colors[j], label=labels[j])
+        plt.scatter(X_c[:, 0], X_c[:, 1], marker='o', s=200, c=colors[j], label=labels[j])
 
     for i, label in enumerate(country_labels):
-        plt.text(X2[i,0]-0.07, X2[i,1]-0.025, label,
-                 fontproperties=text_font_prop, color='white')
+        plt.text(
+            X2[i, 0] - 0.07, X2[i, 1] - 0.025, label,
+            fontproperties=text_font_prop, color='white'
+        )
     plt.xticks(fontproperties=label_font_prop)
     plt.yticks(fontproperties=label_font_prop)
-    plt.xlim(x_min-0.5, x_max+0.5)
-    plt.ylim(x_min-0.5, x_max+0.5)
+    plt.xlim(x_min - 0.5, x_max + 0.5)
+    plt.ylim(x_min - 0.5, x_max + 0.5)
     plt.xlabel("Component 1", fontproperties=label_font_prop)
     plt.ylabel("Component 2", fontproperties=label_font_prop)
     plt.legend(prop=label_font_prop, loc=4)
@@ -122,16 +125,16 @@ def distance_matrix(df, savefig=True):
     Z = hch.linkage(X, method='ward')
 
     N = X.shape[0]
-    distance_matrix = np.zeros((N,N))
+    distance_matrix = np.zeros((N, N))
     for i in range(N):
         for j in range(N):
-            distance_matrix[i,j] = pearsonr(X[i,:], X[j,:])[0]
+            distance_matrix[i, j] = pearsonr(X[i, :], X[j, :])[0]
 
     distance_matrix -= np.eye(N)
 
     label_font_prop = fm.FontProperties(fname='fonts/RobotoCondensed-Regular.ttf', size=7)
 
-    fig, ax = plt.subplots(1,1, figsize=(16,24))
+    fig, ax = plt.subplots(1, 1, figsize=(16, 24))
     ax.grid(False)
 
     divider = make_axes_locatable(ax)
@@ -140,15 +143,19 @@ def distance_matrix(df, savefig=True):
     dax3 = divider.append_axes("top", size="15%", pad=0.0)
 
     hch.set_link_color_palette(["#DDCC77", "#4477AA", "#CC6677"])
-    dnd = hch.dendrogram(Z, ax=dax2, orientation="left",
-                         color_threshold=0.8*np.max(Z[:,2]),
-                         above_threshold_color='#CCCCCC')
-    hch.dendrogram(Z, ax=dax3, orientation="top",
-                   color_threshold=0.80*np.max(Z[:,2]),
-                   above_threshold_color='#808080')
+    dnd = hch.dendrogram(
+        Z, ax=dax2, orientation="left",
+        color_threshold=0.8 * np.max(Z[:, 2]),
+        above_threshold_color='#CCCCCC'
+    )
+    hch.dendrogram(
+        Z, ax=dax3, orientation="top",
+        color_threshold=0.80 * np.max(Z[:, 2]),
+        above_threshold_color='#808080'
+    )
 
     idx = np.array(dnd["leaves"])[::-1]
-    cax = ax.imshow(distance_matrix[idx][:,idx], cmap='PuOr')
+    cax = ax.imshow(distance_matrix[idx][:, idx], cmap='PuOr')
     cbar = plt.colorbar(cax, cax=dax1)
     cbar.ax.tick_params(labelsize=12)
     ax.set_xticks([])
@@ -160,15 +167,13 @@ def distance_matrix(df, savefig=True):
     dax2.set_yticks([])
     dax3.set_xticks([])
     dax3.set_yticks([])
-    dax3.set_xlim(1250,0)
+    dax3.set_xlim(1250, 0)
     if savefig:
         plt.savefig("image/distance_matrix.pdf", format="pdf", bbox_inches='tight')
     plt.show()
 
 
-
 if __name__ == '__main__':
-
     df = pd.read_csv('data/CountryLevelAMCEVals.csv')
     pca_2D(df)
     distance_matrix(df)

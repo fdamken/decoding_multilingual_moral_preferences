@@ -18,24 +18,22 @@ library(multiwayvcov)
 library(data.table)
 
 
-
 # Loading data as a data.table
 pt = proc.time()
-profiles <- fread(input="SharedResponses.csv")
+profiles <- fread(input = "SharedResponses.csv")
 proc.time() - pt
 
 pt = proc.time()
-profiles.S <- fread(input="SharedResponsesSurvey.csv")
+profiles.S <- fread(input = "SharedResponsesSurvey.csv")
 proc.time() - pt
 
 profiles <- PreprocessProfiles(profiles)
 profiles.S <- PreprocessProfiles(profiles.S)
 
 
-
 # Main Figure 2 - (a)
-Coeffs.main <- GetMainEffectSizes(profiles,T,9)
-plotdata.main <- GetPlotData(Coeffs.main,T,9)
+Coeffs.main <- GetMainEffectSizes(profiles, T, 9)
+plotdata.main <- GetPlotData(Coeffs.main, T, 9)
 
 Coeffs.util <- GetMainEffectSizes.Util(profiles)
 plotdata.util <- GetPlotData.Util(Coeffs.util)
@@ -44,20 +42,17 @@ plotdata.util <- GetPlotData.Util(Coeffs.util)
 save(plotdata.main, file = "plotdatamain.rdata")
 save(plotdata.util, file = "plotdatautil.rdata")
 ## Plot them
-PlotAndSave(plotdata.main,T,"MainChangePr",plotdata.util)
-
-
+PlotAndSave(plotdata.main, T, "MainChangePr", plotdata.util)
 
 
 # Main Figure 2 - (b)
 filename <- "Characters"
-Coeffs.characters <- GetMainEffectSizes.Characters(profiles,"Random",1)
-plotdata.characters.all <- GetPlotData.Characters(Coeffs.characters,"Random",1)
+Coeffs.characters <- GetMainEffectSizes.Characters(profiles, "Random", 1)
+plotdata.characters.all <- GetPlotData.Characters(Coeffs.characters, "Random", 1)
 # Save it
 save(plotdata.characters.all, file = "plotdatacharacters.rdata")
 # Plot it
-PlotAndSave.Characters(plotdata.characters.all,"Random",T,filename)
-
+PlotAndSave.Characters(plotdata.characters.all, "Random", T, filename)
 
 
 # Extended Data Figures
@@ -68,27 +63,27 @@ filename <- "RobustnessInternal"
 ## Scenario Order
 r <- 9
 vals <- c(1:13)
-Coeffs <- GetEffectSizes.Inter.Others(profiles,r,profiles$ScenarioOrder,vals)
-plotdata <- GetPlotData.Inter.Others(Coeffs,vals,F,F)
+Coeffs <- GetEffectSizes.Inter.Others(profiles, r, profiles$ScenarioOrder, vals)
+plotdata <- GetPlotData.Inter.Others(Coeffs, vals, F, F)
 AttrLabel <- "Scenario Order"
-plotdata$Label <- factor(plotdata$Label,levels = rev(levels(plotdata$Label)))
-plotdata$Attribute <- rep(factor(c(1:13),levels = c(13:1)),each=r)
+plotdata$Label <- factor(plotdata$Label, levels = rev(levels(plotdata$Label)))
+plotdata$Attribute <- rep(factor(c(1:13), levels = c(13:1)), each = r)
 # Save it
 save(plotdata, file = "plotdataSIRobustInternalScenarioOrder.rdata")
 # Plot it
-PlotAndSave.Split.Order(plotdata,AttrLabel,F,filename)
+PlotAndSave.Split.Order(plotdata, AttrLabel, F, filename)
 
 ## ED Fig 1 (b)
 ## Profile Order
 AttrLabel <- "Profile is on left"
 r <- 9
 vals <- c(0:1)
-Coeffs <- GetEffectSizes.Inter.Others(profiles,r,profiles$LeftHand,vals)
-plotdata <- GetPlotData.Inter.Others(Coeffs,vals,F,F)
+Coeffs <- GetEffectSizes.Inter.Others(profiles, r, profiles$LeftHand, vals)
+plotdata <- GetPlotData.Inter.Others(Coeffs, vals, F, F)
 # Save it
 save(plotdata, file = "plotdataSIRobustInternalProfileOrder.rdata")
 # Plot it
-PlotAndSave.Split(plotdata,AttrLabel,F,filename)
+PlotAndSave.Split(plotdata, AttrLabel, F, filename)
 
 
 ## ED Fig 1 (c)
@@ -102,17 +97,17 @@ load("plotdatamain.rdata")
 ### main effects using actual distribution
 #Coeffs.main.AW <- GetMainEffectSizesActualWeights(profiles[sample(c(1:70000000),100000),],F,9)
 
-Coeffs.main.AW <- GetMainEffectSizesActualWeights(profiles,F,9)
-plotdata.main.AW <- GetPlotData(Coeffs.main.AW,T,9)
+Coeffs.main.AW <- GetMainEffectSizesActualWeights(profiles, F, 9)
+plotdata.main.AW <- GetPlotData(Coeffs.main.AW, T, 9)
 
 ### Combine all
-plotdata.main.TheoActu <- rbind(cbind(plotdata.main,Attribute="Theortical Distribution"),
-                                cbind(plotdata.main.AW,Attribute="Actual Distribution"))
+plotdata.main.TheoActu <- rbind(cbind(plotdata.main, Attribute = "Theortical Distribution"),
+                                cbind(plotdata.main.AW, Attribute = "Actual Distribution"))
 
 # Save it
 save(plotdata.main.TheoActu, file = "plotdataSIRobustTheoActu.rdata")
 # Plot it
-PlotAndSave.Split(plotdata.main.TheoActu,"Actual",F,filename)
+PlotAndSave.Split(plotdata.main.TheoActu, "Actual", F, filename)
 
 ## Extended Data Fig 2
 ## ED Fig 2 (a)
@@ -122,24 +117,24 @@ filename <- "RobustnessExternal"
 AttrLabel <- "Description is seen"
 r <- 9
 vals <- c(0:1)
-Coeffs <- GetEffectSizes.Inter.Others(profiles,r,profiles$DescriptionShown,vals)
-plotdata <- GetPlotData.Inter.Others(Coeffs,vals,F,F)
+Coeffs <- GetEffectSizes.Inter.Others(profiles, r, profiles$DescriptionShown, vals)
+plotdata <- GetPlotData.Inter.Others(Coeffs, vals, F, F)
 # Save it
 save(plotdata, file = "plotdataSIRobustExternalDescription.rdata")
 # Plot it
-PlotAndSave.Split(plotdata,AttrLabel,F,filename)
+PlotAndSave.Split(plotdata, AttrLabel, F, filename)
 
 ## ED Fig 2 (b)
 ## Platform used
 AttrLabel <- "Template"
 r <- 9
-vals <- c("Desktop","Mobile")
-Coeffs <- GetEffectSizes.Inter.Others(profiles,r,profiles$Template,vals)
-plotdata <- GetPlotData.Inter.Others(Coeffs,vals,F,F)
+vals <- c("Desktop", "Mobile")
+Coeffs <- GetEffectSizes.Inter.Others(profiles, r, profiles$Template, vals)
+plotdata <- GetPlotData.Inter.Others(Coeffs, vals, F, F)
 # Save it
 save(plotdata, file = "plotdataSIRobustExternalTemplate.rdata")
 # Plot it
-PlotAndSave.Split(plotdata,AttrLabel,F,filename)
+PlotAndSave.Split(plotdata, AttrLabel, F, filename)
 
 ## ED Fig 2 (c)
 ## Dataset used
@@ -147,28 +142,28 @@ PlotAndSave.Split(plotdata,AttrLabel,F,filename)
 load("plotdatamain.rdata")
 
 ### Survey takers responses only
-Coeffs.main.S <- GetMainEffectSizes(profiles.S,T,9)
-plotdata.main.S <- GetPlotData(Coeffs.main.S,T,9)
+Coeffs.main.S <- GetMainEffectSizes(profiles.S, T, 9)
+plotdata.main.S <- GetPlotData(Coeffs.main.S, T, 9)
 
 ### First session only
 #### First load data
 pt = proc.time()
-profiles.FF <- fread(input="SharedResponsesFullFirstSessions.csv")
+profiles.FF <- fread(input = "SharedResponsesFullFirstSessions.csv")
 proc.time() - pt
 profiles.FF <- PreprocessProfiles(profiles.FF)
 
-Coeffs.main.FF <- GetMainEffectSizes(profiles.FF,T,9)
-plotdata.main.FF <- GetPlotData(Coeffs.main.FF,T,9)
+Coeffs.main.FF <- GetMainEffectSizes(profiles.FF, T, 9)
+plotdata.main.FF <- GetPlotData(Coeffs.main.FF, T, 9)
 
 
 ### Combine all
-plotdata.main.alldatasets <- rbind(cbind(plotdata.main,Attribute="all data"),
-                                   cbind(plotdata.main.FF,Attribute="full first-session data"),
-                                   cbind(plotdata.main.S,Attribute="survey-only data"))
+plotdata.main.alldatasets <- rbind(cbind(plotdata.main, Attribute = "all data"),
+                                   cbind(plotdata.main.FF, Attribute = "full first-session data"),
+                                   cbind(plotdata.main.S, Attribute = "survey-only data"))
 # Save it
 save(plotdata.main.alldatasets, file = "plotdataSIRobustExternalAllDatasets.rdata")
 # Plot it
-PlotAndSave.Split(plotdata.main.alldatasets,"Dataset",F,filename)
+PlotAndSave.Split(plotdata.main.alldatasets, "Dataset", F, filename)
 
 
 ## Extended Data Fig 3 (a-f)
@@ -177,21 +172,22 @@ profiles.S <- AddUserColumns(profiles.S)
 r <- 9
 savedata <- T
 plotdata.2.c <- NULL
-for(u in names(User.all)){
+for (u in names(User.all)) {
   vals <- User.all[u][[1]]
-  Coeffs <- GetEffectSizes.Inter.Others(profiles.S,r,profiles.S[,.SD,.SDcols=u],vals)
-  plotdata <- GetPlotData.Inter.Others(Coeffs,c("default","nonDefault"),T,T)
-  plotdata <- plotdata[,c(1:3)] %>% spread(Attribute,Estimates) %>% 
-    mutate(UserAttribute = gsub("User","User's ",u),
-           Group1 = gsub(" ","\n ",paste0(toupper(substring(vals[1],1,1)),substring(vals[1],2))),
-           Group2 = gsub(" ","\n ",paste0(toupper(substring(vals[2],1,1)),substring(vals[2],2))),
+  Coeffs <- GetEffectSizes.Inter.Others(profiles.S, r, profiles.S[, .SD, .SDcols = u], vals)
+  plotdata <- GetPlotData.Inter.Others(Coeffs, c("default", "nonDefault"), T, T)
+  plotdata <- plotdata[, c(1:3)] %>%
+    spread(Attribute, Estimates) %>%
+    mutate(UserAttribute = gsub("User", "User's ", u),
+           Group1 = gsub(" ", "\n ", paste0(toupper(substring(vals[1], 1, 1)), substring(vals[1], 2))),
+           Group2 = gsub(" ", "\n ", paste0(toupper(substring(vals[2], 1, 1)), substring(vals[2], 2))),
            Difference = nonDefault - default)
-  plotdata.2.c <- rbind(plotdata.2.c,plotdata)
-  
-  if(savedata){
-    plotdata <- GetPlotData.Inter.Others(Coeffs,vals,F,T)
-    var.name <- paste("plotdata",u,sep=".")
-    assign(var.name,plotdata)
+  plotdata.2.c <- rbind(plotdata.2.c, plotdata)
+
+  if (savedata) {
+    plotdata <- GetPlotData.Inter.Others(Coeffs, vals, F, T)
+    var.name <- paste("plotdata", u, sep = ".")
+    assign(var.name, plotdata)
   }
 }
 
@@ -204,123 +200,114 @@ save(plotdata.UserIncome, file = "plotdataUserIncome.rdata")
 save(plotdata.UserEducation, file = "plotdataUserEducation.rdata")
 
 ## Plot them
-PlotAndSave.Split(plotdata.UserGender,"User Gender",F,"Inter")
-PlotAndSave.Split(plotdata.UserAge,"User Age",F,"Inter")
-PlotAndSave.Split(plotdata.UserPolitical,"User Political Views",F,"Inter")
-PlotAndSave.Split(plotdata.UserReligious,"User Religious Views",F,"Inter")
-PlotAndSave.Split(plotdata.UserIncome,"User Income",F,"Inter")
-PlotAndSave.Split(plotdata.UserEducation,"User Education",F,"Inter")
+PlotAndSave.Split(plotdata.UserGender, "User Gender", F, "Inter")
+PlotAndSave.Split(plotdata.UserAge, "User Age", F, "Inter")
+PlotAndSave.Split(plotdata.UserPolitical, "User Political Views", F, "Inter")
+PlotAndSave.Split(plotdata.UserReligious, "User Religious Views", F, "Inter")
+PlotAndSave.Split(plotdata.UserIncome, "User Income", F, "Inter")
+PlotAndSave.Split(plotdata.UserEducation, "User Education", F, "Inter")
 
 
-# Supplemential Information Figures 
+# Supplemential Information Figures
 ## Fig S3 (same as Fig 2 (a) w/ confidence intervals)
-Coeffs.main.SI <- GetMainEffectSizes(profiles,F,9)
-plotdata.main.SI <- GetPlotData(Coeffs.main.SI,F,9)
-PlotAndSave(plotdata.main.SI,F,"MainChangePr",plotdata.util)
+Coeffs.main.SI <- GetMainEffectSizes(profiles, F, 9)
+plotdata.main.SI <- GetPlotData(Coeffs.main.SI, F, 9)
+PlotAndSave(plotdata.main.SI, F, "MainChangePr", plotdata.util)
 
 ## Fig S4
 ## Fig S4 (a)
 ##Inter Attr
 filename <- "Inter"
 ## Interventionism
-Attr="Intervention"
-r<-7
-if (Attr=="Intervention") r <- 8
-Coeffs <- GetEffectSizes.Inter.Att(profiles,r,Attr)
-plotdata <- GetPlotData.Inter.Attr(Coeffs,F,r,Attr)
+Attr = "Intervention"
+r <- 7
+if (Attr == "Intervention") r <- 8
+Coeffs <- GetEffectSizes.Inter.Att(profiles, r, Attr)
+plotdata <- GetPlotData.Inter.Attr(Coeffs, F, r, Attr)
 # Save it
 save(plotdata, file = "plotdataSIInterIntervention.rdata")
 # Plot it
-PlotAndSave.Split(plotdata,Attr,F,filename)
+PlotAndSave.Split(plotdata, Attr, F, filename)
 
 ## Fig S4 (b)
 ## Relation to AV
-Attr="Barrier"
-r<-7
-if (Attr=="Intervention") r <- 8
-Coeffs <- GetEffectSizes.Inter.Att(profiles,r,Attr)
-plotdata <- GetPlotData.Inter.Attr(Coeffs,F,r,Attr)
+Attr = "Barrier"
+r <- 7
+if (Attr == "Intervention") r <- 8
+Coeffs <- GetEffectSizes.Inter.Att(profiles, r, Attr)
+plotdata <- GetPlotData.Inter.Attr(Coeffs, F, r, Attr)
 # Save it
 save(plotdata, file = "plotdataSIInterRelation.rdata")
 # Plot it
-PlotAndSave.Split(plotdata,Attr,F,filename)
+PlotAndSave.Split(plotdata, Attr, F, filename)
 
 ## Fig S4 (c)
 ## Legality
-Attr="CrossingSignal"
-r<-7
-if (Attr=="Intervention") r <- 8
-Coeffs <- GetEffectSizes.Inter.Att(profiles,r,Attr)
-plotdata <- GetPlotData.Inter.Attr(Coeffs,F,r,Attr)
+Attr = "CrossingSignal"
+r <- 7
+if (Attr == "Intervention") r <- 8
+Coeffs <- GetEffectSizes.Inter.Att(profiles, r, Attr)
+plotdata <- GetPlotData.Inter.Attr(Coeffs, F, r, Attr)
 # Save it
 save(plotdata, file = "plotdataSIInterLegality.rdata")
 # Plot it
-PlotAndSave.Split(plotdata,Attr,F,filename)
-
+PlotAndSave.Split(plotdata, Attr, F, filename)
 
 
 ## Fig S5 (a-f)
 #SI Figure Characters effect within dimensions
 filename <- "Characters"
-k=1
+k = 1
 r <- 9
-for(scope in names(characters.all)[-6]){
-  Coeffs.characters <- GetMainEffectSizes.Characters(profiles,scope,k)
-  plotdata.characters <- GetPlotData.Characters(Coeffs.characters,scope,k)
+for (scope in names(characters.all)[-6]) {
+  Coeffs.characters <- GetMainEffectSizes.Characters(profiles, scope, k)
+  plotdata.characters <- GetPlotData.Characters(Coeffs.characters, scope, k)
   # Save them
-  save(plotdata.characters, file = paste0("plotdataSICharacters",scope,".rdata"))
+  save(plotdata.characters, file = paste0("plotdataSICharacters", scope, ".rdata"))
   # Plot them
-  PlotAndSave.Characters(plotdata.characters,scope,F,filename)
+  PlotAndSave.Characters(plotdata.characters, scope, F, filename)
 }
-
-
-
 
 
 ######################
 # Get stratified effect sizes for locations (used elsewhere for cross-country figures)
-r=9
+r = 9
 ###########
 # 1. Countries
 # Use the first function to tinker with the threshold
 # For example, using 2500 records per country as a threshold will result with k countries. Is that enough?
-vals <- GetFilteredList(profiles,"UserCountry3",100)
-k=length(vals)
+vals <- GetFilteredList(profiles, "UserCountry3", 100)
+k = length(vals)
 
 # Use the second function to calculate the effect sizes for each country. This returns a matrix
-Coeffs <- GetEffectSizes.Inter.Others(profiles,r,profiles$UserCountry3,vals)
+Coeffs <- GetEffectSizes.Inter.Others(profiles, r, profiles$UserCountry3, vals)
 
 # Use the third function to prepare the final data frame that you want to save
-finaldata <- GetFinalDF(Coeffs,vals)
+finaldata <- GetFinalDF(Coeffs, vals)
 
 # Save to a csv
 pt = proc.time()
-fwrite(file="CountriesChangePr.csv", x=finaldata, row.names = T)
+fwrite(file = "CountriesChangePr.csv", x = finaldata, row.names = T)
 proc.time() - pt
-
 
 
 ###########
 # 2. Countries [did not read description] (was used to re-produce Extended Data Fig 4)
 ## filter
-profiles.d <- profiles[DescriptionShown=="0",]
+profiles.d <- profiles[DescriptionShown == "0",]
 
 # Use the first function to tinker with the threshold
 # For example, using 2500 records per country as a threshold will result with k countries. Is that enough?
-vals <- GetFilteredList(profiles.d,"UserCountry3",100)
-k=length(vals)
+vals <- GetFilteredList(profiles.d, "UserCountry3", 100)
+k = length(vals)
 
 # Use the second function to calculate the effect sizes for each country. This returns a matrix
-Coeffs <- GetEffectSizes.Inter.Others(profiles.d,r,profiles.d$UserCountry3,vals)
+Coeffs <- GetEffectSizes.Inter.Others(profiles.d, r, profiles.d$UserCountry3, vals)
 
 # Use the third function to prepare the final data frame that you want to save
-finaldata <- GetFinalDF(Coeffs,vals)
+finaldata <- GetFinalDF(Coeffs, vals)
 
 # Save to a csv
 pt = proc.time()
-fwrite(file="CountriesNoDescriptionChangePr.csv", x=finaldata, row.names = T)
+fwrite(file = "CountriesNoDescriptionChangePr.csv", x = finaldata, row.names = T)
 proc.time() - pt
-
-
-
-

@@ -1,245 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 
     <!-- <link rel="stylesheet" href="dendrogram.css" /> -->
 
     <style>
-    body {
-      font-family: 'Roboto Condensed', sans-serif;
-    }
-    .node circle  {
-      fill: #999;
-    }
+        body {
+          font-family: 'Roboto Condensed', sans-serif;
+        }
+        .node circle  {
+          fill: #999;
+        }
 
-    .node circle.cluster-one {
-      fill: #CC6677;
-    }
+        .node circle.cluster-one {
+          fill: #CC6677;
+        }
 
-    .node circle.cluster-two {
-      fill: #4477AA;
-    }
+        .node circle.cluster-two {
+          fill: #4477AA;
+        }
 
-    .node circle.cluster-three {
-      fill: #DDCC77;
-    }
+        .node circle.cluster-three {
+          fill: #DDCC77;
+        }
 
-    .node circle.cluster-four {
-      fill: #2CA25F;
-    }
+        .node circle.cluster-four {
+          fill: #2CA25F;
+        }
 
-    .node text {
-      font-size: 18px;
-      line-height: 1.4;
-    }
+        .node text {
+          font-size: 18px;
+          line-height: 1.4;
+        }
 
-    .culture--islamic {
-      fill: #8c564b;
-    }
+        .culture--islamic {
+          fill: #8c564b;
+        }
 
-    .culture--orthodox {
-      fill: #7f7f7f;
-    }
+        .culture--orthodox {
+          fill: #7f7f7f;
+        }
 
-    .culture--latin-america {
-      fill: #e377c2;
-    }
+        .culture--latin-america {
+          fill: #e377c2;
+        }
 
-    .culture--catholic {
-      fill: #2ca02c;
-    }
+        .culture--catholic {
+          fill: #2ca02c;
+        }
 
-    .culture--english {
-      fill: #9467bd;
-    }
+        .culture--english {
+          fill: #9467bd;
+        }
 
-    .culture--protestant {
-      fill: #bcbd22;
-    }
+        .culture--protestant {
+          fill: #bcbd22;
+        }
 
-    .culture--confucian {
-      fill: #d62728;
-    }
+        .culture--confucian {
+          fill: #d62728;
+        }
 
-    .culture--baltic {
-      fill: #ff7f0e;
-    }
+        .culture--baltic {
+          fill: #ff7f0e;
+        }
 
-    .culture--south-asia {
-      fill: #17becf;
-    }
+        .culture--south-asia {
+          fill: #17becf;
+        }
 
 
-    .node--internal text {
-      text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
-    }
+        .node--internal text {
+          text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
+        }
 
-    .link {
-      fill: none;
-      stroke: #555;
-      stroke-opacity: 0.4;
-      stroke-width: 2.5px;
-    }
+        .link {
+          fill: none;
+          stroke: #555;
+          stroke-opacity: 0.4;
+          stroke-width: 2.5px;
+        }
 
-    .link.cluster-one {
-      stroke: #CC6677;
-    }
+        .link.cluster-one {
+          stroke: #CC6677;
+        }
 
-    .link.cluster-two {
-      stroke: #4477AA;
-    }
+        .link.cluster-two {
+          stroke: #4477AA;
+        }
 
-    .link.cluster-three {
-      stroke: #DDCC77;
-    }
+        .link.cluster-three {
+          stroke: #DDCC77;
+        }
 
-    .link.cluster-four {
-      stroke: #2CA25F;
-    }
+        .link.cluster-four {
+          stroke: #2CA25F;
+        }
 
 
     </style>
-  </head>
-  <body>
+</head>
+<body>
 
-    <svg id="img" width="1200" height="1200"></svg>
+<svg id="img" width="1200" height="1200"></svg>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script>
-      var width = 1000,
-          height = 1000;
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+        integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+    var width = 1000,
+        height = 1000;
 
-      var svg = d3.select("svg"),
-          g = svg.append("g").attr("transform", "translate(" + ((width / 2)+80) +
-                              "," + (height / 2 + 20) + ")"),
-          legend = svg.append("g");
-
-
-      var stratify = d3.stratify()
-                       .parentId(function(d)
-                          { return d.id.substring(0, d.id.lastIndexOf(".")); });
-
-      var cluster = d3.cluster()
-                      .size([360, width / 2 - 120]);
-
-      function project(x, y) {
-        var angle = (x - 90) / 180 * Math.PI, radius = y;
-        return [radius * Math.cos(angle), radius * Math.sin(angle)];
-      }
+    var svg = d3.select("svg"),
+        g = svg.append("g").attr("transform", "translate(" + ((width / 2)+80) +
+                            "," + (height / 2 + 20) + ")"),
+        legend = svg.append("g");
 
 
-      d3.csv("data/dendrogram_Culture.csv", function(error, data) {
-        if (error) throw error;
+    var stratify = d3.stratify()
+                     .parentId(function(d)
+                        { return d.id.substring(0, d.id.lastIndexOf(".")); });
 
-        var root = stratify(data).sort(function(a, b) {
-                        return a.height - b.height || a.id.localeCompare(b.id);
-                      });
+    var cluster = d3.cluster()
+                    .size([360, width / 2 - 120]);
 
-        cluster(root);
+    function project(x, y) {
+      var angle = (x - 90) / 180 * Math.PI, radius = y;
+      return [radius * Math.cos(angle), radius * Math.sin(angle)];
+    }
 
-        var link = g.selectAll(".link")
-                    .data(root.descendants().slice(1))
-                    .enter().append("path")
-                    .attr("d", function(d) {
-                      return "M" + project(d.x, d.y)
-                          + "C" + project(d.x, (d.y + d.parent.y) / 2)
-                          + " " + project(d.parent.x, (d.y + d.parent.y) / 2)
-                          + " " + project(d.parent.x, d.parent.y);
+
+    d3.csv("data/dendrogram_Culture.csv", function(error, data) {
+      if (error) throw error;
+
+      var root = stratify(data).sort(function(a, b) {
+                      return a.height - b.height || a.id.localeCompare(b.id);
                     });
 
-      link.attr("class", function(d) {
-              var id = d.data.id;
+      cluster(root);
 
-              if (id.slice(2,5) == "1.3") {
-                  return "link cluster-one";
-              } else if (id.slice(2,5) == "1.5") {
-                  return "link cluster-two";
-              } else if (id[2] == "2") {
-                  return "link cluster-three";
-              } else {
-                return "link";
-              }
-            });
+      var link = g.selectAll(".link")
+                  .data(root.descendants().slice(1))
+                  .enter().append("path")
+                  .attr("d", function(d) {
+                    return "M" + project(d.x, d.y)
+                        + "C" + project(d.x, (d.y + d.parent.y) / 2)
+                        + " " + project(d.parent.x, (d.y + d.parent.y) / 2)
+                        + " " + project(d.parent.x, d.parent.y);
+                  });
 
-        var node = g.selectAll(".node")
-                    .data(root.descendants())
-                    .enter().append("g")
-                    .attr("class", function(d) {
-                      return "node" + (d.children ? " node--internal" : " node--leaf");
-                    })
-                    .attr("transform", function(d) {
-                      return "translate(" + project(d.x, d.y) + ")";
-                    });
+    link.attr("class", function(d) {
+            var id = d.data.id;
 
-        var leaf = g.selectAll(".node--leaf")
-                    .append("circle")
-                    .attr("r", 3)
-                    .classed("cluster-one", function(d){
-                      var id = d.data.id;
-                      return (id.slice(2,5) == "1.3");
-                    })
-                    .classed("cluster-two", function(d){
-                      var id = d.data.id;
-                      return (id.slice(2,5) == "1.5");
-                    })
-                    .classed("cluster-three", function(d){
-                      var id = d.data.id;
-                      return (id[2] == "2");
-                    });
+            if (id.slice(2,5) == "1.3") {
+                return "link cluster-one";
+            } else if (id.slice(2,5) == "1.5") {
+                return "link cluster-two";
+            } else if (id[2] == "2") {
+                return "link cluster-three";
+            } else {
+              return "link";
+            }
+          });
 
-        node.append("text")
-            .attr("dy", "0.31em")
-            .attr("x", function(d) {
-              return d.x < 180 === !d.children ? 6 : -6;
-            })
-            .style("text-anchor", function(d) {
-              return d.x < 180 === !d.children ? "start" : "end";
-            })
-            .attr("transform", function(d) {
-              return "rotate(" + (d.x < 180 ? d.x - 90 : d.x + 90) + ")";
-            })
-            .text(function(d) {
-              if (typeof d.children == "undefined") {
-                  return d.id.substring(d.id.lastIndexOf(".") + 1);
-              }
-            })
-            .attr("class", function(d){
-              var culture = d.data.culture;
+      var node = g.selectAll(".node")
+                  .data(root.descendants())
+                  .enter().append("g")
+                  .attr("class", function(d) {
+                    return "node" + (d.children ? " node--internal" : " node--leaf");
+                  })
+                  .attr("transform", function(d) {
+                    return "translate(" + project(d.x, d.y) + ")";
+                  });
 
-              if (culture === "Baltic") {
-                return "culture--baltic";
-              } else if (culture === "Catholic") {
-                return "culture--catholic";
-              } else if (culture === "Confucian") {
-                return "culture--confucian";
-              } else if (culture === "English") {
-                return "culture--english";
-              } else if (culture === "Islamic") {
-                return "culture--islamic";
-              } else if (culture === "LatinAmerica") {
-                return "culture--latin-america";
-              } else if (culture === "Orthodox") {
-                return "culture--orthodox";
-              } else if (culture === "Protestant") {
-                return "culture--protestant";
-              } else if (culture === "SouthAsia") {
-                return "culture--south-asia";
-              } else {
-                return "culture--na";
-              }
-            });
-      });
-    </script>
-  </body>
+      var leaf = g.selectAll(".node--leaf")
+                  .append("circle")
+                  .attr("r", 3)
+                  .classed("cluster-one", function(d){
+                    var id = d.data.id;
+                    return (id.slice(2,5) == "1.3");
+                  })
+                  .classed("cluster-two", function(d){
+                    var id = d.data.id;
+                    return (id.slice(2,5) == "1.5");
+                  })
+                  .classed("cluster-three", function(d){
+                    var id = d.data.id;
+                    return (id[2] == "2");
+                  });
+
+      node.append("text")
+          .attr("dy", "0.31em")
+          .attr("x", function(d) {
+            return d.x < 180 === !d.children ? 6 : -6;
+          })
+          .style("text-anchor", function(d) {
+            return d.x < 180 === !d.children ? "start" : "end";
+          })
+          .attr("transform", function(d) {
+            return "rotate(" + (d.x < 180 ? d.x - 90 : d.x + 90) + ")";
+          })
+          .text(function(d) {
+            if (typeof d.children == "undefined") {
+                return d.id.substring(d.id.lastIndexOf(".") + 1);
+            }
+          })
+          .attr("class", function(d){
+            var culture = d.data.culture;
+
+            if (culture === "Baltic") {
+              return "culture--baltic";
+            } else if (culture === "Catholic") {
+              return "culture--catholic";
+            } else if (culture === "Confucian") {
+              return "culture--confucian";
+            } else if (culture === "English") {
+              return "culture--english";
+            } else if (culture === "Islamic") {
+              return "culture--islamic";
+            } else if (culture === "LatinAmerica") {
+              return "culture--latin-america";
+            } else if (culture === "Orthodox") {
+              return "culture--orthodox";
+            } else if (culture === "Protestant") {
+              return "culture--protestant";
+            } else if (culture === "SouthAsia") {
+              return "culture--south-asia";
+            } else {
+              return "culture--na";
+            }
+          });
+    });
+</script>
+</body>
 </html>

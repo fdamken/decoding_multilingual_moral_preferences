@@ -1,29 +1,25 @@
 import matplotlib
+
 matplotlib.use('Agg')
 import numpy as np
-import networkx as nx
 import pandas as pd
 import matplotlib.pyplot as plt
-import seaborn as sns
 from itertools import permutations
 from scipy.cluster import hierarchy as hch
 
-from mpl_toolkits.axes_grid1 import make_axes_locatable
-import matplotlib.patches as mpatches
-from matplotlib.colors import rgb2hex
 import matplotlib.font_manager as fm
 
-
-
-
-font_prop = fm.FontProperties(fname='fonts/RobotoCondensed-Regular.ttf',
-                              size=32)
-label_font_prop = fm.FontProperties(fname='fonts/RobotoCondensed-Regular.ttf',
-                              size=42)
+font_prop = fm.FontProperties(
+    fname='fonts/RobotoCondensed-Regular.ttf',
+    size=32
+)
+label_font_prop = fm.FontProperties(
+    fname='fonts/RobotoCondensed-Regular.ttf',
+    size=42
+)
 
 prefs = ["Intervention", "Relation to AV", "Law", "Gender",
          "Fitness", "Social Status", "Age", "No. Characters", "Species"]
-
 
 df = pd.read_csv("data/CountriesChangePr.csv")
 
@@ -31,12 +27,11 @@ df = df[df.columns[:10]]
 df.columns = ["Country"] + prefs
 
 countries = df["Country"].values
-X = df.values[:,1:].astype(np.float)
-X = (X - np.mean(X, axis=0))/np.std(X, axis=0)
-
+X = df.values[:, 1:].astype(np.float)
+X = (X - np.mean(X, axis=0)) / np.std(X, axis=0)
 
 countries_df = pd.read_csv("data/countryInfo.csv")
-continents_df = countries_df[["Country",  "Continent"]]
+continents_df = countries_df[["Country", "Continent"]]
 continents_df["Continent"] = continents_df['Continent'].astype("category")
 continents_df["Continent"] = continents_df["Continent"].cat.codes + 1
 continents_df.index = countries_df["ISO3"]
@@ -62,7 +57,7 @@ cultural_group_dict = {
     0: 2
 }
 
-cultural_df['Cluster'] = cultural_df['Code']#.apply(lambda x: cultural_group_dict[x])
+cultural_df['Cluster'] = cultural_df['Code']  # .apply(lambda x: cultural_group_dict[x])
 
 cultural_dict = {
     5: "Islamic",
@@ -158,9 +153,13 @@ for i in range(len(values)):
 
     else:
         print(values[i], iso3[i])
-country_cluster_df = pd.DataFrame(dict(Country=countries_sublist,
-                                        ClusterPred=cluster_pred,
-                                        ClusterTruth=cluster_truth))
+country_cluster_df = pd.DataFrame(
+    dict(
+        Country=countries_sublist,
+        ClusterPred=cluster_pred,
+        ClusterTruth=cluster_truth
+    )
+)
 country_cluster_df = country_cluster_df[["Country", "ClusterPred", "ClusterTruth"]]
 country_cluster_df = pd.merge(country_cluster_df, cultural_df.reset_index(), left_on="Country", right_on="countries")
 country_cluster_df = country_cluster_df[["countries", "ClusterPred", "ClusterTruth"]]
@@ -172,21 +171,22 @@ def purity(df):
     denominator = len(df)
     numerators = list()
     for i in range(9):
-        cluster_i_df = df[df['ClusterPred'] == i+1]
+        cluster_i_df = df[df['ClusterPred'] == i + 1]
         vals = cluster_i_df.groupby('ClusterTruth').count()['countries'].values
         max_val = np.max(vals)
         numerators.append(max_val)
-    return 1.0*np.sum(numerators)/denominator
+    return 1.0 * np.sum(numerators) / denominator
+
 
 def max_matching(df):
     denominator = len(df)
-    numerators = np.zeros((9,9), dtype=int)
+    numerators = np.zeros((9, 9), dtype=int)
 
     for i in range(9):
-        cluster_i_df = df[df['ClusterPred'] == i+1]
+        cluster_i_df = df[df['ClusterPred'] == i + 1]
         for j in range(9):
-            cluster_ij_df = cluster_i_df[cluster_i_df['ClusterTruth'] == j+1]
-            numerators[i,j] = len(cluster_ij_df)
+            cluster_ij_df = cluster_i_df[cluster_i_df['ClusterTruth'] == j + 1]
+            numerators[i, j] = len(cluster_ij_df)
 
     max_val = 0
     for i_array in permutations(range(9)):
@@ -195,7 +195,8 @@ def max_matching(df):
         if max_val < val:
             max_val = val
 
-    return 1.0*max_val / denominator
+    return 1.0 * max_val / denominator
+
 
 purity_measures = list()
 max_matching_measures = list()
@@ -203,33 +204,40 @@ for i in range(1000):
     np.random.seed(i)
     n = len(country_cluster_df)
     vals = np.random.choice(9, size=n)
-    vals = [z+1 for z in vals]
-    fake_df = pd.DataFrame(dict(countries=country_cluster_df['countries'],
-                                ClusterTruth=country_cluster_df['ClusterTruth'],
-                                ClusterPred=vals))
+    vals = [z + 1 for z in vals]
+    fake_df = pd.DataFrame(
+        dict(
+            countries=country_cluster_df['countries'],
+            ClusterTruth=country_cluster_df['ClusterTruth'],
+            ClusterPred=vals
+        )
+    )
 
     purity_measures.append(purity(fake_df))
     max_matching_measures.append(max_matching(fake_df))
 
-
-plt.figure(figsize=(16,10))
+plt.figure(figsize=(16, 10))
 plt.hist(purity_measures, bins=15, normed=True)
-plt.axvline(purity(country_cluster_df), linestyle='--',
-            color='r', label='purity={:.4f}'.format(purity(country_cluster_df)))
+plt.axvline(
+    purity(country_cluster_df), linestyle='--',
+    color='r', label='purity={:.4f}'.format(purity(country_cluster_df))
+)
 plt.legend(prop=label_font_prop, loc=1)
 plt.xticks(fontproperties=font_prop)
 plt.yticks(fontproperties=font_prop)
 plt.tight_layout()
-plt.savefig('image/purity.pdf', format='pdf',transparent=True)
-#plt.show()
+plt.savefig('image/purity.pdf', format='pdf', transparent=True)
+# plt.show()
 
-plt.figure(figsize=(16,10))
+plt.figure(figsize=(16, 10))
 plt.hist(max_matching_measures, bins=15, normed=True)
-plt.axvline(max_matching(country_cluster_df), linestyle='--',
-            color='r', label='Max Matching={:.4f}'.format(max_matching(country_cluster_df)))
+plt.axvline(
+    max_matching(country_cluster_df), linestyle='--',
+    color='r', label='Max Matching={:.4f}'.format(max_matching(country_cluster_df))
+)
 plt.legend(prop=label_font_prop, loc=1)
 plt.xticks(fontproperties=font_prop)
 plt.yticks(fontproperties=font_prop)
 plt.tight_layout()
-plt.savefig('image/max-matching.pdf', format='pdf',transparent=True)
-#plt.show()
+plt.savefig('image/max-matching.pdf', format='pdf', transparent=True)
+# plt.show()

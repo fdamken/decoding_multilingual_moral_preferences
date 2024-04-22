@@ -1,17 +1,17 @@
-Documentation for generating plot in Figure 4 and related SI figures.  
+Documentation for generating plot in Figure 4 and related SI figures.
 
-0- File RobotoCondensed-Regular.ttf 
+0- File RobotoCondensed-Regular.ttf
 font-family of Roboto Condensed used in label generation
 
 1- File: SharedFig4andSI.R
-++ Input: 
+++ Input:
 country_cluster_map.csv
 moral_distance.csv
 CountriesChangePr.csv
 CrossCountryExternal1.csv
 CrossCountryExternal2.csv
 
-++ Output: 
+++ Output:
 Fig 4
 Fig S10
 Fig S11
@@ -21,7 +21,7 @@ Fig S11
 ++ Input:
 DataEdmond_tableS2.dta
 
-++ Output: 
+++ Output:
 Table S2 (SI table)
 
 3- File: EDTable2 Syntax.rtf

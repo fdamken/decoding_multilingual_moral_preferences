@@ -1,17 +1,16 @@
+import matplotlib.font_manager as fm
+import matplotlib.patches as mpatches
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 import seaborn as sns
-import matplotlib.font_manager as fm
 from scipy.cluster import hierarchy as hch
-import matplotlib.patches as mpatches
-
 
 subtext = ["Preference for Inaction", "Sparing Pedestrians", "Sparing Females", "Sparing the Fit",
            "Sparing the Lawful", "Sparing Higher Status", "Sparing the Younger", "Sparing More",
            "Sparing Humans"]
 
-prefs = ["Intervention", "Relation to AV", "Gender","Fitness", "Law",
+prefs = ["Intervention", "Relation to AV", "Gender", "Fitness", "Law",
          "Social Status", "Age", "No. Characters", "Species"]
 
 xlabels = list()
@@ -34,7 +33,7 @@ def vectorize(df):
 
     X = df.values[:, 4:].astype(float)
 
-    #Normalize Values
+    # Normalize Values
     X = (X - np.mean(X, axis=0)) / np.std(X, axis=0)
 
     return X
@@ -94,44 +93,49 @@ def joy_plot(df, savefig=True):
     grouping = np.array(grouping)
     grouped_X = list()
     for g in range(3):
-        grouped_X.append(X[::-1][grouping==g])
+        grouped_X.append(X[::-1][grouping == g])
 
-    fig, axes = plt.subplots(9,1, figsize=(8,14))
+    fig, axes = plt.subplots(9, 1, figsize=(8, 14))
     for i, ax in enumerate(axes.ravel()):
         for j, x_c in enumerate(grouped_X):
-            sns.kdeplot(x_c[:,i], shade=False, ax=ax, linewidth=2, alpha=1., color=colors[j])
-            sns.kdeplot(x_c[:,i], shade=True, ax=ax, linewidth=2, alpha=0.15, color=colors[j])
-        ax.set_ylabel(xlabels[i], rotation="horizontal",
-                      horizontalalignment="right",
-                      verticalalignment="center",
-                      fontsize=20, fontproperties=font_prop)
+            sns.kdeplot(x_c[:, i], shade=False, ax=ax, linewidth=2, alpha=1., color=colors[j])
+            sns.kdeplot(x_c[:, i], shade=True, ax=ax, linewidth=2, alpha=0.15, color=colors[j])
+        ax.set_ylabel(
+            xlabels[i], rotation="horizontal",
+            horizontalalignment="right",
+            verticalalignment="center",
+            fontsize=20, fontproperties=font_prop
+        )
         ax.set_yticks([])
         ax.spines['right'].set_visible(False)
         ax.spines['top'].set_visible(False)
         ax.spines['bottom'].set_visible(False)
         ax.spines['left'].set_visible(False)
-        ax.set_xlim(-5,5)
+        ax.set_xlim(-5, 5)
 
         if i == 0:
-            ax.legend([patch1, patch2, patch3], labels, prop=font_prop,
-                      loc="upper center", bbox_to_anchor=(0.5, 1.6), ncol=3)
+            ax.legend(
+                [patch1, patch2, patch3], labels, prop=font_prop,
+                loc="upper center", bbox_to_anchor=(0.5, 1.6), ncol=3
+            )
         if i == 8:
             ax.set_xlabel("Z-Score of Effect Sizes", fontsize=22, fontproperties=font_prop)
-            ax.set_xticks(range(-4,6,2))
-            ax.set_xticklabels(labels=range(-4,6,2),
-                               fontproperties=font_prop)
+            ax.set_xticks(range(-4, 6, 2))
+            ax.set_xticklabels(
+                labels=range(-4, 6, 2),
+                fontproperties=font_prop
+            )
             ax.tick_params(axis='x', which='major', pad=15)
         else:
             ax.set_xticks([])
     plt.tight_layout()
 
     if savefig:
-        plt.savefig("image/joyplot.pdf", format="pdf", bbox_inches = 'tight')
+        plt.savefig("image/joyplot.pdf", format="pdf", bbox_inches='tight')
     else:
         plt.show()
 
 
 if __name__ == '__main__':
-
     df = pd.read_csv('data/CountryLevelAMCEVals.csv')
     joy_plot(df)

@@ -5,28 +5,28 @@
 library(GGally)
 
 
-data.ed <- fread(input="CountriesChangePr.csv")
+data.ed <- fread(input = "CountriesChangePr.csv")
 
-names(data.ed)[2:10] <- c("Inaction","Pedestrians","Legal","Female","Fit","High","Young","More","Humans")
+names(data.ed)[2:10] <- c("Inaction", "Pedestrians", "Legal", "Female", "Fit", "High", "Young", "More", "Humans")
 
 
 # Before running this, run the below function mycor.
-gg <- ggpairs(data.ed, columns = c(2:3,5:7,4,8:10),
-        upper = list(continuous = wrap(mycor, sgnf=2, size = 4)),
-        lower = list(continuous = wrap("smooth", method = "lm", color = "blue",fill="red")))+
-  theme_bw()+
-  theme_ipsum_rc(grid="XY",axis_title_just="m")+
-  theme(text=element_text(size=8, family = "Roboto Condensed"),legend.position="no",#aspect.ratio=1/1, 
-      panel.grid.major = element_blank(), panel.grid.minor = element_blank(), strip.text.x = element_text(hjust = 0.5),
-      panel.border=element_rect(color="grey20",fill=NA), panel.spacing.x=unit(0.3, "lines"),
-      strip.background = element_rect(color="black",fill="white"))
-ggsave(file="ggpairs.pdf", width = 10, height = 12)
+gg <- ggpairs(data.ed, columns = c(2:3, 5:7, 4, 8:10),
+              upper = list(continuous = wrap(mycor, sgnf = 2, size = 4)),
+              lower = list(continuous = wrap("smooth", method = "lm", color = "blue", fill = "red"))) +
+  theme_bw() +
+  theme_ipsum_rc(grid = "XY", axis_title_just = "m") +
+  theme(text = element_text(size = 8, family = "Roboto Condensed"), legend.position = "no", #aspect.ratio=1/1,
+        panel.grid.major = element_blank(), panel.grid.minor = element_blank(), strip.text.x = element_text(hjust = 0.5),
+        panel.border = element_rect(color = "grey20", fill = NA), panel.spacing.x = unit(0.3, "lines"),
+        strip.background = element_rect(color = "black", fill = "white"))
+ggsave(file = "ggpairs.pdf", width = 10, height = 12)
 
 
 # Run this before running ggpairs above
-mycor <- function(data, mapping, alignPercent = 0.6, method = "pearson", 
-                  use = "complete.obs", corAlignPercent = NULL, corMethod = NULL, 
-                  corUse = NULL, sgnf=2, ...) {
+mycor <- function(data, mapping, alignPercent = 0.6, method = "pearson",
+                  use = "complete.obs", corAlignPercent = NULL, corMethod = NULL,
+                  corUse = NULL, sgnf = 2, ...) {
   if (!is.null(corAlignPercent)) {
     stop("'corAlignPercent' is deprecated.  Please use argument 'alignPercent'")
   }
@@ -36,7 +36,7 @@ mycor <- function(data, mapping, alignPercent = 0.6, method = "pearson",
   if (!is.null(corUse)) {
     stop("'corUse' is deprecated.  Please use argument 'use'")
   }
-  useOptions <- c("all.obs", "complete.obs", "pairwise.complete.obs", 
+  useOptions <- c("all.obs", "complete.obs", "pairwise.complete.obs",
                   "everything", "na.or.complete")
   use <- pmatch(use, useOptions)
   if (is.na(use)) {
@@ -45,9 +45,11 @@ mycor <- function(data, mapping, alignPercent = 0.6, method = "pearson",
   } else {
     use <- useOptions[use]
   }
+
   cor_fn <- function(x, y) {
     cor(x, y, method = method, use = use)
   }
+
   xCol <- deparse(mapping$x)
   yCol <- deparse(mapping$y)
   if (GGally:::is_date(data[[xCol]]) || GGally:::is_date(data[[yCol]])) {
@@ -64,7 +66,7 @@ mycor <- function(data, mapping, alignPercent = 0.6, method = "pearson",
     stop("ggally_cor: mapping color column must be categorical, not numeric")
   }
   colorCol <- deparse(mapping$colour)
-  singleColorCol <- ifelse(is.null(colorCol), NULL, paste(colorCol, 
+  singleColorCol <- ifelse(is.null(colorCol), NULL, paste(colorCol,
                                                           collapse = ""))
   if (use %in% c("complete.obs", "pairwise.complete.obs", "na.or.complete")) {
     if (length(colorCol) > 0) {
@@ -84,14 +86,14 @@ mycor <- function(data, mapping, alignPercent = 0.6, method = "pearson",
         warning("Removing 1 row that contained a missing value")
       }
     }
-    data <- data[rows, ]
+    data <- data[rows,]
   }
   xVal <- data[[xCol]]
   yVal <- data[[yCol]]
   if (length(names(mapping)) > 0) {
     for (i in length(names(mapping)):1) {
       tmp_map_val <- deparse(mapping[names(mapping)[i]][[1]])
-      if (tmp_map_val[length(tmp_map_val)] %in% colnames(data)) 
+      if (tmp_map_val[length(tmp_map_val)] %in% colnames(data))
         mapping[[names(mapping)[i]]] <- NULL
       if (length(names(mapping)) < 1) {
         mapping <- NULL
@@ -102,61 +104,61 @@ mycor <- function(data, mapping, alignPercent = 0.6, method = "pearson",
   if (length(colorCol) < 1) {
     colorCol <- "ggally_NO_EXIST"
   }
-  if ((singleColorCol != "ggally_NO_EXIST") && (singleColorCol %in% 
-                                                colnames(data))) {
+  if ((singleColorCol != "ggally_NO_EXIST") && (singleColorCol %in%
+    colnames(data))) {
     cord <- plyr::ddply(data, c(colorCol), function(x) {
       cor_fn(x[[xCol]], x[[yCol]])
     })
     colnames(cord)[2] <- "ggally_cor"
-    cord$ggally_cor <- signif(as.numeric(cord$ggally_cor), 
+    cord$ggally_cor <- signif(as.numeric(cord$ggally_cor),
                               sgnf)
     lev <- levels(data[[colorCol]])
     ord <- rep(-1, nrow(cord))
     for (i in 1:nrow(cord)) {
       for (j in seq_along(lev)) {
-        if (identical(as.character(cord[i, colorCol]), 
+        if (identical(as.character(cord[i, colorCol]),
                       as.character(lev[j]))) {
           ord[i] <- j
         }
       }
     }
-    cord <- cord[order(ord[ord >= 0]), ]
+    cord <- cord[order(ord[ord >= 0]),]
     cord$label <- GGally:::str_c(cord[[colorCol]], ": ", cord$ggally_cor)
     xmin <- min(xVal, na.rm = TRUE)
     xmax <- max(xVal, na.rm = TRUE)
-    xrange <- c(xmin - 0.01 * (xmax - xmin), xmax + 0.01 * 
-                  (xmax - xmin))
+    xrange <- c(xmin - 0.01 * (xmax - xmin), xmax + 0.01 *
+      (xmax - xmin))
     ymin <- min(yVal, na.rm = TRUE)
     ymax <- max(yVal, na.rm = TRUE)
-    yrange <- c(ymin - 0.01 * (ymax - ymin), ymax + 0.01 * 
-                  (ymax - ymin))
-    p <- ggally_text(label = GGally:::str_c("Corr: ", signif(cor_fn(xVal, 
-                                                                    yVal), sgnf)), mapping = mapping, xP = 0.5, yP = 0.9, 
-                     xrange = xrange, yrange = yrange, color = "black", 
+    yrange <- c(ymin - 0.01 * (ymax - ymin), ymax + 0.01 *
+      (ymax - ymin))
+    p <- ggally_text(label = GGally:::str_c("Corr: ", signif(cor_fn(xVal,
+                                                                    yVal), sgnf)), mapping = mapping, xP = 0.5, yP = 0.9,
+                     xrange = xrange, yrange = yrange, color = "black",
                      ...) + theme(legend.position = "none")
-    xPos <- rep(alignPercent, nrow(cord)) * diff(xrange) + 
+    xPos <- rep(alignPercent, nrow(cord)) * diff(xrange) +
       min(xrange, na.rm = TRUE)
-    yPos <- seq(from = 0.9, to = 0.2, length.out = nrow(cord) + 
-                  1)
+    yPos <- seq(from = 0.9, to = 0.2, length.out = nrow(cord) +
+      1)
     yPos <- yPos * diff(yrange) + min(yrange, na.rm = TRUE)
     yPos <- yPos[-1]
     cordf <- data.frame(xPos = xPos, yPos = yPos, labelp = cord$label)
     cordf$labelp <- factor(cordf$labelp, levels = cordf$labelp)
-    p <- p + geom_text(data = cordf, aes(x = xPos, y = yPos, 
+    p <- p + geom_text(data = cordf, aes(x = xPos, y = yPos,
                                          label = labelp, color = labelp), hjust = 1, ...)
     p
   }  else {
     xmin <- min(xVal, na.rm = TRUE)
     xmax <- max(xVal, na.rm = TRUE)
-    xrange <- c(xmin - 0.01 * (xmax - xmin), xmax + 0.01 * 
-                  (xmax - xmin))
+    xrange <- c(xmin - 0.01 * (xmax - xmin), xmax + 0.01 *
+      (xmax - xmin))
     ymin <- min(yVal, na.rm = TRUE)
     ymax <- max(yVal, na.rm = TRUE)
-    yrange <- c(ymin - 0.01 * (ymax - ymin), ymax + 0.01 * 
-                  (ymax - ymin))
-    p <- ggally_text(label = paste("Corr:\n", signif(cor_fn(xVal, 
-                                                            yVal), sgnf), sep = "", collapse = ""), mapping, xP = 0.5, 
-                     yP = 0.5, xrange = xrange, yrange = yrange, ...) + 
+    yrange <- c(ymin - 0.01 * (ymax - ymin), ymax + 0.01 *
+      (ymax - ymin))
+    p <- ggally_text(label = paste("Corr:\n", signif(cor_fn(xVal,
+                                                            yVal), sgnf), sep = "", collapse = ""), mapping, xP = 0.5,
+                     yP = 0.5, xrange = xrange, yrange = yrange, ...) +
       theme(legend.position = "none")
     p
   }

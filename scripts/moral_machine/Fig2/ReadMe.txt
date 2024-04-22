@@ -1,11 +1,11 @@
-Documentation for generating plot in Figure 2 and related SI figures.  
+Documentation for generating plot in Figure 2 and related SI figures.
 
-0- File RobotoCondensed-Regular.ttf 
+0- File RobotoCondensed-Regular.ttf
 font-family of Roboto Condensed used in label generation
 
 
 1- File MMFunctionsShared.R [Run this file before other files]
-++ Input: 
+++ Input:
 No input
 
 ++ Output:
@@ -19,7 +19,7 @@ SharedResponsesSurvey.csv
 SharedResponsesFullFirstSessions.csv
 
 ++ Output
-Fig 2, 
+Fig 2,
 Extended Data Fig 1-3
 SI Fig S3-S5
 CountriesChangePr.csv
@@ -36,7 +36,7 @@ Extended Data Fig 6
 
 
 4- File SharedMMFunctionsExtraAnalysis.R [Run this file before the following files]
-++ Input: 
+++ Input:
 No input
 
 ++ Output:
@@ -107,4 +107,3 @@ plotdatautil.rdata
 Fig 2 (a)
 Extended Data Fig1-3
 Extended Data Fig 7(e)
-

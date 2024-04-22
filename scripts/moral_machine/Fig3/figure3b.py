@@ -1,17 +1,15 @@
+import matplotlib.font_manager as fm
+import matplotlib.patches as mpatches
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-
-import matplotlib.font_manager as fm
 from scipy.cluster import hierarchy as hch
-import matplotlib.patches as mpatches
 
 subtext = ["Preference for Inaction", "Sparing Pedestrians", "Sparing Females", "Sparing the Fit",
            "Sparing the Lawful", "Sparing Higher Status", "Sparing the Younger", "Sparing More",
            "Sparing Humans"]
 
-prefs = ["Intervention", "Relation to AV", "Gender","Fitness", "Law",
+prefs = ["Intervention", "Relation to AV", "Gender", "Fitness", "Law",
          "Social Status", "Age", "No. Characters", "Species"]
 
 xlabels = list()
@@ -34,7 +32,7 @@ def vectorize(df):
 
     X = df.values[:, 4:].astype(float)
 
-    #Normalize Values
+    # Normalize Values
     X = (X - np.mean(X, axis=0)) / np.std(X, axis=0)
 
     return X
@@ -84,7 +82,6 @@ def create_d3_dendogram(df, leaf_color=None, save_csv=True):
 
     d3_dendo_tree_df = pd.DataFrame(node_hierarchy)
     d3_dendo_tree_df.columns = ["id", "culture", "continent"]
-
 
     if save_csv:
         if leaf_color:
@@ -149,11 +146,11 @@ def radar_plot(df, savefig=True):
     grouping = np.array(grouping)
     grouped_X = list()
     for g in range(3):
-        grouped_X.append(X[::-1][grouping==g])
+        grouped_X.append(X[::-1][grouping == g])
 
-    cluster1_means = grouped_X[0].mean(axis=0) # Cluster 1
-    cluster2_means = grouped_X[1].mean(axis=0) # Cluster 2
-    cluster3_means = grouped_X[2].mean(axis=0) # Cluster 3
+    cluster1_means = grouped_X[0].mean(axis=0)  # Cluster 1
+    cluster2_means = grouped_X[1].mean(axis=0)  # Cluster 2
+    cluster3_means = grouped_X[2].mean(axis=0)  # Cluster 3
 
     N = len(cluster1_means)
     x_as = [n / float(N) * 2 * np.pi for n in range(N)]
@@ -167,7 +164,7 @@ def radar_plot(df, savefig=True):
     clusters = np.array([cluster1_means, cluster2_means, cluster3_means])
     min_val = clusters.min()
     clusters_adj = np.sqrt(np.square(clusters - min_val))
-    ytick_labels = [np.sqrt(np.square(i-1-min_val))-.3 for i in range(4)]
+    ytick_labels = [np.sqrt(np.square(i - 1 - min_val)) - .3 for i in range(4)]
 
     colors = ["#CC6677", "#4477AA", "#DDCC77"]
 
@@ -179,42 +176,40 @@ def radar_plot(df, savefig=True):
     font_axis_prop = fm.FontProperties(fname='fonts/RobotoCondensed-Regular.ttf', size=22)
     font_title_prop = fm.FontProperties(fname='fonts/RobotoCondensed-Regular.ttf', size=36)
 
-    fig, axes = plt.subplots(1, 3, figsize=(22,8), subplot_kw={'projection': 'polar'})
+    fig, axes = plt.subplots(1, 3, figsize=(22, 8), subplot_kw={'projection': 'polar'})
     fig.subplots_adjust(wspace=.3)
 
     for i, ax in enumerate(axes.ravel()):
         ax.set_theta_offset(np.pi / 2)
         ax.set_theta_direction(-1)
         ax.plot(x_as, clusters_adj[i], linewidth=3, linestyle='solid', zorder=3, color=colors[i])
-        ax.fill(x_as, clusters_adj[i],  color=colors[i], alpha=0.4)
-        ax.plot(np.linspace(0,2*np.pi,1000), np.ones(1000)*-1*min_val, color='black', linewidth=0.7)
+        ax.fill(x_as, clusters_adj[i], color=colors[i], alpha=0.4)
+        ax.plot(np.linspace(0, 2 * np.pi, 1000), np.ones(1000) * -1 * min_val, color='black', linewidth=0.7)
         ax.set_xticks(x_as[:-1])
         ax.set_xticklabels([])
         ax.set_ylim(0, 3)
         ax.tick_params(axis='y', width=10, which='major')
-        y_ticks = np.sqrt(np.square(np.arange(-1,3,1) - min_val))
+        y_ticks = np.sqrt(np.square(np.arange(-1, 3, 1) - min_val))
         ax.set_yticks(y_ticks)
         ax.set_yticklabels([])
         for i in range(4):
             y = ytick_labels[i]
             if i > 0:
-                ax.text(0.0, y, "z={}".format(i-1), fontproperties=font_axis_prop)
+                ax.text(0.0, y, "z={}".format(i - 1), fontproperties=font_axis_prop)
                 ax.text(x_as[0], 3.3, subtext[0], fontproperties=font_prop, rotation=0, horizontalalignment='center')
                 ax.text(x_as[1], 3.65, subtext[1], fontproperties=font_prop, rotation=-40, horizontalalignment='center')
                 ax.text(x_as[2], 3.5, subtext[2], fontproperties=font_prop, rotation=-80, horizontalalignment='center')
                 ax.text(x_as[3], 3.5, subtext[3], fontproperties=font_prop, rotation=-120, horizontalalignment='center')
                 ax.text(x_as[4], 3.55, subtext[4], fontproperties=font_prop, rotation=-160, horizontalalignment='center')
                 ax.text(x_as[5], 3.5, subtext[5], fontproperties=font_prop, rotation=-200, horizontalalignment='center')
-                ax.text(x_as[6]+0.1, 3.5, subtext[6], fontproperties=font_prop, rotation=-240, horizontalalignment='center')
+                ax.text(x_as[6] + 0.1, 3.5, subtext[6], fontproperties=font_prop, rotation=-240, horizontalalignment='center')
                 ax.text(x_as[7], 3.55, subtext[7], fontproperties=font_prop, rotation=-280, horizontalalignment='center')
                 ax.text(x_as[8], 3.55, subtext[8], fontproperties=font_prop, rotation=-320, horizontalalignment='center')
     if savefig:
         plt.savefig("image/radar_plot.pdf", format="pdf")
 
 
-
 if __name__ == '__main__':
-
     df = pd.read_csv('data/CountryLevelAMCEVals.csv')
     create_d3_dendogram(df, leaf_color="Culture")
     radar_plot(df)
