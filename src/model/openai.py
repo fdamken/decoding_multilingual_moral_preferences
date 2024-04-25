@@ -25,10 +25,9 @@ class OpenAIRole(Enum):
 
 class OpenAIModel(Model):
     SUPPORTED_MODELS: Final[set[str]] = {
-        # gpt-4 is way too expensive (roughly $7k for all languages combined)
         # # https://platform.openai.com/docs/models/gpt-4-and-gpt-4-turbo
         # "gpt-4-0125-preview",  # latest gpt-4-turbo with pinned version
-        # "gpt-4-0613",  # latest gpt-4 with pinned version
+        "gpt-4-0613",  # latest gpt-4 with pinned version
         # https://platform.openai.com/docs/models/gpt-3-5-turbo
         "gpt-3.5-turbo-0125",  # latest gpt-3.5-turbo with pinned version
     }

@@ -17,7 +17,7 @@ from .model import Model
 class GoogleModel(Model):
     SUPPORTED_MODELS: Final[set[str]] = {
         # https://ai.google.dev/models/gemini
-        "gemini-1.0-pro-001",  # latest gemini-pro with pinned version
+        "gemini-1.0-pro-001",  # latest gemini-1.0-pro with pinned version
     }
 
     _model_name: str
