@@ -53,9 +53,7 @@ class Llama3Model(Model):
 
     def prompt(self, prompt: str) -> str:
         self._history.append(ChatMessage(ChatRole.USER, prompt))
-        complete = self._complete()
-        print("complete:", repr(complete))
-        quit()
+        message = self._complete()
         self._history.append(ChatMessage(ChatRole.ASSISTANT, message))
         return message
 
