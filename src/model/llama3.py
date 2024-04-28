@@ -68,7 +68,7 @@ class Llama3Model(Model):
         )
         return self._pipe(
             prompt,
-            max_new_tokens=10,
+            max_new_tokens=1,
             eos_token_id=[
                 self._pipe.tokenizer.eos_token_id,
                 self._pipe.tokenizer.convert_tokens_to_ids("<|eot_id|>")
