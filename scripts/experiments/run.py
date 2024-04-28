@@ -1,4 +1,3 @@
-import sys
 import traceback
 from logging import Logger
 from typing import Any, Optional
@@ -23,8 +22,10 @@ def _run_session(agent: Agent, session: moral_machine.Session) -> tuple[list[int
 
 @ex.automain
 def main(model_name: str, language: str, session_indices: Optional[int | list[int]], _log: Logger) -> Any:
-    assert model_name in model.get_available_models(), f"model '{model_name}' not available"
-    assert language in moral_machine.get_available_languages(), f"language '{language}' not available"
+    assert model_name in model.get_available_models(), \
+        f"model '{model_name}' not available; available models: {model.get_available_models()}"
+    assert language in moral_machine.get_available_languages(), \
+        f"language '{language}' not available; available languages: {moral_machine.get_available_languages()}"
 
     if session_indices is not None:
         if type(session_indices) is int:
@@ -42,7 +43,10 @@ def main(model_name: str, language: str, session_indices: Optional[int | list[in
                 session_answers, session_api_usage = _run_session(agent, session)
                 pbar.update()
             else:
-                session_answers, session_api_usage = f"skipped; only playing sessions {session_indices}", APIUsage(model_name, 0, 0, 0)
+                session_answers, session_api_usage = (
+                    f"skipped; only playing sessions {session_indices}",
+                    APIUsage(model_name, 0, 0, 0),
+                )
             answers.append(session_answers)
             api_usage.append(session_api_usage)
         api_usage_total = APIUsage.merge(*api_usage)
