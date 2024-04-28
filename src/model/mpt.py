@@ -49,7 +49,6 @@ class MptModel(Model):
     def _init_model(self) -> None:
         model_name = self._model_config[self._model_name]
         config = AutoConfig.from_pretrained(model_name, trust_remote_code=True)
-        config.attn_config["attn_impl"] = "flash"
         config.max_seq_len = 16384
         model = AutoModelForCausalLM.from_pretrained(
             model_name,
