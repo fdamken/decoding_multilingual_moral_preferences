@@ -57,6 +57,14 @@ class MptModel(Model):
             trust_remote_code=True,
         )
         tokenizer = AutoTokenizer.from_pretrained(model_name, padding_side="left")
+        tokenizer.chat_template = (
+            "{% for message in messages %}"
+            "{{'<|im_start|>' + message['role'] + '\n' + message['content'] + '<|im_end|>' + '\n'}}"
+            "{% endfor %}"
+            "{% if add_generation_prompt %}"
+            "{{ '<|im_start|>assistant\n' }}"
+            "{% endif %}"
+        )
         self._pipe = transformers.pipeline("text-generation", model=model, tokenizer=tokenizer)
 
     def prompt(self, prompt: str) -> str:
