@@ -87,7 +87,7 @@ class TransformersModel(Model):
             max_new_tokens=1,
             eos_token_id=eos_token_id,
             do_sample=False,
-        )[0]["generated_text"]  # [len(prompt):]
+        )[0]["generated_text"][len(prompt):]
 
     def report_api_usage(self) -> APIUsage:
         return APIUsage(self._model_name, -1, -1, 0.)
