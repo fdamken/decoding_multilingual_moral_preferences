@@ -6,7 +6,6 @@ from .google import GoogleModel
 from .llama import LlamaModel
 from .mock import MockModel
 from .model import Model
-from .mpt import MPTModel
 from .openai import OpenAIModel
 
 _model_maker_registry: dict[str, Callable[[], Model]] = {}
@@ -59,18 +58,6 @@ for _model_name in LlamaModel.SUPPORTED_MODELS:
 @model_maker("mock")
 def _make_mock_model() -> MockModel:
     return MockModel()
-
-
-def _register_mpt_model(model_name: str) -> None:
-    @model_maker(model_name)
-    @ex.capture
-    def make_mpt_model(_log: Logger) -> MPTModel:
-        _log.debug(f"creating MPT model '{model_name}'")
-        return MPTModel(model_name)
-
-
-for _model_name in MPTModel.SUPPORTED_MODELS:
-    _register_mpt_model(_model_name)
 
 
 def _register_openai_model(model_name: str) -> None:
