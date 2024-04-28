@@ -3,10 +3,10 @@ from typing import Callable
 
 from experiment import ex
 from .google import GoogleModel
-from .llama import LlamaModel
 from .mock import MockModel
 from .model import Model
 from .openai import OpenAIModel
+from .transformers import TransformersModel
 
 _model_maker_registry: dict[str, Callable[[], Model]] = {}
 
@@ -43,18 +43,6 @@ for _model_name in GoogleModel.SUPPORTED_MODELS:
     _register_google_model(_model_name)
 
 
-def _register_llama_model(model_name: str) -> None:
-    @model_maker(model_name)
-    @ex.capture
-    def make_llama_model(_log: Logger) -> LlamaModel:
-        _log.debug(f"creating Llama model '{model_name}'")
-        return LlamaModel(model_name)
-
-
-for _model_name in LlamaModel.SUPPORTED_MODELS:
-    _register_llama_model(_model_name)
-
-
 @model_maker("mock")
 def _make_mock_model() -> MockModel:
     return MockModel()
@@ -70,6 +58,18 @@ def _register_openai_model(model_name: str) -> None:
 
 for _model_name in OpenAIModel.SUPPORTED_MODELS:
     _register_openai_model(_model_name)
+
+
+def _register_transformers_model(model_name: str) -> None:
+    @model_maker(model_name)
+    @ex.capture
+    def make_transformers_model(_log: Logger) -> TransformersModel:
+        _log.debug(f"creating TransformersModel model '{model_name}'")
+        return TransformersModel(model_name)
+
+
+for _model_name in TransformersModel.SUPPORTED_MODELS:
+    _register_transformers_model(_model_name)
 
 __all__ = [
     "Model",

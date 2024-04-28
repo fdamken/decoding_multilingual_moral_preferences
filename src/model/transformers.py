@@ -25,13 +25,17 @@ class ChatMessage:
         return {"role": self.role, "content": self.content}
 
 
-class LlamaModel(Model):
+class TransformersModel(Model):
     _model_config = {
         "Llama-2-7b-chat-hf": "meta-llama/Llama-2-7b-chat-hf",
         "Llama-2-13b-chat-hf": "meta-llama/Llama-2-13b-chat-hf",
         "Llama-2-70b-chat-hf": "meta-llama/Llama-2-70b-chat-hf",
         "Meta-Llama-3-8B-Instruct": "meta-llama/Meta-Llama-3-8B-Instruct",
         "Meta-Llama-3-70B-Instruct": "meta-llama/Meta-Llama-3-70B-Instruct",
+        "mpt-7b-8k-chat": "mosaicml/mpt-7b-8k-chat",
+        "mpt-7b-chat": "mosaicml/mpt-7b-chat",
+        "mpt-30b-instruct": "mosaicml/mpt-30b-instruct",
+        "mpt-30b-chat": "mosaicml/mpt-30b-chat",
     }
 
     SUPPORTED_MODELS = set(_model_config.keys())
@@ -51,6 +55,7 @@ class LlamaModel(Model):
             "text-generation",
             model=self._model_config[self._model_name],
             model_kwargs={"torch_dtype": torch.bfloat16},
+            trust_remote_code=True,
         )
 
     def prompt(self, prompt: str) -> str:
