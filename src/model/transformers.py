@@ -79,13 +79,13 @@ class TransformersModel(Model):
             add_generation_prompt=True,
         )
         print("prompt:", repr(prompt))
+        eos_token_id = [self._pipe.tokenizer.eos_token_id]
+        if eot_id := self._pipe.tokenizer.convert_tokens_to_ids("<|eot_id|>"):
+            eos_token_id.append(eot_id)
         return self._pipe(
             prompt,
             max_new_tokens=1,
-            eos_token_id=[
-                self._pipe.tokenizer.eos_token_id,
-                self._pipe.tokenizer.convert_tokens_to_ids("<|eot_id|>")
-            ],
+            eos_token_id=eos_token_id,
             do_sample=False,
         )[0]["generated_text"]  # [len(prompt):]
 
