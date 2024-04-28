@@ -30,7 +30,6 @@ class MptModel(Model):
     _model_config = {
         "mpt-7b-8k-chat": "mosaicml/mpt-7b-8k-chat",
         "mpt-7b-chat": "mosaicml/mpt-7b-chat",
-        "mpt-30b-instruct": "mosaicml/mpt-30b-instruct",
         "mpt-30b-chat": "mosaicml/mpt-30b-chat",
     }
 
