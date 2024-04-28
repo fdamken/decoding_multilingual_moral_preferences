@@ -27,6 +27,9 @@ class ChatMessage:
 
 class TransformersModel(Model):
     _model_config = {
+        "falcon-7b-instruct": "tiiuae/falcon-7b-instruct",
+        "falcon-40b-instruct": "tiiuae/falcon-40b-instruct",
+        "falcon-180B-chat": "tiiuae/falcon-180B-chat",
         "Llama-2-7b-chat-hf": "meta-llama/Llama-2-7b-chat-hf",
         "Llama-2-13b-chat-hf": "meta-llama/Llama-2-13b-chat-hf",
         "Llama-2-70b-chat-hf": "meta-llama/Llama-2-70b-chat-hf",
@@ -61,6 +64,7 @@ class TransformersModel(Model):
     def prompt(self, prompt: str) -> str:
         self._history.append(ChatMessage(ChatRole.USER, prompt))
         message = self._complete()
+        print("message:", repr(message))
         self._history.append(ChatMessage(ChatRole.ASSISTANT, message))
         return message
 
@@ -72,8 +76,9 @@ class TransformersModel(Model):
         prompt = self._pipe.tokenizer.apply_chat_template(
             [msg.to_dict() for msg in self._history],
             tokenize=False,
-            add_generation_prompt=True
+            add_generation_prompt=True,
         )
+        print("prompt:", repr(prompt))
         return self._pipe(
             prompt,
             max_new_tokens=1,
@@ -82,7 +87,7 @@ class TransformersModel(Model):
                 self._pipe.tokenizer.convert_tokens_to_ids("<|eot_id|>")
             ],
             do_sample=False,
-        )[0]["generated_text"][len(prompt):]
+        )[0]["generated_text"]  # [len(prompt):]
 
     def report_api_usage(self) -> APIUsage:
         return APIUsage(self._model_name, -1, -1, 0.)
