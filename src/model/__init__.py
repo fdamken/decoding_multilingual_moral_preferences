@@ -5,6 +5,7 @@ from experiment import ex
 from .google import GoogleModel
 from .mock import MockModel
 from .model import Model
+from .mpt import MptModel
 from .openai import OpenAIModel
 from .transformers import TransformersModel
 
@@ -48,6 +49,18 @@ def _make_mock_model() -> MockModel:
     return MockModel()
 
 
+def _register_mpt_model(model_name: str) -> None:
+    @model_maker(model_name)
+    @ex.capture
+    def make_mpt_model(_log: Logger) -> MptModel:
+        _log.debug(f"creating MPT model '{model_name}'")
+        return MptModel(model_name)
+
+
+for _model_name in MptModel.SUPPORTED_MODELS:
+    _register_mpt_model(_model_name)
+
+
 def _register_openai_model(model_name: str) -> None:
     @model_maker(model_name)
     @ex.capture
@@ -64,7 +77,7 @@ def _register_transformers_model(model_name: str) -> None:
     @model_maker(model_name)
     @ex.capture
     def make_transformers_model(_log: Logger) -> TransformersModel:
-        _log.debug(f"creating TransformersModel model '{model_name}'")
+        _log.debug(f"creating Transformers model '{model_name}'")
         return TransformersModel(model_name)
 
 

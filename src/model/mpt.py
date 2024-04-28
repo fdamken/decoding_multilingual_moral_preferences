@@ -4,6 +4,7 @@ from logging import Logger
 
 import torch
 import transformers
+from transformers import AutoConfig, AutoModelForCausalLM, AutoTokenizer
 
 from api_usage import APIUsage
 from experiment import ex
@@ -25,16 +26,12 @@ class ChatMessage:
         return {"role": self.role, "content": self.content}
 
 
-class TransformersModel(Model):
+class MptModel(Model):
     _model_config = {
-        "falcon-7b-instruct": "tiiuae/falcon-7b-instruct",
-        "falcon-40b-instruct": "tiiuae/falcon-40b-instruct",
-        "falcon-180B-chat": "tiiuae/falcon-180B-chat",
-        "Llama-2-7b-chat-hf": "meta-llama/Llama-2-7b-chat-hf",
-        "Llama-2-13b-chat-hf": "meta-llama/Llama-2-13b-chat-hf",
-        "Llama-2-70b-chat-hf": "meta-llama/Llama-2-70b-chat-hf",
-        "Meta-Llama-3-8B-Instruct": "meta-llama/Meta-Llama-3-8B-Instruct",
-        "Meta-Llama-3-70B-Instruct": "meta-llama/Meta-Llama-3-70B-Instruct",
+        "mpt-7b-8k-chat": "mosaicml/mpt-7b-8k-chat",
+        "mpt-7b-chat": "mosaicml/mpt-7b-chat",
+        "mpt-30b-instruct": "mosaicml/mpt-30b-instruct",
+        "mpt-30b-chat": "mosaicml/mpt-30b-chat",
     }
 
     SUPPORTED_MODELS = set(_model_config.keys())
@@ -50,12 +47,17 @@ class TransformersModel(Model):
         self._init_model()
 
     def _init_model(self) -> None:
-        self._pipe = transformers.pipeline(
-            "text-generation",
-            model=self._model_config[self._model_name],
-            model_kwargs={"torch_dtype": torch.bfloat16},
+        model_name = self._model_config[self._model_name]
+        config = AutoConfig.from_pretrained(model_name, trust_remote_code=True)
+        config.max_seq_len = 16384
+        model = AutoModelForCausalLM.from_pretrained(
+            model_name,
+            config=config,
+            torch_dtype=torch.bfloat16,
             trust_remote_code=True,
         )
+        tokenizer = AutoTokenizer.from_pretrained(model_name)
+        self._pipe = transformers.pipeline("text-generation", model=model, tokenizer=tokenizer)
 
     def prompt(self, prompt: str) -> str:
         self._history.append(ChatMessage(ChatRole.USER, prompt))
@@ -76,8 +78,6 @@ class TransformersModel(Model):
         )
         print("prompt:", repr(prompt))
         eos_token_id = [self._pipe.tokenizer.eos_token_id]
-        if eot_id := self._pipe.tokenizer.convert_tokens_to_ids("<|eot_id|>"):
-            eos_token_id.append(eot_id)
         return self._pipe(
             prompt,
             max_new_tokens=1,
