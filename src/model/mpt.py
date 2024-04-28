@@ -49,6 +49,7 @@ class MptModel(Model):
     def _init_model(self) -> None:
         model_name = self._model_config[self._model_name]
         config = AutoConfig.from_pretrained(model_name, trust_remote_code=True)
+        config.attn_config["attn_impl"] = "flash"
         config.max_seq_len = 16384
         model = AutoModelForCausalLM.from_pretrained(
             model_name,
@@ -56,7 +57,7 @@ class MptModel(Model):
             torch_dtype=torch.bfloat16,
             trust_remote_code=True,
         )
-        tokenizer = AutoTokenizer.from_pretrained(model_name)
+        tokenizer = AutoTokenizer.from_pretrained(model_name, padding_side="left")
         self._pipe = transformers.pipeline("text-generation", model=model, tokenizer=tokenizer)
 
     def prompt(self, prompt: str) -> str:
@@ -80,7 +81,7 @@ class MptModel(Model):
         eos_token_id = [self._pipe.tokenizer.eos_token_id]
         return self._pipe(
             prompt,
-            max_new_tokens=1,
+            max_new_tokens=256,
             eos_token_id=eos_token_id,
             do_sample=False,
         )[0]["generated_text"][len(prompt):]
