@@ -48,7 +48,6 @@ class Llama3Model(Model):
             "text-generation",
             model=self._model_config[self._model_name],
             model_kwargs={"torch_dtype": torch.bfloat16},
-            device_map="auto",
         )
 
     def prompt(self, prompt: str) -> str:
