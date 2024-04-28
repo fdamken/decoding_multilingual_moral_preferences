@@ -3,6 +3,7 @@ from typing import Callable
 
 from experiment import ex
 from .google import GoogleModel
+from .llama3 import Llama3Model
 from .mock import MockModel
 from .model import Model
 from .mpt import MPTModel
@@ -42,6 +43,18 @@ def _register_google_model(model_name: str) -> None:
 
 for _model_name in GoogleModel.SUPPORTED_MODELS:
     _register_google_model(_model_name)
+
+
+def _register_llama3_model(model_name: str) -> None:
+    @model_maker(model_name)
+    @ex.capture
+    def make_llama3_model(_log: Logger) -> Llama3Model:
+        _log.debug(f"creating Llama3 '{model_name}'")
+        return Llama3Model(model_name)
+
+
+for _model_name in Llama3Model.SUPPORTED_MODELS:
+    _register_llama3_model(_model_name)
 
 
 @model_maker("mock")
