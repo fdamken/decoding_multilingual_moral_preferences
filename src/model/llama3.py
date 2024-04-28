@@ -76,10 +76,8 @@ class Llama3Model(Model):
                 self._pipe.tokenizer.eos_token_id,
                 self._pipe.tokenizer.convert_tokens_to_ids("<|eot_id|>")
             ],
-            do_sample=True,
-            temperature=0.,
-            top_p=.9,
-        )[0]["generated_text"]
+            do_sample=False,
+        )[0]["generated_text"][len(prompt):]
 
     def report_api_usage(self) -> APIUsage:
         return APIUsage(self._model_name, -1, -1, 0.)
