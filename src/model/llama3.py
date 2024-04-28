@@ -1,28 +1,12 @@
-from dataclasses import dataclass
-from enum import StrEnum
 from logging import Logger
 
 import torch
 import transformers
+from transformers import Conversation
 
 from api_usage import APIUsage
 from experiment import ex
 from .model import Model
-
-
-class ChatRole(StrEnum):
-    SYSTEM = "system"
-    USER = "user"
-    ASSISTANT = "assistant"
-
-
-@dataclass
-class ChatMessage:
-    role: ChatRole
-    content: str
-
-    def to_dict(self) -> dict:
-        return {"role": self.role, "content": self.content}
 
 
 class Llama3Model(Model):
@@ -35,8 +19,8 @@ class Llama3Model(Model):
 
     _model_name: str
 
-    _pipe: transformers.Pipeline
-    _history: list[ChatMessage]
+    _chatbot: transformers.Pipeline
+    _conversation: Conversation
 
     def __init__(self, model_name: str):
         super().__init__()
@@ -44,38 +28,33 @@ class Llama3Model(Model):
         self._init_model()
 
     def _init_model(self) -> None:
-        self._pipe = transformers.pipeline(
-            "text-generation",
+        self._chatbot = transformers.pipeline(
+            task="conversation",
             model=self._model_config[self._model_name],
             model_kwargs={"torch_dtype": torch.bfloat16},
-            device_map="auto",
         )
 
     def prompt(self, prompt: str) -> str:
-        self._history.append(ChatMessage(ChatRole.USER, prompt))
+        self._conversation.add_message({"role": "user", "content": prompt})
         message = self._complete()
-        self._history.append(ChatMessage(ChatRole.ASSISTANT, message))
         return message
 
     @ex.capture
     def reset(self, _log: Logger) -> None:
-        self._history = [ChatMessage(ChatRole.SYSTEM, self.system_prompt)]
+        self._conversation = Conversation()
+        self._conversation.add_message({"role": "system", "content": self.system_prompt})
 
     def _complete(self) -> str:
-        prompt = self._pipe.tokenizer.apply_chat_template(
-            [msg.to_dict() for msg in self._history],
-            tokenize=False,
-            add_generation_prompt=True
-        )
-        return self._pipe(
-            prompt,
+        self._chatbot(
+            self._conversation,
             max_new_tokens=10,
             eos_token_id=[
-                self._pipe.tokenizer.eos_token_id,
-                self._pipe.tokenizer.convert_tokens_to_ids("<|eot_id|>")
+                self._chatbot.tokenizer.eos_token_id,
+                self._chatbot.tokenizer.convert_tokens_to_ids("<|eot_id|>")
             ],
             do_sample=False,
-        )[0]["generated_text"][len(prompt):]
+        )
+        return self._conversation.messages[-1]["content"]
 
     def report_api_usage(self) -> APIUsage:
         return APIUsage(self._model_name, -1, -1, 0.)
