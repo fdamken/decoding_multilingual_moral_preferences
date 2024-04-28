@@ -60,7 +60,6 @@ class TransformersModel(Model):
     def prompt(self, prompt: str) -> str:
         self._history.append(ChatMessage(ChatRole.USER, prompt))
         message = self._complete()
-        print("message:", repr(message))
         self._history.append(ChatMessage(ChatRole.ASSISTANT, message))
         return message
 
@@ -74,7 +73,6 @@ class TransformersModel(Model):
             tokenize=False,
             add_generation_prompt=True,
         )
-        print("prompt:", repr(prompt))
         eos_token_id = [self._pipe.tokenizer.eos_token_id]
         if eot_id := self._pipe.tokenizer.convert_tokens_to_ids("<|eot_id|>"):
             eos_token_id.append(eot_id)

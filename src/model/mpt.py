@@ -70,7 +70,6 @@ class MptModel(Model):
     def prompt(self, prompt: str) -> str:
         self._history.append(ChatMessage(ChatRole.USER, prompt))
         message = self._complete()
-        print("message:", repr(message))
         self._history.append(ChatMessage(ChatRole.ASSISTANT, message))
         return message
 
@@ -84,7 +83,6 @@ class MptModel(Model):
             tokenize=False,
             add_generation_prompt=True,
         )
-        print("prompt:", repr(prompt))
         eos_token_id = [self._pipe.tokenizer.eos_token_id]
         return self._pipe(
             prompt,
