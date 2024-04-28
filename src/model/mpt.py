@@ -88,7 +88,7 @@ class MptModel(Model):
         eos_token_id = [self._pipe.tokenizer.eos_token_id]
         return self._pipe(
             prompt,
-            max_new_tokens=256,
+            max_new_tokens=50,
             eos_token_id=eos_token_id,
             do_sample=False,
         )[0]["generated_text"][len(prompt):]
