@@ -3,12 +3,11 @@ from typing import Callable
 
 from experiment import ex
 from .google import GoogleModel
-from .llama3 import Llama3Model
+from .llama import LlamaModel
 from .mock import MockModel
 from .model import Model
 from .mpt import MPTModel
 from .openai import OpenAIModel
-from .transformers import TransformersModel
 
 _model_maker_registry: dict[str, Callable[[], Model]] = {}
 
@@ -45,16 +44,16 @@ for _model_name in GoogleModel.SUPPORTED_MODELS:
     _register_google_model(_model_name)
 
 
-def _register_llama3_model(model_name: str) -> None:
+def _register_llama_model(model_name: str) -> None:
     @model_maker(model_name)
     @ex.capture
-    def make_llama3_model(_log: Logger) -> Llama3Model:
-        _log.debug(f"creating Llama3 '{model_name}'")
-        return Llama3Model(model_name)
+    def make_llama_model(_log: Logger) -> LlamaModel:
+        _log.debug(f"creating Llama model '{model_name}'")
+        return LlamaModel(model_name)
 
 
-for _model_name in Llama3Model.SUPPORTED_MODELS:
-    _register_llama3_model(_model_name)
+for _model_name in LlamaModel.SUPPORTED_MODELS:
+    _register_llama_model(_model_name)
 
 
 @model_maker("mock")
@@ -84,18 +83,6 @@ def _register_openai_model(model_name: str) -> None:
 
 for _model_name in OpenAIModel.SUPPORTED_MODELS:
     _register_openai_model(_model_name)
-
-
-def _register_transformers_model(model_name: str) -> None:
-    @model_maker(model_name)
-    @ex.capture
-    def make_mpt_model(_log: Logger) -> TransformersModel:
-        _log.debug(f"creating Transformers model '{model_name}'")
-        return TransformersModel(model_name)
-
-
-for _model_name in TransformersModel.SUPPORTED_MODELS:
-    _register_transformers_model(_model_name)
 
 __all__ = [
     "Model",
