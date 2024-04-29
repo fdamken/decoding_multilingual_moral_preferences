@@ -16,8 +16,9 @@ def default_config():
     # language, can be one of moral_machine.get_available_languages()
     language = None
 
-    # number of sessions to play, defaults to 100
-    num_sessions = 100
+    # which sessions to play (from inclusive, to exclusive); defaults to 0-500 (all)
+    from_session_id = 0
+    to_session_id = 500
 
     # play only the listed session indices; defaults to None (all)
     session_indices = None

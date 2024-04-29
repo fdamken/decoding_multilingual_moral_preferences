@@ -1,5 +1,4 @@
 from dataclasses import dataclass
-from typing import Optional
 
 import pandas as pd
 
@@ -37,7 +36,7 @@ class Session:
 
 
 @ex.capture
-def load_sessions(language: str, num_sessions: Optional[int]) -> list[Session]:
+def load_sessions(language: str, from_session_id: int, to_session_id: int) -> list[Session]:
     assert language in get_available_languages(), f"language '{language}' not available"
     language = language.split("-")[0]  # strip region to load the dataset in correct language
     df = pd.read_csv(path_util.get_data_path(language))
@@ -49,6 +48,4 @@ def load_sessions(language: str, num_sessions: Optional[int]) -> list[Session]:
         if len(scenarios) == 13:
             sessions.append(Session(scenarios))
             scenarios = []
-        if num_sessions is not None and len(sessions) == num_sessions:
-            break
-    return sessions
+    return sessions[from_session_id:to_session_id]
