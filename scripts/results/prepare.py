@@ -193,17 +193,17 @@ def prepare_round(responde_id, extended_session_id, user_id, language, round_idx
     return outcomes
 
 
-def prepare(language, data):
+def prepare(language, sessions):
     rows = []
-    for session in data:
+    for session in sessions:
         session_id = str(uuid4())
         user_id = str(uuid4())
-        for round_idx, round in enumerate(session["rounds"]):
-            rows += prepare_round(str(uuid4()), session_id, user_id, language, round_idx, round)
+        for round_idx, round_ in enumerate(session["rounds"]):
+            rows += prepare_round(str(uuid4()), session_id, user_id, language, round_idx, round_)
     return rows
 
 
-def _validate(csv_file_name):
+def _find_missing_characters(csv_file_name):
     df = pd.read_csv(csv_file_name)
     # we exclude "Age", "Fitness", "Social Status", "Species", "Gender" because we have too little data
     characters = ["OldMan", "OldWoman", "Boy", "Girl", "LargeMan", "LargeWoman", "MaleAthlete", "FemaleAthlete", "MaleDoctor",
@@ -212,9 +212,7 @@ def _validate(csv_file_name):
     df_filtered = df.loc[
         (df["ScenarioType"] == "Random") & (df["ScenarioTypeStrict"] == "Random") & (df["NumberOfCharacters"] == 1)]
     relevant_columns_sum = df_filtered[characters].sum()
-    missing_characters = list(relevant_columns_sum[relevant_columns_sum == 0].index)
-    if missing_characters:
-        print(f"missing characters in {csv_file_name.name}: {', '.join(missing_characters)}")
+    return list(relevant_columns_sum[relevant_columns_sum == 0].index)
 
 
 def main():
@@ -224,10 +222,15 @@ def main():
 
     for model in path_util.preprocessed_experiment_results_dir.iterdir():
         rows = []
+        missing_languages = []
         for file_path in model.iterdir():
             with open(file_path, "r") as f:
-                data = json.load(f)
-                rows += prepare(file_path.name.split(".")[0], data)
+                language = file_path.stem
+                sessions = json.load(f)
+                if len(sessions) > 0:
+                    rows += prepare(language, sessions)
+                else:
+                    missing_languages.append(language)
 
         csv_file_name = path_util.prepared_experiment_results_dir / f"{model.name}.csv"
         with open(csv_file_name, "w") as f:
@@ -247,7 +250,15 @@ def main():
             for row in rows:
                 csv.writerow(row)
 
-        _validate(csv_file_name)
+        status = []
+        missing_characters = _find_missing_characters(csv_file_name)
+        if missing_languages:
+            status.append(f"missing languages: {', '.join(missing_languages)}")
+        if missing_characters:
+            status.append(f"missing characters: {', '.join(missing_characters)}")
+        if not missing_languages and not missing_characters:
+            status.append("valid")
+        print(f"{model.name}: {'; '.join(status)}")
 
 
 if __name__ == "__main__":

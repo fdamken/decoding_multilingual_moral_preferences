@@ -5,7 +5,7 @@ import path_util
 from model import get_available_models
 from moral_machine import get_available_languages
 
-expected_num_sessions = 100
+expected_num_sessions = 500
 expected_num_scenarios_per_session = 13
 expected_answers = {1, 2}
 
@@ -37,36 +37,32 @@ def _log_error(
         print(error)
 
 
-def _validate_result(model: str, language: str) -> Optional[list[int]]:
-    result_dir = path_util.cleansed_experiment_results_dir / model / language
-    if not result_dir.exists():
+def _validate_result(model: str, language: str) -> Optional[tuple[list[int], int, int, int]]:
+    results_file = path_util.cleansed_experiment_results_dir / model / f"{language}.json"
+    if not results_file.exists():
         _log_error(model, language, error="missing results")
         return None
-    files = {x.name for x in result_dir.iterdir()}
-    expected_files = {"config.json", "cout.txt", "metrics.json", "run.json"}
-    if files != expected_files:
-        _log_error(model, language, error=f"unexpected files: {files - expected_files}; missing files: {expected_files - files}")
-        return None
-    with open(result_dir / "config.json") as f:
-        config = json.load(f)
-    if config["model_name"] != model:
-        _log_error(model, language, error=f"model name mismatch (is {config['model_name']}, should be {model})")
-        return None
-    if config["language"] != language:
-        _log_error(model, language, error=f"language mismatch (is {config['language']}, should be {language})")
-        return None
-    with open(result_dir / "run.json") as f:
-        run = json.load(f)
-    sessions = run["result"]["answers"]
+    with open(results_file) as f:
+        sessions = json.load(f)
     num_sessions = len(sessions)
     if num_sessions != expected_num_sessions:
         _log_error(model, language, error=f"unexpected number of sessions (is {num_sessions}, should be {expected_num_sessions})")
         return None
     erroneous_sessions = []
+    num_missing_sessions = 0
+    num_prompts_blocked = 0
+    num_unexpected_answers = 0
     for session_idx, answers in enumerate(sessions):
-        if type(answers) is str and answers.startswith("PROMPT BLOCKED"):
-            _log_error(model, language, session_idx, error="prompt blocked")
+        if answers is None:
+            num_missing_sessions += 1
             continue
+        if type(answers) is str:
+            if answers.startswith("PROMPT BLOCKED"):
+                num_prompts_blocked += 1
+                continue
+            if answers == "UNEXPECTED_ANSWER":
+                num_unexpected_answers += 1
+                continue
         if type(answers) is not list:
             _log_error(model, language, session_idx, error=f"unexpected type of answer list (is {type(answers)}, should be list)")
             erroneous_sessions.append(session_idx)
@@ -86,35 +82,31 @@ def _validate_result(model: str, language: str) -> Optional[list[int]]:
             _log_error(model, language, session_idx, error=f"contains unexpected answers: {unexpected_answers}")
             erroneous_sessions.append(session_idx)
             continue
-    return erroneous_sessions
+    return erroneous_sessions, num_missing_sessions, num_prompts_blocked, num_unexpected_answers
 
 
 def _validate_results() -> None:
-    total_erroneous_sessions = []
     rerun_arguments = []
     for model in get_available_models():
         if not (path_util.cleansed_experiment_results_dir / model).exists():
             _log_error(model, error="missing results")
             continue
         for language in get_available_languages():
-            erroneous_sessions = _validate_result(model, language)
-            if erroneous_sessions is None:
-                print(f"model {model}, language {language}: valid")
-            else:
-                total_erroneous_sessions += erroneous_sessions
-                if erroneous_sessions:
-                    rerun_arguments.append(
-                        f"with model_name={model} language={language} session_indices="
-                        f"{','.join([str(session) for session in erroneous_sessions])}"
-                    )
-    if total_erroneous_sessions:
-        rerun_arguments_str = '\n'.join(rerun_arguments)
-        print(
-            f"found {len(total_erroneous_sessions)} erroneous sessions\nrerun with the following arguments:\n"
-            f"{rerun_arguments_str}"
-        )
-    else:
-        print("all results are valid")
+            validation_result = _validate_result(model, language)
+            if validation_result is None:
+                continue
+            erroneous_sessions, num_missing_sessions, num_prompts_blocked, num_unexpected_answers = validation_result
+            _log_error(
+                model,
+                language,
+                error=f"{erroneous_sessions} erroneous sessions; {num_missing_sessions} missing sessions sessions; "
+                      f"{num_prompts_blocked} blocked prompts; {num_unexpected_answers} unexpected answers"
+            )
+            if len(erroneous_sessions) > 0:
+                rerun_arguments.append(
+                    f"with model_name={model} language={language} session_indices="
+                    f"{','.join([str(session) for session in erroneous_sessions])}"
+                )
 
 
 def main() -> None:
