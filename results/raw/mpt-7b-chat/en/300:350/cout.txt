@@ -1,0 +1,730 @@
+INFO - tinypaper - Running command 'main'
+INFO - tinypaper - Started run with ID "114"
+/home/fd15hava/.cache/huggingface/modules/transformers_modules/mosaicml/mpt-7b-chat/1fe2374291e730f7c58ceb1bf49960082371b551/configuration_mpt.py:114: UserWarning: alibi or rope is turned on, setting `learned_pos_emb` to `False.`
+  warnings.warn(f'alibi or rope is turned on, setting `learned_pos_emb` to `False.`')
+/home/fd15hava/.cache/huggingface/modules/transformers_modules/mosaicml/mpt-7b-chat/1fe2374291e730f7c58ceb1bf49960082371b551/configuration_mpt.py:141: UserWarning: If not using a Prefix Language Model, we recommend setting "attn_impl" to "flash" instead of "triton".
+  warnings.warn(UserWarning('If not using a Prefix Language Model, we recommend setting "attn_impl" to "flash" instead of "triton".'))
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Instantiating an MPTForCausalLM model from /home/fd15hava/.cache/huggingface/modules/transformers_modules/mosaicml/mpt-7b-chat/1fe2374291e730f7c58ceb1bf49960082371b551/modeling_mpt.py
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - We recommend using config.init_device="meta" with Composer + FSDP for faster initialization.
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-7b-chat.1fe2374291e730f7c58ceb1bf49960082371b551.modeling_mpt - Removing bias from module=LPLayerNorm((4096,), eps=1e-05, elementwise_affine=True).
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:35<00:35, 35.32s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:47<00:00, 21.72s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:47<00:00, 23.76s/it]
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+  0%|          | 0/50 [00:00<?, ?it/s]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+/home/fd15hava/.cache/huggingface/modules/transformers_modules/mosaicml/mpt-7b-chat/1fe2374291e730f7c58ceb1bf49960082371b551/attention.py:87: UserWarning: Propagating key_padding_mask to the attention module and applying it within the attention module can cause unnecessary computation/memory usage. Consider integrating into attn_bias once and passing that to each attention module instead.
+  warnings.warn('Propagating key_padding_mask to the attention module ' + 'and applying it within the attention module can cause ' + 'unnecessary computation/memory usage. Consider integrating ' + 'into attn_bias once and passing that to each attention ' + 'module instead.')
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+  2%|▏         | 1/50 [00:38<31:31, 38.60s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+  4%|▍         | 2/50 [01:00<23:00, 28.76s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+  6%|▌         | 3/50 [01:21<19:42, 25.16s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+  8%|▊         | 4/50 [01:41<17:41, 23.08s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 10%|█         | 5/50 [01:58<15:40, 20.89s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 12%|█▏        | 6/50 [02:17<14:50, 20.24s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 14%|█▍        | 7/50 [02:33<13:35, 18.96s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 16%|█▌        | 8/50 [02:54<13:47, 19.69s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 18%|█▊        | 9/50 [03:11<12:45, 18.67s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 20%|██        | 10/50 [03:26<11:39, 17.48s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 22%|██▏       | 11/50 [03:44<11:28, 17.65s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 24%|██▍       | 12/50 [04:26<15:58, 25.23s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 26%|██▌       | 13/50 [05:20<20:54, 33.91s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 28%|██▊       | 14/50 [05:40<17:50, 29.73s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 30%|███       | 15/50 [06:13<17:54, 30.70s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 32%|███▏      | 16/50 [06:30<15:01, 26.50s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 34%|███▍      | 17/50 [06:54<14:10, 25.76s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 36%|███▌      | 18/50 [07:11<12:19, 23.12s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 38%|███▊      | 19/50 [07:28<10:59, 21.29s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 40%|████      | 20/50 [07:44<09:51, 19.72s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 42%|████▏     | 21/50 [08:08<10:08, 20.98s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 44%|████▍     | 22/50 [08:24<09:07, 19.57s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 46%|████▌     | 23/50 [08:42<08:37, 19.18s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 48%|████▊     | 24/50 [09:00<08:04, 18.65s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 50%|█████     | 25/50 [09:21<08:06, 19.47s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 52%|█████▏    | 26/50 [09:37<07:24, 18.52s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 54%|█████▍    | 27/50 [10:02<07:48, 20.37s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 56%|█████▌    | 28/50 [10:20<07:14, 19.75s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 58%|█████▊    | 29/50 [10:39<06:44, 19.28s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 60%|██████    | 30/50 [11:00<06:39, 19.96s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 62%|██████▏   | 31/50 [11:21<06:26, 20.36s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 64%|██████▍   | 32/50 [11:42<06:04, 20.27s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 66%|██████▌   | 33/50 [12:02<05:45, 20.30s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 68%|██████▊   | 34/50 [12:20<05:13, 19.60s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 70%|███████   | 35/50 [12:49<05:37, 22.50s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 72%|███████▏  | 36/50 [13:14<05:23, 23.12s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 74%|███████▍  | 37/50 [13:33<04:47, 22.09s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 76%|███████▌  | 38/50 [13:59<04:37, 23.15s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 78%|███████▊  | 39/50 [14:34<04:54, 26.74s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 80%|████████  | 40/50 [15:14<05:06, 30.65s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 82%|████████▏ | 41/50 [15:43<04:31, 30.13s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 84%|████████▍ | 42/50 [16:09<03:51, 28.93s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 86%|████████▌ | 43/50 [16:25<02:55, 25.04s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 88%|████████▊ | 44/50 [16:40<02:12, 22.11s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 90%|█████████ | 45/50 [17:02<01:49, 21.90s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 92%|█████████▏| 46/50 [17:19<01:22, 20.65s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 94%|█████████▍| 47/50 [17:36<00:58, 19.35s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 96%|█████████▌| 48/50 [17:55<00:38, 19.38s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 98%|█████████▊| 49/50 [18:14<00:19, 19.14s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+100%|██████████| 50/50 [18:32<00:00, 18.81s/it]100%|██████████| 50/50 [18:32<00:00, 22.24s/it]
+INFO - tinypaper - Result: {'answers': [[1, 1, 1, 2, 2, 2, 2, 2, 2, 1, 1, 2, 2], [1, 2, 2, 2, 2, 1, 2, 1, 1, 1, 1, 1, 2], [1, 1, 1, 1, 1, 2, 2, 1, 1, 2, 1, 1, 1], [1, 2, 2, 1, 1, 2, 2, 2, 1, 2, 1, 2, 1], [1, 1, 1, 2, 2, 2, 2, 2, 1, 1, 2, 2, 2], [1, 1, 2, 1, 1, 2, 2, 2, 1, 1, 2, 2, 2], [1, 1, 2, 2, 1, 2, 1, 1, 1, 2, 2, 2, 1], [2, 2, 1, 1, 1, 1, 2, 2, 2, 1, 1, 2, 2], [1, 2, 1, 1, 1, 2, 2, 1, 1, 2, 2, 2, 1], [2, 1, 1, 1, 2, 1, 2, 1, 1, 2, 1, 1, 2], [2, 2, 2, 1, 2, 2, 2, 1, 2, 1, 2, 1, 1], [1, 1, 2, 2, 2, 2, 2, 2, 2, 1, 2, 1, 2], [2, 2, 2, 1, 1, 2, 2, 2, 1, 2, 1, 2, 1], [1, 1, 1, 1, 2, 2, 1, 2, 2, 1, 1, 2, 1], [1, 1, 2, 1, 2, 2, 2, 2, 1, 2, 2, 1, 1], [2, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2], [1, 1, 1, 1, 1, 2, 2, 1, 2, 1, 2, 2, 1], [1, 2, 1, 2, 2, 2, 1, 2, 2, 2, 2, 2, 1], [1, 1, 2, 1, 2, 1, 2, 1, 2, 1, 1, 1, 2], [1, 1, 2, 1, 2, 1, 1, 2, 1, 1, 2, 2, 1], [1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 2, 2], [2, 2, 1, 2, 2, 1, 2, 1, 1, 2, 2, 2, 2], [1, 1, 1, 2, 2, 1, 2, 1, 2, 1, 1, 2, 2], [1, 2, 2, 1, 2, 2, 2, 2, 2, 2, 1, 2, 2], [1, 2, 2, 1, 2, 2, 2, 2, 2, 2, 1, 1, 1], [1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 2], [1, 1, 2, 2, 2, 1, 1, 1, 2, 2, 2, 2, 1], [1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2], [2, 2, 1, 1, 2, 2, 1, 2, 1, 1, 1, 1, 2], [1, 2, 1, 2, 1, 2, 1, 2, 1, 1, 2, 2, 1], [1, 2, 1, 1, 2, 1, 2, 1, 1, 1, 2, 2, 2], [1, 2, 1, 2, 2, 2, 1, 1, 1, 2, 2, 1, 2], [1, 2, 2, 2, 1, 1, 2, 2, 1, 2, 1, 2, 1], [2, 2, 1, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2], [2, 2, 2, 1, 2, 1, 1, 1, 2, 1, 2, 2, 1], [2, 2, 2, 1, 2, 2, 2, 2, 2, 1, 1, 1, 1], [1, 2, 2, 1, 2, 1, 1, 2, 1, 1, 2, 1, 1], [1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 2, 2], [2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 1], [2, 2, 2, 2, 2, 1, 1, 1, 1, 2, 1, 2, 1], [1, 2, 1, 2, 2, 1, 2, 2, 1, 2, 2, 2, 2], [1, 2, 1, 1, 1, 1, 1, 2, 2, 2, 2, 1, 2], [1, 2, 2, 2, 1, 2, 1, 2, 2, 1, 2, 1, 2], [2, 2, 1, 2, 1, 2, 2, 1, 2, 2, 2, 2, 1], [1, 2, 1, 1, 2, 2, 1, 1, 1, 2, 1, 2, 2], [2, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 2], [1, 1, 1, 2, 2, 2, 1, 1, 1, 2, 2, 1, 1], [2, 1, 1, 1, 2, 1, 1, 2, 2, 1, 2, 1, 1], [2, 2, 1, 2, 2, 1, 2, 2, 1, 1, 2, 2, 1], [1, 1, 2, 2, 2, 1, 2, 2, 1, 2, 1, 1, 2]], 'api_usage': [APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='mpt-7b-chat', num_input_tokens=-1, num_output_tokens=-1, cost=0.0)], 'api_usage_total': APIUsage(name='mpt-7b-chat', num_input_tokens=-50, num_output_tokens=-50, cost=0.0)}
+INFO - tinypaper - Completed after 0:19:26

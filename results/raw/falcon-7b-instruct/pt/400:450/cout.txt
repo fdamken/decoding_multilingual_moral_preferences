@@ -1,0 +1,957 @@
+INFO - tinypaper - Running command 'main'
+INFO - tinypaper - Started run with ID "315"
+WARNING - transformers_modules.tiiuae.falcon-7b-instruct.cf4b3c42ce2fdfe24f753f0f0d179202fea59c99.configuration_falcon - 
+WARNING: You are currently loading Falcon using legacy code contained in the model repository. Falcon has now been fully ported into the Hugging Face transformers library. For the most up-to-date and high-performance version of the Falcon model code, please update to the latest version of transformers and then load the model without the trust_remote_code=True argument.
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:34<00:34, 34.90s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:50<00:00, 23.44s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:50<00:00, 25.16s/it]
+  0%|          | 0/50 [00:00<?, ?it/s]
+No chat template is defined for this tokenizer - using a default chat template that implements the ChatML format (without BOS/EOS tokens!). If the default is not appropriate for your model, please set `tokenizer.chat_template` to an appropriate template. See https://huggingface.co/docs/transformers/main/chat_templating for more information.
+
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 4.767(s), this was the 1st time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 5.114(s), this was the 2nd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 5.448(s), this was the 3rd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 5.784(s), this was the 4th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 6.127(s), this was the 5th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 6.459(s), this was the 6th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 6.810(s), this was the 7th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 7.133(s), this was the 8th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 7.471(s), this was the 9th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 7.792(s), this was the 10th time calling it.
+Traceback (most recent call last):
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 26, in play
+    answer = self._prompt(self._make_prompt(scenario))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 40, in _prompt
+    raise UnexpectedAnswerException(f"expected 1 or 2, got {result}")
+util.UnexpectedAnswerException: expected 1 or 2, got Voc
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py", line 16, in _run_session
+    result = agent.play(session)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 326, in iter
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x149355690310 state=finished raised UnexpectedAnswerException>]
+  2%|▏         | 1/50 [00:07<06:22,  7.80s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 0.374(s), this was the 1st time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 0.729(s), this was the 2nd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 1.976(s), this was the 3rd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 3.487(s), this was the 4th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 7.497(s), this was the 5th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 7.851(s), this was the 6th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 8.178(s), this was the 7th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 8.497(s), this was the 8th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 8.813(s), this was the 9th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 9.136(s), this was the 10th time calling it.
+Traceback (most recent call last):
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 26, in play
+    answer = self._prompt(self._make_prompt(scenario))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 40, in _prompt
+    raise UnexpectedAnswerException(f"expected 1 or 2, got {result}")
+util.UnexpectedAnswerException: expected 1 or 2, got Voc
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py", line 16, in _run_session
+    result = agent.play(session)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 326, in iter
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x149357329a90 state=finished raised UnexpectedAnswerException>]
+  4%|▍         | 2/50 [00:16<06:52,  8.59s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Token indices sequence length is longer than the specified maximum sequence length for this model (2128 > 2048). Running this sequence through the model will result in indexing errors
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+  6%|▌         | 3/50 [00:39<11:46, 15.04s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+  8%|▊         | 4/50 [00:58<12:36, 16.44s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 0.336(s), this was the 1st time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 0.675(s), this was the 2nd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 1.009(s), this was the 3rd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 1.347(s), this was the 4th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 1.681(s), this was the 5th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 2.018(s), this was the 6th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 2.357(s), this was the 7th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 2.694(s), this was the 8th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 3.032(s), this was the 9th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 3.648(s), this was the 10th time calling it.
+Traceback (most recent call last):
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 26, in play
+    answer = self._prompt(self._make_prompt(scenario))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 40, in _prompt
+    raise UnexpectedAnswerException(f"expected 1 or 2, got {result}")
+util.UnexpectedAnswerException: expected 1 or 2, got Voc
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py", line 16, in _run_session
+    result = agent.play(session)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 326, in iter
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x1493556a0050 state=finished raised UnexpectedAnswerException>]
+ 10%|█         | 5/50 [01:01<08:52, 11.83s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 12%|█▏        | 6/50 [01:22<10:53, 14.86s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 14%|█▍        | 7/50 [01:39<11:09, 15.56s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 16%|█▌        | 8/50 [01:57<11:28, 16.39s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 18%|█▊        | 9/50 [02:27<14:01, 20.52s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 2.920(s), this was the 1st time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 3.270(s), this was the 2nd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 3.617(s), this was the 3rd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 3.966(s), this was the 4th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 4.311(s), this was the 5th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 4.656(s), this was the 6th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 5.001(s), this was the 7th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 5.346(s), this was the 8th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 5.694(s), this was the 9th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 6.039(s), this was the 10th time calling it.
+Traceback (most recent call last):
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 26, in play
+    answer = self._prompt(self._make_prompt(scenario))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 40, in _prompt
+    raise UnexpectedAnswerException(f"expected 1 or 2, got {result}")
+util.UnexpectedAnswerException: expected 1 or 2, got Voc
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py", line 16, in _run_session
+    result = agent.play(session)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 326, in iter
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x149355e78a50 state=finished raised UnexpectedAnswerException>]
+ 20%|██        | 10/50 [02:33<10:41, 16.05s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 22%|██▏       | 11/50 [02:51<10:49, 16.65s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 24%|██▍       | 12/50 [03:10<10:59, 17.34s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 26%|██▌       | 13/50 [03:38<12:46, 20.72s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 28%|██▊       | 14/50 [03:57<12:07, 20.22s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 30%|███       | 15/50 [04:25<13:03, 22.38s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 32%|███▏      | 16/50 [04:44<12:05, 21.32s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 34%|███▍      | 17/50 [05:00<10:53, 19.80s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 36%|███▌      | 18/50 [05:18<10:21, 19.41s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 38%|███▊      | 19/50 [05:46<11:21, 21.98s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 40%|████      | 20/50 [06:05<10:27, 20.90s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 42%|████▏     | 21/50 [06:34<11:20, 23.47s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 44%|████▍     | 22/50 [06:51<09:58, 21.37s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 46%|████▌     | 23/50 [07:26<11:30, 25.58s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 48%|████▊     | 24/50 [07:42<09:46, 22.56s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 50%|█████     | 25/50 [08:01<08:58, 21.54s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 0.372(s), this was the 1st time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 0.712(s), this was the 2nd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 1.052(s), this was the 3rd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 1.394(s), this was the 4th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 3.346(s), this was the 5th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 3.683(s), this was the 6th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 4.020(s), this was the 7th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 4.356(s), this was the 8th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 4.693(s), this was the 9th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 5.030(s), this was the 10th time calling it.
+Traceback (most recent call last):
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 26, in play
+    answer = self._prompt(self._make_prompt(scenario))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 40, in _prompt
+    raise UnexpectedAnswerException(f"expected 1 or 2, got {result}")
+util.UnexpectedAnswerException: expected 1 or 2, got Voc
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py", line 16, in _run_session
+    result = agent.play(session)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 326, in iter
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x1493556a99d0 state=finished raised UnexpectedAnswerException>]
+ 52%|█████▏    | 26/50 [08:06<06:38, 16.59s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 54%|█████▍    | 27/50 [08:39<08:17, 21.65s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 0.374(s), this was the 1st time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 0.753(s), this was the 2nd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 1.128(s), this was the 3rd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 1.503(s), this was the 4th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 1.876(s), this was the 5th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 2.252(s), this was the 6th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 2.628(s), this was the 7th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 3.005(s), this was the 8th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 3.392(s), this was the 9th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 3.763(s), this was the 10th time calling it.
+Traceback (most recent call last):
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 26, in play
+    answer = self._prompt(self._make_prompt(scenario))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 40, in _prompt
+    raise UnexpectedAnswerException(f"expected 1 or 2, got {result}")
+util.UnexpectedAnswerException: expected 1 or 2, got Voc
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py", line 16, in _run_session
+    result = agent.play(session)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 326, in iter
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x149355eb3910 state=finished raised UnexpectedAnswerException>]
+ 56%|█████▌    | 28/50 [08:43<05:58, 16.29s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 58%|█████▊    | 29/50 [09:04<06:12, 17.73s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 60%|██████    | 30/50 [09:25<06:13, 18.69s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 62%|██████▏   | 31/50 [09:43<05:50, 18.43s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 64%|██████▍   | 32/50 [10:01<05:29, 18.32s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 66%|██████▌   | 33/50 [10:30<06:05, 21.52s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 68%|██████▊   | 34/50 [10:53<05:53, 22.09s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 70%|███████   | 35/50 [11:30<06:34, 26.33s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 72%|███████▏  | 36/50 [12:38<09:06, 39.05s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 0.425(s), this was the 1st time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 0.857(s), this was the 2nd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 1.276(s), this was the 3rd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 1.815(s), this was the 4th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 2.235(s), this was the 5th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 2.655(s), this was the 6th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 3.071(s), this was the 7th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 3.492(s), this was the 8th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 3.911(s), this was the 9th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Voc.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 4.327(s), this was the 10th time calling it.
+Traceback (most recent call last):
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 26, in play
+    answer = self._prompt(self._make_prompt(scenario))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 40, in _prompt
+    raise UnexpectedAnswerException(f"expected 1 or 2, got {result}")
+util.UnexpectedAnswerException: expected 1 or 2, got Voc
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py", line 16, in _run_session
+    result = agent.play(session)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 326, in iter
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x149355e663d0 state=finished raised UnexpectedAnswerException>]
+ 74%|███████▍  | 37/50 [12:43<06:12, 28.64s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 76%|███████▌  | 38/50 [13:23<06:26, 32.20s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 78%|███████▊  | 39/50 [13:46<05:24, 29.48s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 80%|████████  | 40/50 [14:06<04:26, 26.64s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 82%|████████▏ | 41/50 [14:29<03:47, 25.29s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 84%|████████▍ | 42/50 [14:47<03:05, 23.22s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 86%|████████▌ | 43/50 [15:05<02:31, 21.67s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 88%|████████▊ | 44/50 [15:38<02:29, 24.93s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 90%|█████████ | 45/50 [16:00<02:00, 24.11s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 92%|█████████▏| 46/50 [16:21<01:32, 23.19s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 94%|█████████▍| 47/50 [16:38<01:04, 21.41s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 96%|█████████▌| 48/50 [17:01<00:43, 21.81s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+ 98%|█████████▊| 49/50 [17:19<00:20, 20.80s/it]Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:11 for open-end generation.
+100%|██████████| 50/50 [17:42<00:00, 21.31s/it]100%|██████████| 50/50 [17:42<00:00, 21.24s/it]
+INFO - tinypaper - Result: {'answers': ['Traceback (most recent call last):\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 40, in _prompt\n    raise UnexpectedAnswerException(f"expected 1 or 2, got {result}")\nutil.UnexpectedAnswerException: expected 1 or 2, got Voc\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File "/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x149355690310 state=finished raised UnexpectedAnswerException>]\n', 'Traceback (most recent call last):\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 40, in _prompt\n    raise UnexpectedAnswerException(f"expected 1 or 2, got {result}")\nutil.UnexpectedAnswerException: expected 1 or 2, got Voc\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File "/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x149357329a90 state=finished raised UnexpectedAnswerException>]\n', [2, 2, 2, 1, 2, 2, 2, 2, 2, 1, 1, 2, 2], [2, 2, 1, 2, 2, 1, 2, 2, 1, 2, 2, 2, 2], 'Traceback (most recent call last):\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 40, in _prompt\n    raise UnexpectedAnswerException(f"expected 1 or 2, got {result}")\nutil.UnexpectedAnswerException: expected 1 or 2, got Voc\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File "/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1493556a0050 state=finished raised UnexpectedAnswerException>]\n', [1, 2, 1, 2, 1, 1, 2, 1, 2, 1, 1, 1, 2], [2, 2, 1, 1, 2, 2, 2, 2, 1, 2, 1, 1, 2], [2, 2, 2, 1, 1, 2, 1, 1, 2, 1, 2, 1, 1], [2, 1, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 1], 'Traceback (most recent call last):\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 40, in _prompt\n    raise UnexpectedAnswerException(f"expected 1 or 2, got {result}")\nutil.UnexpectedAnswerException: expected 1 or 2, got Voc\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File "/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x149355e78a50 state=finished raised UnexpectedAnswerException>]\n', [1, 2, 1, 2, 1, 1, 1, 1, 2, 1, 2, 2, 1], [2, 1, 2, 1, 2, 1, 1, 2, 1, 1, 2, 1, 2], [2, 2, 1, 2, 1, 1, 1, 2, 2, 2, 2, 2, 1], [2, 1, 2, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2], [1, 2, 2, 2, 1, 1, 1, 1, 2, 1, 1, 2, 1], [2, 1, 2, 2, 1, 2, 1, 1, 2, 2, 2, 1, 2], [2, 1, 1, 1, 1, 2, 2, 2, 2, 1, 2, 1, 2], [1, 1, 1, 2, 1, 2, 2, 1, 1, 2, 1, 2, 2], [1, 1, 2, 2, 1, 1, 2, 2, 2, 1, 1, 1, 1], [2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 2], [2, 2, 2, 1, 2, 2, 2, 2, 1, 1, 1, 2, 2], [2, 2, 1, 2, 2, 1, 2, 1, 2, 1, 1, 2, 2], [1, 2, 1, 2, 2, 1, 2, 1, 1, 2, 2, 1, 1], [2, 1, 1, 1, 2, 1, 2, 1, 1, 1, 1, 2, 1], [1, 1, 2, 2, 1, 1, 2, 2, 1, 2, 1, 1, 1], 'Traceback (most recent call last):\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 40, in _prompt\n    raise UnexpectedAnswerException(f"expected 1 or 2, got {result}")\nutil.UnexpectedAnswerException: expected 1 or 2, got Voc\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File "/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1493556a99d0 state=finished raised UnexpectedAnswerException>]\n', [2, 1, 2, 2, 1, 1, 1, 2, 2, 2, 2, 1, 2], 'Traceback (most recent call last):\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 40, in _prompt\n    raise UnexpectedAnswerException(f"expected 1 or 2, got {result}")\nutil.UnexpectedAnswerException: expected 1 or 2, got Voc\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File "/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x149355eb3910 state=finished raised UnexpectedAnswerException>]\n', [2, 2, 2, 2, 2, 1, 1, 1, 1, 2, 1, 1, 1], [1, 1, 1, 1, 2, 1, 1, 2, 2, 1, 2, 1, 1], [2, 1, 2, 2, 1, 1, 2, 1, 1, 2, 2, 1, 1], [1, 2, 2, 2, 1, 1, 1, 1, 2, 1, 1, 2, 2], [2, 1, 2, 1, 2, 2, 1, 1, 1, 1, 2, 2, 2], [1, 1, 1, 2, 1, 2, 1, 2, 2, 2, 1, 1, 2], [1, 1, 2, 1, 1, 1, 2, 1, 2, 1, 2, 1, 2], [2, 1, 1, 2, 2, 1, 2, 1, 1, 1, 1, 1, 2], 'Traceback (most recent call last):\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 40, in _prompt\n    raise UnexpectedAnswerException(f"expected 1 or 2, got {result}")\nutil.UnexpectedAnswerException: expected 1 or 2, got Voc\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File "/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x149355e663d0 state=finished raised UnexpectedAnswerException>]\n', [1, 2, 1, 2, 2, 1, 2, 2, 2, 1, 1, 2, 1], [2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1], [2, 1, 2, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1], [2, 1, 1, 1, 2, 1, 2, 2, 1, 1, 1, 1, 1], [1, 1, 2, 1, 2, 1, 2, 1, 2, 2, 2, 2, 2], [1, 2, 2, 2, 1, 1, 2, 1, 1, 2, 2, 2, 1], [2, 2, 1, 1, 1, 2, 2, 1, 1, 1, 1, 2, 1], [2, 1, 2, 2, 1, 2, 2, 2, 2, 2, 1, 2, 1], [2, 1, 1, 2, 2, 2, 2, 1, 1, 2, 1, 2, 2], [2, 1, 2, 2, 2, 1, 1, 1, 1, 1, 2, 1, 1], [2, 2, 1, 1, 2, 2, 1, 1, 2, 2, 1, 2, 2], [1, 1, 1, 1, 1, 1, 2, 2, 2, 1, 1, 2, 1], [2, 1, 1, 2, 2, 2, 2, 1, 1, 2, 1, 2, 2]], 'api_usage': [APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='falcon-7b-instruct', num_input_tokens=-1, num_output_tokens=-1, cost=0.0)], 'api_usage_total': APIUsage(name='falcon-7b-instruct', num_input_tokens=-50, num_output_tokens=-50, cost=0.0)}
+INFO - tinypaper - Completed after 0:18:34
