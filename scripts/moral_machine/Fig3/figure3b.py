@@ -238,8 +238,8 @@ if __name__ == '__main__':
         "mpt-30b-chat": "MPT 30B-Chat",
     }
     model_name = "Meta-Llama-3-70B-Instruct"
-    file_path = Path(__file__).parent.parent.parent.parent / "data" / "prepared_for_fig3" / f"{model_name}.csv"
-    df_loaded = pd.read_csv('CountriesChangePr.csv')
+    file_path = Path(__file__).parent.parent.parent.parent / "results" / "prepared_for_fig3" / f"{model_name}.csv"
+    df_loaded = pd.read_csv(file_path)
     df = pd.DataFrame()
     df["Country"] = df_loaded["Unnamed: 0"]
     columns = [
