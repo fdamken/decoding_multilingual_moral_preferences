@@ -244,7 +244,8 @@ def main():
                  "Boy", "Girl", "Homeless", "LargeWoman", "LargeMan",
                  "Criminal", "MaleExecutive", "FemaleExecutive", "FemaleAthlete", "MaleAthlete", "FemaleDoctor", "MaleDoctor",
                  "Dog", "Cat"
-                 ]
+                 ],
+                lineterminator="\n"
             )
             csv.writeheader()
             for row in rows:
