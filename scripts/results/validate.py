@@ -60,7 +60,7 @@ def _validate_result(model: str, language: str) -> Optional[tuple[list[int], int
             if answers.startswith("PROMPT BLOCKED"):
                 num_prompts_blocked += 1
                 continue
-            if answers == "UNEXPECTED_ANSWER":
+            if answers == "UNEXPECTED ANSWER":
                 num_unexpected_answers += 1
                 continue
         if type(answers) is not list:
@@ -99,7 +99,7 @@ def _validate_results() -> None:
             _log_error(
                 model,
                 language,
-                error=f"{erroneous_sessions} erroneous sessions; {num_missing_sessions} missing sessions sessions; "
+                error=f"{len(erroneous_sessions)} erroneous sessions; {num_missing_sessions} missing sessions sessions; "
                       f"{num_prompts_blocked} blocked prompts; {num_unexpected_answers} unexpected answers"
             )
             if len(erroneous_sessions) > 0:

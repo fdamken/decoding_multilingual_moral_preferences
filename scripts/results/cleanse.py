@@ -19,7 +19,7 @@ def _cleanse(model: str, language: str, model_language_dir: Path) -> None:
             print(f"  - processing {results_dir.name} ({from_session_id}:{to_session_id})", file=sys.stderr)
             for session_idx_offset, session in enumerate(json.load(f_run)["result"]["answers"]):
                 if isinstance(session, str) and "UnexpectedAnswerException" in session:
-                    session = "UNEXPECTED_ANSWER"
+                    session = "PROMPT BLOCKED" if model.startswith("Llama-2-") else "UNEXPECTED ANSWER"
                 sessions[from_session_id + session_idx_offset] = session
             assert from_session_id + session_idx_offset + 1 == to_session_id, "session IDs do not match"
 
