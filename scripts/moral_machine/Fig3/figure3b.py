@@ -131,7 +131,10 @@ def radar_plot(title, df, savefig=True):
     plt.title(title)
     plt.tight_layout()
     tikzplotlib.clean_figure()
-    tikzplotlib.save("dendrogram.tikz")
+    code = tikzplotlib.get_tikz_code() \
+        .replace("xmajorticks=false,", "ymajorticks=false,\nxtick pos=bottom,")
+    with open("dendrogram.tikz", "w") as f:
+        f.write(code)
     plt.show()
 
     rootnode, node_list = hch.to_tree(Z, rd=True)
@@ -198,7 +201,7 @@ def radar_plot(title, df, savefig=True):
     fig, axes = plt.subplots(
         1,
         2,
-        figsize=(2 * 7.00137, 2 * 7.00137 / 2),
+        figsize=(7.00137, 7.00137 / 2),
         subplot_kw={'projection': 'polar'}
     )
 
@@ -214,7 +217,7 @@ def radar_plot(title, df, savefig=True):
         y_ticks = np.sqrt(np.square(np.arange(0, 3, 1) - min_val))
         ax.set_ylim(0, y_ticks.max())
         ax.set_yticks(y_ticks)
-        ax.set_yticklabels([r"$z = 0$", r"$z = 1$", r"$z = 2$"])
+        ax.set_yticklabels([r"$z = 0$", r"$z = 1$", ""])
         ax.set_title(labels[i])
 
     fig.suptitle(title)

@@ -37,7 +37,7 @@ def _log_error(
         print(error)
 
 
-def _validate_result(model: str, language: str) -> Optional[tuple[list[int], int, int, int]]:
+def _validate_result(model: str, language: str) -> Optional[tuple[int, list[int], int, int, int]]:
     results_file = path_util.cleansed_experiment_results_dir / model / f"{language}.json"
     if not results_file.exists():
         _log_error(model, language, error="missing results")
@@ -82,7 +82,8 @@ def _validate_result(model: str, language: str) -> Optional[tuple[list[int], int
             _log_error(model, language, session_idx, error=f"contains unexpected answers: {unexpected_answers}")
             erroneous_sessions.append(session_idx)
             continue
-    return erroneous_sessions, num_missing_sessions, num_prompts_blocked, num_unexpected_answers
+    return (num_sessions - num_missing_sessions, erroneous_sessions, num_missing_sessions, num_prompts_blocked,
+            num_unexpected_answers)
 
 
 def _validate_results() -> None:
@@ -91,22 +92,34 @@ def _validate_results() -> None:
         if not (path_util.cleansed_experiment_results_dir / model).exists():
             _log_error(model, error="missing results")
             continue
+        table_row = []
         for language in get_available_languages():
             validation_result = _validate_result(model, language)
             if validation_result is None:
                 continue
-            erroneous_sessions, num_missing_sessions, num_prompts_blocked, num_unexpected_answers = validation_result
-            _log_error(
-                model,
-                language,
-                error=f"{len(erroneous_sessions)} erroneous sessions; {num_missing_sessions} missing sessions sessions; "
-                      f"{num_prompts_blocked} blocked prompts; {num_unexpected_answers} unexpected answers"
-            )
+            (num_sessions,
+             erroneous_sessions,
+             num_missing_sessions,
+             num_prompts_blocked,
+             num_unexpected_answers,
+             ) = validation_result
+            # _log_error(
+            #     model,
+            #     language,
+            #     error=f"{len(erroneous_sessions)} erroneous sessions; {num_missing_sessions} missing sessions sessions; "
+            #           f"{num_prompts_blocked} blocked prompts; {num_unexpected_answers} unexpected answers"
+            # )
+            if num_missing_sessions > 0:
+                cell_suffix = f" (-{num_missing_sessions})"
+            else:
+                cell_suffix = ""
+            table_row.append(f"{(num_prompts_blocked + num_unexpected_answers) / num_sessions * 100:.0f}{cell_suffix}")
             if len(erroneous_sessions) > 0:
                 rerun_arguments.append(
                     f"with model_name={model} language={language} session_indices="
                     f"{','.join([str(session) for session in erroneous_sessions])}"
                 )
+        print(f"{model}: {' & '.join(table_row)}")
 
 
 def main() -> None:

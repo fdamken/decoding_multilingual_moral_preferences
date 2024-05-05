@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+set -o errexit
+set -o nounset
+
+root_dir="$(dirname "$(dirname "$(dirname "$(realpath "$0")")")")"
+results_prepared_dir="$root_dir/results/prepared"
+results_prepared_for_fig3_dir="$root_dir/results/prepared_for_fig3"
+moral_machine_scripts="$root_dir/scripts/moral_machine/Fig2"
+
+if [[ ! -d "$results_prepared_for_fig3_dir" ]]; then
+  echo "E: '$results_prepared_for_fig3_dir' does not exist"
+  exit 126
+fi
+
+cd "$moral_machine_scripts"
+for file in "$results_prepared_dir"/*.csv; do
+  file_name="$(basename "$file")"
+  output_file="$results_prepared_for_fig3_dir/$file_name"
+  cp "$file" SharedResponses.csv
+  set +o errexit
+  Rscript MMAnalysisShared.R &>"$output_file.log"
+  return_code="$?"
+  set -o errexit
+  if [[ "$return_code" -eq 0 ]]; then
+    mv CountriesChangePr.csv "$output_file"
+    rm -f "$output_file.log"
+    rm SharedResponses.csv
+  fi
+done
