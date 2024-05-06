@@ -1,0 +1,1528 @@
+INFO - tinypaper - Running command 'main'
+INFO - tinypaper - Started run with ID "902"
+/home/fd15hava/.cache/huggingface/modules/transformers_modules/mosaicml/mpt-30b-chat/28fc475f7b73a5631fbbc6419645c27177f275d4/configuration_mpt.py:114: UserWarning: alibi or rope is turned on, setting `learned_pos_emb` to `False.`
+  warnings.warn(f'alibi or rope is turned on, setting `learned_pos_emb` to `False.`')
+/home/fd15hava/.cache/huggingface/modules/transformers_modules/mosaicml/mpt-30b-chat/28fc475f7b73a5631fbbc6419645c27177f275d4/configuration_mpt.py:141: UserWarning: If not using a Prefix Language Model, we recommend setting "attn_impl" to "flash" instead of "triton".
+  warnings.warn(UserWarning('If not using a Prefix Language Model, we recommend setting "attn_impl" to "flash" instead of "triton".'))
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Instantiating an MPTForCausalLM model from /home/fd15hava/.cache/huggingface/modules/transformers_modules/mosaicml/mpt-30b-chat/28fc475f7b73a5631fbbc6419645c27177f275d4/modeling_mpt.py
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - We recommend using config.init_device="meta" with Composer + FSDP for faster initialization.
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+INFO - transformers_modules.mosaicml.mpt-30b-chat.28fc475f7b73a5631fbbc6419645c27177f275d4.modeling_mpt - Removing bias from module=LPLayerNorm((7168,), eps=1e-05, elementwise_affine=True).
+Loading checkpoint shards:   0%|          | 0/7 [00:00<?, ?it/s]Loading checkpoint shards:  14%|█▍        | 1/7 [00:32<03:14, 32.35s/it]Loading checkpoint shards:  29%|██▊       | 2/7 [01:05<02:45, 33.05s/it]Loading checkpoint shards:  43%|████▎     | 3/7 [01:41<02:16, 34.18s/it]Loading checkpoint shards:  57%|█████▋    | 4/7 [02:15<01:42, 34.33s/it]Loading checkpoint shards:  71%|███████▏  | 5/7 [02:50<01:08, 34.28s/it]Loading checkpoint shards:  86%|████████▌ | 6/7 [03:24<00:34, 34.26s/it]Loading checkpoint shards: 100%|██████████| 7/7 [03:27<00:00, 24.02s/it]Loading checkpoint shards: 100%|██████████| 7/7 [03:27<00:00, 29.62s/it]
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+  0%|          | 0/10 [00:00<?, ?it/s]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+/home/fd15hava/.cache/huggingface/modules/transformers_modules/mosaicml/mpt-30b-chat/28fc475f7b73a5631fbbc6419645c27177f275d4/attention.py:87: UserWarning: Propagating key_padding_mask to the attention module and applying it within the attention module can cause unnecessary computation/memory usage. Consider integrating into attn_bias once and passing that to each attention module instead.
+  warnings.warn('Propagating key_padding_mask to the attention module ' + 'and applying it within the attention module can cause ' + 'unnecessary computation/memory usage. Consider integrating ' + 'into attn_bias once and passing that to each attention ' + 'module instead.')
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Token indices sequence length is longer than the specified maximum sequence length for this model (9066 > 8192). Running this sequence through the model will result in indexing errors
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 638.145(s), this was the 1st time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got أ.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 1264.886(s), this was the 2nd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got أ.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 1894.563(s), this was the 3rd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got أ.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 2524.267(s), this was the 4th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got أ.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 3143.780(s), this was the 5th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got أ.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 3769.111(s), this was the 6th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got أ.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 4394.642(s), this was the 7th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got أ.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 5021.184(s), this was the 8th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got أ.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 5650.558(s), this was the 9th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got أ.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 6273.946(s), this was the 10th time calling it.
+Traceback (most recent call last):
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 26, in play
+    answer = self._prompt(self._make_prompt(scenario))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 40, in _prompt
+    raise UnexpectedAnswerException(f"expected 1 or 2, got {result}")
+util.UnexpectedAnswerException: expected 1 or 2, got أ
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py", line 16, in _run_session
+    result = agent.play(session)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 326, in iter
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x14e5f9296b50 state=finished raised UnexpectedAnswerException>]
+ 10%|█         | 1/10 [1:44:33<15:41:05, 6273.95s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 737.804(s), this was the 1st time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got �.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 1474.958(s), this was the 2nd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got �.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 2214.978(s), this was the 3rd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got �.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 2958.932(s), this was the 4th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got �.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 3703.673(s), this was the 5th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got �.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 4435.414(s), this was the 6th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got �.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 5175.660(s), this was the 7th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got �.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 5914.966(s), this was the 8th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got �.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 6654.068(s), this was the 9th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got �.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 7388.816(s), this was the 10th time calling it.
+Traceback (most recent call last):
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 26, in play
+    answer = self._prompt(self._make_prompt(scenario))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 40, in _prompt
+    raise UnexpectedAnswerException(f"expected 1 or 2, got {result}")
+util.UnexpectedAnswerException: expected 1 or 2, got �
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py", line 16, in _run_session
+    result = agent.play(session)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 326, in iter
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x14e5fa31b950 state=finished raised UnexpectedAnswerException>]
+ 20%|██        | 2/10 [3:47:42<15:23:58, 6929.76s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 704.641(s), this was the 1st time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got *.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 1411.774(s), this was the 2nd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got *.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 2124.747(s), this was the 3rd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got *.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 2834.524(s), this was the 4th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got *.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 3543.399(s), this was the 5th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got *.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 4249.472(s), this was the 6th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got *.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 4956.145(s), this was the 7th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got *.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 5660.085(s), this was the 8th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got *.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 6365.667(s), this was the 9th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got *.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 7071.485(s), this was the 10th time calling it.
+Traceback (most recent call last):
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 26, in play
+    answer = self._prompt(self._make_prompt(scenario))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 40, in _prompt
+    raise UnexpectedAnswerException(f"expected 1 or 2, got {result}")
+util.UnexpectedAnswerException: expected 1 or 2, got *
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py", line 16, in _run_session
+    result = agent.play(session)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 326, in iter
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x14e5f92177d0 state=finished raised UnexpectedAnswerException>]
+ 30%|███       | 3/10 [5:45:34<13:36:01, 6994.47s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+ 40%|████      | 4/10 [5:57:26<7:31:26, 4514.40s/it] Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 661.505(s), this was the 1st time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got *.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 1321.725(s), this was the 2nd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got *.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 1989.640(s), this was the 3rd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got *.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 2661.406(s), this was the 4th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got *.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 3326.086(s), this was the 5th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got *.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 3995.855(s), this was the 6th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got *.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 4658.164(s), this was the 7th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got *.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 5323.569(s), this was the 8th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got *.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 5988.327(s), this was the 9th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got *.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 6651.803(s), this was the 10th time calling it.
+Traceback (most recent call last):
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 26, in play
+    answer = self._prompt(self._make_prompt(scenario))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 40, in _prompt
+    raise UnexpectedAnswerException(f"expected 1 or 2, got {result}")
+util.UnexpectedAnswerException: expected 1 or 2, got *
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py", line 16, in _run_session
+    result = agent.play(session)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 326, in iter
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x14d7f1806250 state=finished raised UnexpectedAnswerException>]
+ 50%|█████     | 5/10 [7:48:18<7:20:25, 5285.17s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 709.275(s), this was the 1st time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got ا.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 1415.225(s), this was the 2nd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got ا.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 2126.414(s), this was the 3rd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got ا.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 2841.450(s), this was the 4th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got ا.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 3556.586(s), this was the 5th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got ا.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 4268.548(s), this was the 6th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got ا.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 4978.219(s), this was the 7th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got ا.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 5688.344(s), this was the 8th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got ا.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 6393.157(s), this was the 9th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got ا.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 7101.291(s), this was the 10th time calling it.
+Traceback (most recent call last):
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 26, in play
+    answer = self._prompt(self._make_prompt(scenario))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 40, in _prompt
+    raise UnexpectedAnswerException(f"expected 1 or 2, got {result}")
+util.UnexpectedAnswerException: expected 1 or 2, got ا
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py", line 16, in _run_session
+    result = agent.play(session)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 326, in iter
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x14d7f1825990 state=finished raised UnexpectedAnswerException>]
+ 60%|██████    | 6/10 [9:46:39<6:33:30, 5902.65s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 665.167(s), this was the 1st time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got م.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 1334.824(s), this was the 2nd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got م.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 2004.971(s), this was the 3rd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got م.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 2676.866(s), this was the 4th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got م.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 3348.109(s), this was the 5th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got م.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 4015.902(s), this was the 6th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got م.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 4681.297(s), this was the 7th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got م.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 5354.219(s), this was the 8th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got م.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 6024.834(s), this was the 9th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got م.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 6692.237(s), this was the 10th time calling it.
+Traceback (most recent call last):
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 26, in play
+    answer = self._prompt(self._make_prompt(scenario))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 40, in _prompt
+    raise UnexpectedAnswerException(f"expected 1 or 2, got {result}")
+util.UnexpectedAnswerException: expected 1 or 2, got م
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py", line 16, in _run_session
+    result = agent.play(session)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 326, in iter
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x14d7f1827e90 state=finished raised UnexpectedAnswerException>]
+ 70%|███████   | 7/10 [11:38:12<5:08:02, 6160.79s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 631.928(s), this was the 1st time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got *.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 1260.307(s), this was the 2nd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got *.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 1889.269(s), this was the 3rd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got *.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 2521.720(s), this was the 4th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got *.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 3153.067(s), this was the 5th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got *.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 3781.393(s), this was the 6th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got *.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 4418.008(s), this was the 7th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got *.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 5049.150(s), this was the 8th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got *.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 5688.722(s), this was the 9th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got *.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 6322.394(s), this was the 10th time calling it.
+Traceback (most recent call last):
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 26, in play
+    answer = self._prompt(self._make_prompt(scenario))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 40, in _prompt
+    raise UnexpectedAnswerException(f"expected 1 or 2, got {result}")
+util.UnexpectedAnswerException: expected 1 or 2, got *
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py", line 16, in _run_session
+    result = agent.play(session)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 326, in iter
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x14d7f1843810 state=finished raised UnexpectedAnswerException>]
+ 80%|████████  | 8/10 [13:23:34<3:27:04, 6212.23s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 606.694(s), this was the 1st time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got ك.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 1214.757(s), this was the 2nd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got ك.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 1825.009(s), this was the 3rd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got ك.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 2430.368(s), this was the 4th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got ك.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 3038.095(s), this was the 5th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got ك.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 3643.817(s), this was the 6th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got ك.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 4255.667(s), this was the 7th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got ك.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 4868.238(s), this was the 8th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got ك.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 5475.539(s), this was the 9th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got ك.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+WARNING - root - Finished call to 'agent.Agent.play' after 6087.045(s), this was the 10th time calling it.
+Traceback (most recent call last):
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 26, in play
+    answer = self._prompt(self._make_prompt(scenario))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 40, in _prompt
+    raise UnexpectedAnswerException(f"expected 1 or 2, got {result}")
+util.UnexpectedAnswerException: expected 1 or 2, got ك
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py", line 16, in _run_session
+    result = agent.play(session)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 326, in iter
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x14d7f1840c10 state=finished raised UnexpectedAnswerException>]
+ 90%|█████████ | 9/10 [15:05:01<1:42:53, 6173.10s/it]Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+100%|██████████| 10/10 [15:15:15<00:00, 4456.89s/it] 100%|██████████| 10/10 [15:15:15<00:00, 5491.55s/it]
+INFO - tinypaper - Result: {'answers': ['Traceback (most recent call last):\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 40, in _prompt\n    raise UnexpectedAnswerException(f"expected 1 or 2, got {result}")\nutil.UnexpectedAnswerException: expected 1 or 2, got أ\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File "/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x14e5f9296b50 state=finished raised UnexpectedAnswerException>]\n', 'Traceback (most recent call last):\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 40, in _prompt\n    raise UnexpectedAnswerException(f"expected 1 or 2, got {result}")\nutil.UnexpectedAnswerException: expected 1 or 2, got �\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File "/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x14e5fa31b950 state=finished raised UnexpectedAnswerException>]\n', 'Traceback (most recent call last):\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 40, in _prompt\n    raise UnexpectedAnswerException(f"expected 1 or 2, got {result}")\nutil.UnexpectedAnswerException: expected 1 or 2, got *\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File "/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x14e5f92177d0 state=finished raised UnexpectedAnswerException>]\n', [2, 1, 1, 2, 2, 2, 1, 2, 1, 1, 1, 1, 1], 'Traceback (most recent call last):\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 40, in _prompt\n    raise UnexpectedAnswerException(f"expected 1 or 2, got {result}")\nutil.UnexpectedAnswerException: expected 1 or 2, got *\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File "/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x14d7f1806250 state=finished raised UnexpectedAnswerException>]\n', 'Traceback (most recent call last):\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/work/home/fd15hava/tinypaper-mpt/src/agent.py", line 40, in _prompt\n    raise UnexpectedAnswerException(f"expected 1 or 2, got {result}")\nutil.UnexpectedAnswerException: expected 1 or 2, got ا\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File "/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/py

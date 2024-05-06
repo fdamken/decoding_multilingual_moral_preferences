@@ -1,0 +1,1012 @@
+{
+  "artifacts": [],
+  "command": "main",
+  "experiment": {
+    "base_dir": "/work/home/fd15hava/tinypaper-mpt/src",
+    "dependencies": [
+      "numpy==1.26.4",
+      "sacred==0.8.5"
+    ],
+    "mainfile": "experiment.py",
+    "name": "tinypaper",
+    "repositories": [
+      {
+        "commit": "c824c21371d1c9ff11e4b765a3df5fff7f763bd5",
+        "dirty": false,
+        "url": "ssh://github/fdamken/tinypaper_code.git"
+      },
+      {
+        "commit": "c824c21371d1c9ff11e4b765a3df5fff7f763bd5",
+        "dirty": false,
+        "url": "ssh://github/fdamken/tinypaper_code.git"
+      }
+    ],
+    "sources": [
+      [
+        "experiment.py",
+        "_sources/experiment_6c8597232f2b543925a615699d0e2ddb.py"
+      ],
+      [
+        "path_util.py",
+        "_sources/path_util_ce5f4012c098f79adf2c1204811dca0a.py"
+      ]
+    ]
+  },
+  "heartbeat": "2024-04-28T18:38:47.499181",
+  "host": {
+    "ENV": {},
+    "cpu": "Intel(R) Xeon(R) Platinum 8470Q",
+    "hostname": "mpsd0350",
+    "os": [
+      "Linux",
+      "Linux-4.18.0-477.27.1.el8_8.x86_64-x86_64-with-glibc2.28"
+    ],
+    "python_version": "3.11.9"
+  },
+  "meta": {
+    "command": "main",
+    "config_updates": {
+      "language": "fr",
+      "model_name": "mpt-7b-chat"
+    },
+    "named_configs": [],
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--id": null,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [
+        "model_name=mpt-7b-chat",
+        "language=fr"
+      ],
+      "help": false,
+      "with": true
+    }
+  },
+  "resources": [],
+  "result": {
+    "answers": [
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Je\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x152710e280d0 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x152710e4c0d0 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x152711270bd0 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x152708129250 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x152710e28310 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x152708129250 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Je\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x152708129350 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c45ad0 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x152708129490 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x152708108950 state=finished raised UnexpectedAnswerException>]\n",
+      [
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Je\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c47510 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x15270810b950 state=finished raised UnexpectedAnswerException>]\n",
+      [
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1
+      ],
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c47b50 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x152708108050 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c45d10 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Je\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x15270812a010 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c63fd0 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c70bd0 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c71550 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x152710d86dd0 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x152708128e50 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x152708109f50 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Je\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c6b890 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c44490 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Je\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c60950 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got V\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c44a10 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c47c10 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x15270810a010 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x152708109110 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c6ac10 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x15270810b310 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c6b090 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Je\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c6a250 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c47d90 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Je\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1527081094d0 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c72350 state=finished raised UnexpectedAnswerException>]\n",
+      [
+        2,
+        1,
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2
+      ],
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x15271088fc90 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c72710 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c73250 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c46b90 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c723d0 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c72750 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c73250 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Je\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c7bdd0 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got V\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c8c410 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c7bad0 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got V\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c795d0 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c785d0 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c7be10 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c46510 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x15270810bed0 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x152710d86dd0 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Je\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x152708129850 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x15270810bd90 state=finished raised UnexpectedAnswerException>]\n",
+      [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1
+      ],
+      [
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2
+      ],
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c9cbd0 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Je\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c6a610 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c79650 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c7a590 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c8c110 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Je\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c72350 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Je\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1527125b7710 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c79110 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c8f010 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Je\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2ca5710 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x152710d87010 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Je\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c72b90 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1527081a3dd0 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c78390 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c9f410 state=finished raised UnexpectedAnswerException>]\n",
+      [
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        2
+      ],
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c9dc90 state=finished raised UnexpectedAnswerException>]\n",
+      [
+        2,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c9e0d0 state=finished raised UnexpectedAnswerException>]\n",
+      [
+        2,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2cc46d0 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c44c50 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Je\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c8f3d0 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c7a250 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Je\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2cc7090 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c7b950 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Je\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1527081a3ed0 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x152710d86dd0 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c7af50 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c63590 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c9cbd0 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x152710e4c290 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Je\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c7b950 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c7a590 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Je\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2cc4c10 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c72910 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c7b4d0 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2c45190 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got V\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2ca4e90 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Cho\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2cd3cd0 state=finished raised UnexpectedAnswerException>]\n",
+      "Traceback (most recent call last):\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/home/fd15hava/tinypaper-mpt/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got Je\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/work/home/fd15hava/tinypaper-mpt/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/fd15hava/.cache/pypoetry/virtualenvs/non-package-mode-zjkKA0Ca-py3.11/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x1523e2ca5990 state=finished raised UnexpectedAnswerException>]\n"
+    ],
+    "api_usage": [
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0,
+        "name": "mpt-7b-chat",
+        "num_input_tokens": -1,
+        "num_output_tokens": -1,
+        "py/object": "api_usage.APIUsage"
+      }
+    ],
+    "api_usage_total": {
+      "cost": 0.0,
+      "name": "mpt-7b-chat",
+      "num_input_tokens": -100,
+      "num_output_tokens": -100,
+      "py/object": "api_usage.APIUsage"
+    }
+  },
+  "start_time": "2024-04-28T18:22:14.683294",
+  "status": "COMPLETED",
+  "stop_time": "2024-04-28T18:38:47.482521"
+}

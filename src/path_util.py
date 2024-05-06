@@ -5,6 +5,7 @@ project_root_dir: Final[Path] = Path(__file__).parent.parent
 data_dir: Final[Path] = project_root_dir / "data"
 results_local_dir: Final[Path] = project_root_dir / "results_local"
 results_dir: Final[Path] = project_root_dir / "results"
+raw_experiment_results_dir: Final[Path] = results_dir / "raw"
 cleansed_experiment_results_dir: Final[Path] = results_dir / "cleansed"
 preprocessed_experiment_results_dir: Final[Path] = results_dir / "preprocessed"
 prepared_experiment_results_dir: Final[Path] = results_dir / "prepared"

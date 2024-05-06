@@ -13,6 +13,14 @@ def _expand_args_list(args_list: list[list[str]], key: str, values: list[str]) -
     return new_args_list
 
 
+def _add_session_slices(args_list: list[list[str]]) -> list[list[str]]:
+    new_args_list = []
+    for args in args_list:
+        for i in range(10):
+            new_args_list.append(args + [f"from_session_id={i * 50}", f"to_session_id={(i + 1) * 50}"])
+    return new_args_list
+
+
 def _run(args: list[str]) -> None:
     run_py = os.path.join(os.path.dirname(__file__), "run.py")
     command = f"python {run_py} {' '.join(args)}"
@@ -34,6 +42,7 @@ def main() -> None:
         args_list = _expand_args_list(args_list, "model_name", get_available_models())
     if not language_given:
         args_list = _expand_args_list(args_list, "language", get_available_languages())
+    args_list = _add_session_slices(args_list)
     for args in args_list:
         _run(args)
 

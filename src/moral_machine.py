@@ -12,7 +12,7 @@ _languages = [
     "es",
     "fr",
     "ja",
-    "kr",
+    "ko",
     "pt",
     "ru",
     "zh",
