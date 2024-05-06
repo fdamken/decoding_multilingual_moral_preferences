@@ -53,6 +53,7 @@ class GoogleModel(Model):
                 generation_config=genai.GenerationConfig(
                     candidate_count=1,  # generate a single completion
                     max_output_tokens=2,  # generate at most one token (we just want a single number, 1 or 2)
+                    temperature=0,
                 ),
             ).start_chat()
         system_prompt_response = self._fetch(self.system_prompt)

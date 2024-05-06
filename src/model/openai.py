@@ -95,6 +95,7 @@ class OpenAIModel(Model):
             model=self._model_name,
             max_tokens=1,  # generate at most one token (we just want a single number, 1 or 2)
             n=1,  # generate a single completion
+            temperature=0,
         )
 
         num_input_tokens = response.usage.prompt_tokens
