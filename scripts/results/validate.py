@@ -93,6 +93,8 @@ def _validate_results() -> None:
             _log_error(model, error="missing results")
             continue
         table_row = []
+        total_invalid_sessions = 0
+        total_num_sessions = 0
         for language in get_available_languages():
             validation_result = _validate_result(model, language)
             if validation_result is None:
@@ -109,16 +111,20 @@ def _validate_results() -> None:
             #     error=f"{len(erroneous_sessions)} erroneous sessions; {num_missing_sessions} missing sessions sessions; "
             #           f"{num_prompts_blocked} blocked prompts; {num_unexpected_answers} unexpected answers"
             # )
-            if num_missing_sessions > 0:
+            if False and num_missing_sessions > 0:
                 cell_suffix = f" (-{num_missing_sessions})"
             else:
                 cell_suffix = ""
-            table_row.append(f"{(num_prompts_blocked + num_unexpected_answers) / num_sessions * 100:.0f}{cell_suffix}")
+            invalid_sessions = num_prompts_blocked + num_unexpected_answers
+            total_invalid_sessions += invalid_sessions
+            total_num_sessions += num_sessions
+            table_row.append(f"{invalid_sessions / num_sessions * 100:.0f}{cell_suffix}")
             if len(erroneous_sessions) > 0:
                 rerun_arguments.append(
                     f"with model_name={model} language={language} session_indices="
                     f"{','.join([str(session) for session in erroneous_sessions])}"
                 )
+        table_row.append(f"{total_invalid_sessions / total_num_sessions * 100:.0f}")
         print(f"{model}: {' & '.join(table_row)}")
 
 
