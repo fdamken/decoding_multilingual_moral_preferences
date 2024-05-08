@@ -4,7 +4,9 @@ from logging import Logger
 from typing import Final
 
 import google.generativeai as genai
+from google.api_core.exceptions import InternalServerError
 from google.generativeai.types import BlockedPromptException, HarmBlockThreshold, HarmCategory
+from tenacity import retry, after_log, before_sleep_log, retry_if_exception_type, stop_after_attempt
 
 from api_usage import APIUsage
 from experiment import ex
@@ -53,6 +55,7 @@ class GoogleModel(Model):
                 generation_config=genai.GenerationConfig(
                     candidate_count=1,  # generate a single completion
                     max_output_tokens=2,  # generate at most one token (we just want a single number, 1 or 2)
+                    temperature=0,
                 ),
             ).start_chat()
         system_prompt_response = self._fetch(self.system_prompt)
@@ -61,6 +64,12 @@ class GoogleModel(Model):
     def report_api_usage(self) -> APIUsage:
         return APIUsage(self._model_name, -1, -1, 0.)
 
+    @retry(
+        after=after_log(logging.root, logging.WARNING),
+        before_sleep=before_sleep_log(logging.root, logging.INFO),
+        retry=retry_if_exception_type(InternalServerError),
+        stop=stop_after_attempt(10),
+    )
     @ex.capture
     def _fetch(self, prompt: str, _log: Logger) -> str:
         if not self.dry_run:
