@@ -1,0 +1,118 @@
+INFO - tinypaper - Running command 'main'
+INFO - tinypaper - Started run with ID "151"
+/Users/karina/Documents/Coding/PyCharm/mme/src/model/model.py:19: UserWarning: Running model NOT in dry mode! This will consume API tokens and may cost money. MAKE SURE TO RUN IN DRY MODE FIRST TO GET AN ESTIMATE!
+  warnings.warn(
+  0%|          | 0/50 [00:00<?, ?it/s]  2%|▏         | 1/50 [00:11<09:47, 12.00s/it]  4%|▍         | 2/50 [00:25<10:15, 12.83s/it]  6%|▌         | 3/50 [00:38<10:05, 12.87s/it]  8%|▊         | 4/50 [00:50<09:34, 12.49s/it]Traceback (most recent call last):
+  File "/Users/karina/Documents/Coding/PyCharm/mme/scripts/experiments/run.py", line 16, in _run_session
+    result = agent.play(session)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 314, in iter
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 26, in play
+    answer = self._prompt(self._make_prompt(scenario))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 38, in _prompt
+    result = self._model.prompt(prompt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/model/google.py", line 35, in prompt
+    return self._fetch(prompt)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 314, in iter
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/sacred/config/captured_function.py", line 42, in captured_function
+    result = wrapped(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/model/google.py", line 80, in _fetch
+    response = self._chat.send_message(prompt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/google/generativeai/generative_models.py", line 426, in send_message
+    response = self.model.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/google/generativeai/generative_models.py", line 232, in generate_content
+    response = self._client.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/google/ai/generativelanguage_v1beta/services/generative_service/client.py", line 566, in generate_content
+    response = rpc(
+               ^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 293, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 153, in retry_target
+    _retry_error_helper(
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/google/api_core/retry/retry_base.py", line 212, in _retry_error_helper
+    raise final_exc from source_exc
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 144, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/google/api_core/timeout.py", line 120, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/google/api_core/grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:625717280712'. [reason: "RATE_LIMIT_EXCEEDED"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+metadata {
+  key: "quota_metric"
+  value: "generativelanguage.googleapis.com/generate_content_requests"
+}
+metadata {
+  key: "quota_location"
+  value: "us-central2"
+}
+metadata {
+  key: "quota_limit"
+  value: "GenerateContentRequestsPerMinutePerProjectPerRegion"
+}
+metadata {
+  key: "quota_limit_value"
+  value: "60"
+}
+metadata {
+  key: "consumer"
+  value: "projects/625717280712"
+}
+, links {
+  description: "Request a higher quota limit."
+  url: "https://cloud.google.com/docs/quota#requesting_higher_quota"
+}
+]
+ 10%|█         | 5/50 [01:15<12:45, 17.00s/it] 12%|█▏        | 6/50 [01:27<11:18, 15.42s/it] 14%|█▍        | 7/50 [01:41<10:38, 14.84s/it] 16%|█▌        | 8/50 [01:53<09:50, 14.06s/it] 18%|█▊        | 9/50 [02:19<12:03, 17.65s/it] 20%|██        | 10/50 [02:31<10:45, 16.14s/it] 22%|██▏       | 11/50 [02:44<09:48, 15.10s/it] 24%|██▍       | 12/50 [02:57<09:10, 14.48s/it] 26%|██▌       | 13/50 [03:22<10:50, 17.57s/it] 28%|██▊       | 14/50 [03:34<09:37, 16.04s/it] 30%|███       | 15/50 [03:47<08:43, 14.96s/it] 32%|███▏      | 16/50 [04:01<08:16, 14.60s/it] 34%|███▍      | 17/50 [04:14<07:44, 14.09s/it] 36%|███▌      | 18/50 [04:38<09:08, 17.15s/it] 38%|███▊      | 19/50 [04:50<08:07, 15.72s/it] 40%|████      | 20/50 [05:03<07:29, 14.99s/it] 42%|████▏     | 21/50 [05:17<06:59, 14.48s/it] 44%|████▍     | 22/50 [05:42<08:12, 17.60s/it] 46%|████▌     | 23/50 [05:54<07:15, 16.14s/it] 48%|████▊     | 24/50 [06:07<06:32, 15.08s/it] 50%|█████     | 25/50 [06:20<05:58, 14.35s/it] 52%|█████▏    | 26/50 [06:44<06:58, 17.46s/it] 54%|█████▍    | 27/50 [06:58<06:14, 16.26s/it] 56%|█████▌    | 28/50 [07:12<05:42, 15.57s/it] 58%|█████▊    | 29/50 [07:25<05:09, 14.75s/it] 60%|██████    | 30/50 [07:37<04:39, 13.99s/it] 62%|██████▏   | 31/50 [08:00<05:20, 16.89s/it] 64%|██████▍   | 32/50 [08:15<04:49, 16.06s/it] 66%|██████▌   | 33/50 [08:28<04:21, 15.37s/it] 68%|██████▊   | 34/50 [08:41<03:52, 14.56s/it] 70%|███████   | 35/50 [09:04<04:14, 16.94s/it] 72%|███████▏  | 36/50 [09:18<03:47, 16.28s/it] 74%|███████▍  | 37/50 [09:32<03:20, 15.41s/it] 76%|███████▌  | 38/50 [09:45<02:58, 14.85s/it] 78%|███████▊  | 39/50 [10:06<03:02, 16.63s/it] 80%|████████  | 40/50 [10:21<02:41, 16.13s/it] 82%|████████▏ | 41/50 [10:35<02:19, 15.55s/it] 84%|████████▍ | 42/50 [10:49<01:59, 14.95s/it] 86%|████████▌ | 43/50 [11:07<01:52, 16.10s/it] 88%|████████▊ | 44/50 [11:23<01:36, 16.06s/it] 90%|█████████ | 45/50 [11:37<01:16, 15.31s/it] 92%|█████████▏| 46/50 [11:51<00:59, 14.81s/it] 94%|█████████▍| 47/50 [12:05<00:44, 14.77s/it] 96%|█████████▌| 48/50 [12:26<00:32, 16.49s/it] 98%|█████████▊| 49/50 [12:40<00:15, 15.89s/it]100%|██████████| 50/50 [12:54<00:00, 15.29s/it]100%|██████████| 50/50 [12:54<00:00, 15.49s/it]
+INFO - tinypaper - Result: {'answers': [[2, 2, 2, 2, 2, 1, 1, 2, 1, 2, 1, 1, 1], [2, 1, 1, 2, 2, 2, 2, 2, 2, 1, 1, 2, 2], [2, 1, 2, 2, 2, 2, 1, 2, 2, 2, 1, 2, 2], [1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 2, 2], 'Traceback (most recent call last):\n  File "/Users/karina/Documents/Coding/PyCharm/mme/scripts/experiments/run.py", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 314, in iter\n    return fut.result()\n           ^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 449, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result\n    raise self._exception\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 38, in _prompt\n    result = self._model.prompt(prompt)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/Documents/Coding/PyCharm/mme/src/model/google.py", line 35, in prompt\n    return self._fetch(prompt)\n           ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 314, in iter\n    return fut.result()\n           ^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 449, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result\n    raise self._exception\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/sacred/config/captured_function.py", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/Documents/Coding/PyCharm/mme/src/model/google.py", line 80, in _fetch\n    response = self._chat.send_message(prompt)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/google/generativeai/generative_models.py", line 426, in send_message\n    response = self.model.generate_content(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/google/generativeai/generative_models.py", line 232, in generate_content\n    response = self._client.generate_content(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/google/ai/generativelanguage_v1beta/services/generative_service/client.py", line 566, in generate_content\n    response = rpc(\n               ^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__\n    return wrapped_func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 293, in retry_wrapped_func\n    return retry_target(\n           ^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 153, in retry_target\n    _retry_error_helper(\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/google/api_core/retry/retry_base.py", line 212, in _retry_error_helper\n    raise final_exc from source_exc\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 144, in retry_target\n    result = target()\n             ^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/google/api_core/timeout.py", line 120, in func_with_timeout\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/google/api_core/grpc_helpers.py", line 78, in error_remapped_callable\n    raise exceptions.from_grpc_error(exc) from exc\ngoogle.api_core.exceptions.ResourceExhausted: 429 Quota exceeded for quota metric \'Generate Content API requests per minute\' and limit \'GenerateContent request limit per minute for a region\' of service \'generativelanguage.googleapis.com\' for consumer \'project_number:625717280712\'. [reason: "RATE_LIMIT_EXCEEDED"\ndomain: "googleapis.com"\nmetadata {\n  key: "service"\n  value: "generativelanguage.googleapis.com"\n}\nmetadata {\n  key: "quota_metric"\n  value: "generativelanguage.googleapis.com/generate_content_requests"\n}\nmetadata {\n  key: "quota_location"\n  value: "us-central2"\n}\nmetadata {\n  key: "quota_limit"\n  value: "GenerateContentRequestsPerMinutePerProjectPerRegion"\n}\nmetadata {\n  key: "quota_limit_value"\n  value: "60"\n}\nmetadata {\n  key: "consumer"\n  value: "projects/625717280712"\n}\n, links {\n  description: "Request a higher quota limit."\n  url: "https://cloud.google.com/docs/quota#requesting_higher_quota"\n}\n]\n', [1, 1, 1, 1, 2, 2, 1, 2, 1, 1, 2, 2, 2], [2, 2, 2, 1, 2, 2, 1, 1, 1, 2, 2, 1, 2], [2, 2, 2, 2, 1, 2, 2, 2, 2, 1, 2, 1, 1], [2, 1, 2, 2, 2, 2, 2, 2, 1, 2, 1, 2, 1], [2, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 2, 2], [2, 2, 2, 1, 2, 2, 1, 2, 2, 1, 1, 2, 2], [2, 2, 2, 1, 2, 2, 1, 2, 2, 2, 1, 2, 1], [1, 2, 2, 2, 2, 2, 1, 1, 1, 2, 2, 2, 1], [2, 2, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2, 2], [2, 2, 1, 1, 2, 2, 2, 2, 1, 1, 1, 2, 1], [2, 2, 2, 2, 2, 2, 1, 2, 2, 1, 1, 2, 1], [2, 2, 2, 1, 2, 1, 1, 2, 2, 2, 2, 2, 1], [2, 2, 2, 1, 1, 2, 1, 1, 2, 2, 1, 2, 2], [2, 2, 1, 1, 2, 2, 2, 1, 2, 2, 2, 2, 1], [2, 2, 2, 2, 1, 2, 2, 2, 1, 1, 2, 1, 1], [2, 1, 2, 2, 1, 2, 1, 1, 1, 2, 1, 1, 2], [1, 2, 1, 2, 2, 1, 1, 2, 1, 2, 2, 2, 2], [2, 1, 1, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2], [1, 1, 1, 2, 1, 1, 1, 2, 2, 1, 2, 2, 2], [2, 1, 2, 2, 1, 2, 1, 2, 2, 1, 1, 2, 2], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [2, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 2, 2], [2, 2, 1, 2, 2, 1, 1, 2, 2, 2, 1, 2, 2], [2, 2, 1, 2, 1, 2, 1, 1, 2, 1, 1, 1, 2], [2, 1, 1, 1, 2, 2, 1, 1, 1, 2, 1, 1, 1], [2, 1, 2, 1, 1, 1, 2, 2, 1, 1, 2, 1, 2], [2, 2, 2, 2, 1, 2, 1, 2, 1, 2, 2, 1, 2], [1, 1, 1, 1, 1, 1, 2, 2, 2, 1, 2, 1, 2], [2, 2, 2, 2, 1, 1, 2, 1, 2, 2, 2, 1, 1], [1, 2, 1, 2, 2, 2, 2, 2, 2, 1, 2, 1, 2], [2, 1, 2, 1, 2, 1, 2, 1, 1, 1, 2, 2, 1], [2, 2, 2, 1, 1, 2, 2, 1, 1, 1, 1, 1, 2], [2, 2, 1, 2, 2, 2, 1, 2, 2, 2, 2, 1, 1], [1, 1, 2, 2, 2, 1, 2, 2, 2, 2, 2, 1, 1], [2, 1, 1, 2, 2, 1, 2, 2, 2, 2, 1, 1, 2], [2, 2, 2, 2, 2, 1, 2, 2, 1, 2, 1, 1, 1], [1, 1, 1, 1, 2, 2, 2, 1, 1, 2, 2, 1, 2], [2, 2, 1, 1, 2, 2, 2, 2, 2, 2, 2, 1, 1], [1, 2, 2, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1], [2, 1, 2, 1, 1, 1, 1, 2, 1, 2, 1, 2, 1], [2, 1, 1, 1, 2, 2, 1, 2, 1, 1, 2, 2, 2], [2, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 1, 1], [2, 2, 2, 1, 1, 1, 2, 2, 1, 1, 1, 1, 2], [1, 2, 1, 2, 1, 1, 2, 2, 2, 1, 2, 2, 1], [2, 2, 1, 1, 1, 2, 2, 1, 2, 1, 1, 1, 2]], 'api_usage': [APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0), APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-1, num_output_tokens=-1, cost=0.0)], 'api_usage_total': APIUsage(name='gemini-1.0-pro-001', num_input_tokens=-50, num_output_tokens=-50, cost=0.0)}
+INFO - tinypaper - Completed after 0:12:55

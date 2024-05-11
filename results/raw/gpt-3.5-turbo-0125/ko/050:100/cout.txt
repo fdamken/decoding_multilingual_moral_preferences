@@ -1,0 +1,179 @@
+INFO - tinypaper - Running command 'main'
+INFO - tinypaper - Started run with ID "92"
+/Users/karina/Documents/Coding/PyCharm/mme/src/model/model.py:19: UserWarning: Running model NOT in dry mode! This will consume API tokens and may cost money. MAKE SURE TO RUN IN DRY MODE FIRST TO GET AN ESTIMATE!
+  warnings.warn(
+  0%|          | 0/50 [00:00<?, ?it/s]WARNING - root - Finished call to 'agent.Agent.play' after 1.272(s), this was the 1st time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+WARNING - root - Finished call to 'agent.Agent.play' after 2.318(s), this was the 2nd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+WARNING - root - Finished call to 'agent.Agent.play' after 3.362(s), this was the 3rd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+WARNING - root - Finished call to 'agent.Agent.play' after 4.537(s), this was the 4th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+WARNING - root - Finished call to 'agent.Agent.play' after 5.713(s), this was the 5th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+  2%|▏         | 1/50 [00:14<11:57, 14.64s/it]  4%|▍         | 2/50 [00:24<09:15, 11.58s/it]WARNING - root - Finished call to 'agent.Agent.play' after 0.894(s), this was the 1st time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+WARNING - root - Finished call to 'agent.Agent.play' after 1.952(s), this was the 2nd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+WARNING - root - Finished call to 'agent.Agent.play' after 3.147(s), this was the 3rd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+  6%|▌         | 3/50 [00:36<09:30, 12.14s/it]  8%|▊         | 4/50 [00:46<08:36, 11.24s/it] 10%|█         | 5/50 [01:02<09:38, 12.86s/it]WARNING - root - Finished call to 'agent.Agent.play' after 1.075(s), this was the 1st time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+WARNING - root - Finished call to 'agent.Agent.play' after 1.961(s), this was the 2nd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+WARNING - root - Finished call to 'agent.Agent.play' after 3.012(s), this was the 3rd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+WARNING - root - Finished call to 'agent.Agent.play' after 4.065(s), this was the 4th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+WARNING - root - Finished call to 'agent.Agent.play' after 5.233(s), this was the 5th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+WARNING - root - Finished call to 'agent.Agent.play' after 6.481(s), this was the 6th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+WARNING - root - Finished call to 'agent.Agent.play' after 7.637(s), this was the 7th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+WARNING - root - Finished call to 'agent.Agent.play' after 8.507(s), this was the 8th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+WARNING - root - Finished call to 'agent.Agent.play' after 9.562(s), this was the 9th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+WARNING - root - Finished call to 'agent.Agent.play' after 10.602(s), this was the 10th time calling it.
+Traceback (most recent call last):
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 26, in play
+    answer = self._prompt(self._make_prompt(scenario))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 40, in _prompt
+    raise UnexpectedAnswerException(f"expected 1 or 2, got {result}")
+util.UnexpectedAnswerException: expected 1 or 2, got 어
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/karina/Documents/Coding/PyCharm/mme/scripts/experiments/run.py", line 16, in _run_session
+    result = agent.play(session)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 326, in iter
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x13ba1e6d0 state=finished raised UnexpectedAnswerException>]
+ 12%|█▏        | 6/50 [01:13<08:52, 12.09s/it] 14%|█▍        | 7/50 [01:21<07:51, 10.96s/it] 16%|█▌        | 8/50 [01:30<07:13, 10.32s/it] 18%|█▊        | 9/50 [01:39<06:38,  9.71s/it] 20%|██        | 10/50 [01:49<06:39,  9.99s/it] 22%|██▏       | 11/50 [01:58<06:12,  9.56s/it] 24%|██▍       | 12/50 [02:07<05:56,  9.39s/it] 26%|██▌       | 13/50 [02:16<05:42,  9.25s/it] 28%|██▊       | 14/50 [02:27<05:56,  9.92s/it]WARNING - root - Finished call to 'agent.Agent.play' after 1.404(s), this was the 1st time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+WARNING - root - Finished call to 'agent.Agent.play' after 2.502(s), this was the 2nd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+WARNING - root - Finished call to 'agent.Agent.play' after 3.739(s), this was the 3rd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+WARNING - root - Finished call to 'agent.Agent.play' after 4.824(s), this was the 4th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+WARNING - root - Finished call to 'agent.Agent.play' after 5.837(s), this was the 5th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+WARNING - root - Finished call to 'agent.Agent.play' after 6.885(s), this was the 6th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+WARNING - root - Finished call to 'agent.Agent.play' after 8.100(s), this was the 7th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+WARNING - root - Finished call to 'agent.Agent.play' after 8.983(s), this was the 8th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+WARNING - root - Finished call to 'agent.Agent.play' after 10.704(s), this was the 9th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+WARNING - root - Finished call to 'agent.Agent.play' after 11.843(s), this was the 10th time calling it.
+Traceback (most recent call last):
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 26, in play
+    answer = self._prompt(self._make_prompt(scenario))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 40, in _prompt
+    raise UnexpectedAnswerException(f"expected 1 or 2, got {result}")
+util.UnexpectedAnswerException: expected 1 or 2, got 어
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/karina/Documents/Coding/PyCharm/mme/scripts/experiments/run.py", line 16, in _run_session
+    result = agent.play(session)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 326, in iter
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x13b230b90 state=finished raised UnexpectedAnswerException>]
+ 30%|███       | 15/50 [02:39<06:07, 10.50s/it]WARNING - root - Finished call to 'agent.Agent.play' after 1.205(s), this was the 1st time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+WARNING - root - Finished call to 'agent.Agent.play' after 2.269(s), this was the 2nd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+WARNING - root - Finished call to 'agent.Agent.play' after 3.335(s), this was the 3rd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+WARNING - root - Finished call to 'agent.Agent.play' after 4.219(s), this was the 4th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+ 32%|███▏      | 16/50 [02:54<06:46, 11.95s/it] 34%|███▍      | 17/50 [03:16<08:11, 14.90s/it]WARNING - root - Finished call to 'agent.Agent.play' after 1.060(s), this was the 1st time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+ 36%|███▌      | 18/50 [03:26<07:05, 13.31s/it] 38%|███▊      | 19/50 [03:34<06:03, 11.71s/it] 40%|████      | 20/50 [03:41<05:16, 10.56s/it] 42%|████▏     | 21/50 [03:51<05:00, 10.35s/it] 44%|████▍     | 22/50 [04:00<04:36,  9.88s/it] 46%|████▌     | 23/50 [04:09<04:19,  9.60s/it] 48%|████▊     | 24/50 [04:20<04:15,  9.85s/it] 50%|█████     | 25/50 [04:29<04:03,  9.74s/it] 52%|█████▏    | 26/50 [04:37<03:41,  9.21s/it] 54%|█████▍    | 27/50 [04:45<03:22,  8.82s/it] 56%|█████▌    | 28/50 [04:54<03:13,  8.81s/it]WARNING - root - Finished call to 'agent.Agent.play' after 1.103(s), this was the 1st time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+ 58%|█████▊    | 29/50 [05:03<03:09,  9.03s/it] 60%|██████    | 30/50 [05:12<02:57,  8.89s/it]WARNING - root - Finished call to 'agent.Agent.play' after 1.105(s), this was the 1st time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+ 62%|██████▏   | 31/50 [05:23<03:01,  9.57s/it] 64%|██████▍   | 32/50 [05:32<02:50,  9.48s/it]WARNING - root - Finished call to 'agent.Agent.play' after 1.036(s), this was the 1st time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+WARNING - root - Finished call to 'agent.Agent.play' after 2.119(s), this was the 2nd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+WARNING - root - Finished call to 'agent.Agent.play' after 3.141(s), this was the 3rd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+WARNING - root - Finished call to 'agent.Agent.play' after 4.117(s), this was the 4th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+WARNING - root - Finished call to 'agent.Agent.play' after 5.159(s), this was the 5th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+WARNING - root - Finished call to 'agent.Agent.play' after 6.253(s), this was the 6th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+WARNING - root - Finished call to 'agent.Agent.play' after 7.093(s), this was the 7th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+WARNING - root - Finished call to 'agent.Agent.play' after 8.141(s), this was the 8th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+WARNING - root - Finished call to 'agent.Agent.play' after 9.125(s), this was the 9th time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+WARNING - root - Finished call to 'agent.Agent.play' after 10.459(s), this was the 10th time calling it.
+Traceback (most recent call last):
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 26, in play
+    answer = self._prompt(self._make_prompt(scenario))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 40, in _prompt
+    raise UnexpectedAnswerException(f"expected 1 or 2, got {result}")
+util.UnexpectedAnswerException: expected 1 or 2, got 어
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/karina/Documents/Coding/PyCharm/mme/scripts/experiments/run.py", line 16, in _run_session
+    result = agent.play(session)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 326, in iter
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x13b300bd0 state=finished raised UnexpectedAnswerException>]
+ 66%|██████▌   | 33/50 [05:43<02:46,  9.77s/it]WARNING - root - Finished call to 'agent.Agent.play' after 0.945(s), this was the 1st time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+ 68%|██████▊   | 34/50 [05:52<02:35,  9.72s/it] 70%|███████   | 35/50 [06:01<02:23,  9.55s/it] 72%|███████▏  | 36/50 [06:11<02:12,  9.46s/it] 74%|███████▍  | 37/50 [06:20<02:00,  9.29s/it] 76%|███████▌  | 38/50 [06:29<01:50,  9.23s/it] 78%|███████▊  | 39/50 [06:38<01:42,  9.28s/it] 80%|████████  | 40/50 [06:47<01:32,  9.22s/it] 82%|████████▏ | 41/50 [06:56<01:22,  9.20s/it]WARNING - root - Finished call to 'agent.Agent.play' after 0.958(s), this was the 1st time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+WARNING - root - Finished call to 'agent.Agent.play' after 2.046(s), this was the 2nd time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+ 84%|████████▍ | 42/50 [07:06<01:15,  9.48s/it] 86%|████████▌ | 43/50 [07:17<01:08,  9.74s/it]WARNING - root - Finished call to 'agent.Agent.play' after 1.048(s), this was the 1st time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got 어.
+ 88%|████████▊ | 44/50 [07:29<01:02, 10.49s/it] 90%|█████████ | 45/50 [07:38<00:50, 10.02s/it] 92%|█████████▏| 46/50 [07:52<00:45, 11.25s/it] 94%|█████████▍| 47/50 [08:01<00:31, 10.67s/it] 96%|█████████▌| 48/50 [08:10<00:20, 10.11s/it] 98%|█████████▊| 49/50 [08:20<00:10, 10.06s/it]100%|██████████| 50/50 [08:31<00:00, 10.32s/it]100%|██████████| 50/50 [08:31<00:00, 10.23s/it]
+INFO - tinypaper - Result: {'answers': [[1, 1, 2, 2, 1, 2, 2, 2, 2, 2, 1, 1, 2], [2, 1, 1, 1, 1, 2, 1, 2, 1, 1, 2, 2, 2], [1, 1, 2, 1, 2, 1, 2, 1, 2, 2, 1, 2, 1], [1, 2, 2, 2, 2, 1, 1, 2, 1, 1, 1, 2, 1], [1, 1, 2, 1, 2, 2, 2, 1, 1, 2, 2, 2, 2], 'Traceback (most recent call last):\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 40, in _prompt\n    raise UnexpectedAnswerException(f"expected 1 or 2, got {result}")\nutil.UnexpectedAnswerException: expected 1 or 2, got 어\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File "/Users/karina/Documents/Coding/PyCharm/mme/scripts/experiments/run.py", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x13ba1e6d0 state=finished raised UnexpectedAnswerException>]\n', [2, 1, 2, 1, 2, 1, 2, 2, 1, 1, 2, 2, 1], [2, 2, 1, 2, 1, 2, 2, 2, 2, 2, 1, 1, 2], [1, 1, 1, 2, 1, 1, 1, 2, 1, 2, 2, 2, 2], [2, 2, 2, 1, 1, 1, 1, 2, 2, 1, 2, 2, 1], [2, 1, 2, 1, 1, 1, 2, 2, 1, 2, 2, 1, 1], [2, 2, 1, 2, 1, 1, 2, 1, 2, 1, 2, 2, 1], [1, 1, 2, 1, 2, 2, 2, 2, 1, 1, 1, 2, 1], [1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1], 'Traceback (most recent call last):\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 40, in _prompt\n    raise UnexpectedAnswerException(f"expected 1 or 2, got {result}")\nutil.UnexpectedAnswerException: expected 1 or 2, got 어\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File "/Users/karina/Documents/Coding/PyCharm/mme/scripts/experiments/run.py", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x13b230b90 state=finished raised UnexpectedAnswerException>]\n', [1, 1, 2, 1, 1, 2, 2, 1, 2, 2, 2, 1, 1], [2, 1, 1, 2, 1, 1, 2, 1, 2, 1, 1, 1, 1], [2, 2, 2, 2, 2, 1, 1, 2, 2, 1, 2, 2, 2], [2, 1, 2, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1], [1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 2], [1, 1, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2], [2, 2, 1, 1, 1, 2, 2, 2, 1, 1, 2, 2, 1], [2, 1, 1, 2, 1, 1, 2, 2, 1, 2, 2, 1, 1], [2, 2, 2, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1], [2, 2, 1, 1, 1, 1, 1, 2, 1, 2, 2, 1, 1], [2, 2, 1, 2, 1, 2, 2, 1, 2, 1, 1, 1, 1], [1, 2, 1, 1, 1, 2, 1, 2, 1, 2, 2, 1, 2], [2, 1, 1, 1, 2, 2, 2, 2, 1, 2, 1, 2, 1], [1, 1, 2, 2, 1, 2, 2, 2, 1, 2, 2, 2, 2], [1, 1, 1, 1, 2, 2, 1, 1, 1, 2, 1, 2, 2], [1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1, 2, 2], [2, 2, 2, 1, 2, 1, 2, 2, 1, 1, 2, 1, 1], 'Traceback (most recent call last):\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 40, in _prompt\n    raise UnexpectedAnswerException(f"expected 1 or 2, got {result}")\nutil.UnexpectedAnswerException: expected 1 or 2, got 어\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File "/Users/karina/Documents/Coding/PyCharm/mme/scripts/experiments/run.py", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x13b300bd0 state=finished raised UnexpectedAnswerException>]\n', [1, 1, 2, 1, 2, 1, 2, 1, 2, 2, 1, 1, 1], [2, 2, 1, 2, 2, 2, 2, 1, 1, 1, 1, 2, 1], [2, 2, 1, 1, 2, 1, 2, 2, 2, 1, 2, 2, 2], [1, 2, 2, 1, 1, 1, 1, 1, 2, 1, 1, 2, 1], [2, 1, 2, 1, 1, 1, 2, 2, 1, 2, 2, 1, 1], [1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1], [2, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 2], [2, 1, 2, 2, 1, 1, 1, 1, 2, 2, 2, 2, 1], [2, 1, 2, 1, 1, 1, 2, 2, 2, 2, 1, 1, 1], [1, 1, 2, 2, 2, 1, 1, 2, 2, 1, 1, 2, 1], [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2], [1, 1, 1, 2, 1, 2, 1, 1, 2, 1, 2, 1, 2], [2, 1, 1, 2, 1, 2, 2, 1, 2, 2, 1, 2, 2], [2, 2, 1, 1, 1, 1, 1, 2, 2, 2, 1, 1, 2], [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2], [2, 2, 1, 1, 2, 1, 1, 2, 2, 2, 2, 1, 1], [2, 1, 1, 2, 1, 2, 1, 2, 1, 2, 2, 2, 2]], 'api_usage': [APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=23039, num_output_tokens=18, cost=0.0115465), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=41671, num_output_tokens=31, cost=0.020882), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=61968, num_output_tokens=47, cost=0.0310545), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=82397, num_output_tokens=60, cost=0.0412885), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=102503, num_output_tokens=73, cost=0.051361), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=106273, num_output_tokens=83, cost=0.053261), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=129152, num_output_tokens=96, cost=0.06472), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=150654, num_output_tokens=109, cost=0.0754905), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=171622, num_output_tokens=122, cost=0.085994), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=191994, num_output_tokens=135, cost=0.0961995), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=212116, num_output_tokens=148, cost=0.10628), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=232512, num_output_tokens=161, cost=0.1164975), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=252345, num_output_tokens=174, cost=0.1264335), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=273371, num_output_tokens=187, cost=0.136966), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=277141, num_output_tokens=197, cost=0.138866), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=299186, num_output_tokens=214, cost=0.149914), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=320633, num_output_tokens=227, cost=0.160657), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=342340, num_output_tokens=241, cost=0.1715315), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=362236, num_output_tokens=254, cost=0.181499), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=383640, num_output_tokens=267, cost=0.1922205), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=404398, num_output_tokens=280, cost=0.202619), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=423956, num_output_tokens=293, cost=0.2124175), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=443862, num_output_tokens=306, cost=0.22239), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=464325, num_output_tokens=319, cost=0.232641), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=484329, num_output_tokens=332, cost=0.2426625), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=504656, num_output_tokens=345, cost=0.2528455), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=525783, num_output_tokens=358, cost=0.2634285), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=546941, num_output_tokens=371, cost=0.274027), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=568735, num_output_tokens=385, cost=0.284945), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=589652, num_output_tokens=398, cost=0.295423), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=609861, num_output_tokens=412, cost=0.3055485), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=629875, num_output_tokens=425, cost=0.315575), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=633385, num_output_tokens=435, cost=0.317345), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=655748, num_output_tokens=449, cost=0.3285475), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=677481, num_output_tokens=462, cost=0.3394335), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=698800, num_output_tokens=475, cost=0.3501125), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=719947, num_output_tokens=488, cost=0.3607055), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=739575, num_output_tokens=501, cost=0.370539), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=759457, num_output_tokens=514, cost=0.3804995), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=779560, num_output_tokens=527, cost=0.3905705), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=799907, num_output_tokens=540, cost=0.4007635), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=820491, num_output_tokens=555, cost=0.411078), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=841730, num_output_tokens=568, cost=0.421717), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=864616, num_output_tokens=582, cost=0.433181), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=884362, num_output_tokens=595, cost=0.4430735), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=905053, num_output_tokens=608, cost=0.4534385), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=925467, num_output_tokens=621, cost=0.463665), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=944942, num_output_tokens=634, cost=0.473422), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=966962, num_output_tokens=647, cost=0.4844515), APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=988354, num_output_tokens=660, cost=0.495167)], 'api_usage_total': APIUsage(name='gpt-3.5-turbo-0125', num_input_tokens=24819003, num_output_tokens=16929, cost=12.434895)}

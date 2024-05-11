@@ -1,0 +1,1176 @@
+{
+  "artifacts": [],
+  "command": "main",
+  "experiment": {
+    "base_dir": "/Users/karina/Documents/Coding/PyCharm/mme/src",
+    "dependencies": [
+      "numpy==1.26.4",
+      "sacred==0.8.5"
+    ],
+    "mainfile": "experiment.py",
+    "name": "tinypaper",
+    "repositories": [
+      {
+        "commit": "863fe55c40d6aca96fb4a40bcbed10ae02e51cd2",
+        "dirty": false,
+        "url": "https://github.com/fdamken/tinypaper_code.git"
+      },
+      {
+        "commit": "863fe55c40d6aca96fb4a40bcbed10ae02e51cd2",
+        "dirty": false,
+        "url": "https://github.com/fdamken/tinypaper_code.git"
+      }
+    ],
+    "sources": [
+      [
+        "experiment.py",
+        "_sources/experiment_7ab7c4f9e536be33bd5f71ad8c083f8f.py"
+      ],
+      [
+        "path_util.py",
+        "_sources/path_util_3a188cc169f54562aefe4201454e44af.py"
+      ]
+    ]
+  },
+  "heartbeat": "2024-05-08T16:39:35.293037",
+  "host": {
+    "ENV": {},
+    "cpu": "Apple M2",
+    "hostname": "MacBook-Pro-von-Karina.local",
+    "os": [
+      "Darwin",
+      "macOS-10.16-x86_64-i386-64bit"
+    ],
+    "python_version": "3.11.9"
+  },
+  "meta": {
+    "command": "main",
+    "config_updates": {
+      "from_session_id": 300,
+      "language": "ja",
+      "model_name": "gpt-3.5-turbo-0125",
+      "to_session_id": 350
+    },
+    "named_configs": [],
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--id": null,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [
+        "model_name=gpt-3.5-turbo-0125",
+        "language=ja",
+        "from_session_id=300",
+        "to_session_id=350"
+      ],
+      "help": false,
+      "with": true
+    }
+  },
+  "resources": [],
+  "result": {
+    "answers": [
+      [
+        2,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2,
+        2
+      ],
+      [
+        2,
+        1,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      [
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1
+      ],
+      [
+        2,
+        2,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "Traceback (most recent call last):\n  File \"/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got \u3069\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/Users/karina/Documents/Coding/PyCharm/mme/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x13b85ba50 state=finished raised UnexpectedAnswerException>]\n",
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2
+      ],
+      [
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      [
+        2,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        1,
+        2
+      ],
+      [
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2
+      ],
+      [
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      [
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "Traceback (most recent call last):\n  File \"/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py\", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py\", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py\", line 40, in _prompt\n    raise UnexpectedAnswerException(f\"expected 1 or 2, got {result}\")\nutil.UnexpectedAnswerException: expected 1 or 2, got \u3069\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/Users/karina/Documents/Coding/PyCharm/mme/scripts/experiments/run.py\", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py\", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py\", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py\", line 326, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x13bf0a550 state=finished raised UnexpectedAnswerException>]\n",
+      [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1
+      ],
+      [
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2
+      ],
+      [
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1
+      ],
+      [
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        2,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2
+      ],
+      [
+        1,
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        1
+      ],
+      [
+        1,
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2
+      ],
+      [
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1
+      ],
+      [
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2
+      ],
+      [
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      [
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2
+      ],
+      [
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        2
+      ],
+      [
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1
+      ],
+      [
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2
+      ],
+      [
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1
+      ],
+      [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      [
+        2,
+        2,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2
+      ],
+      [
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      [
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      [
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1
+      ],
+      [
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      [
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      [
+        1,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2
+      ]
+    ],
+    "api_usage": [
+      {
+        "cost": 0.009429,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 18819,
+        "num_output_tokens": 13,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.017907,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 35736,
+        "num_output_tokens": 26,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0265665,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 53016,
+        "num_output_tokens": 39,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0352,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 70244,
+        "num_output_tokens": 52,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0442315,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 88268,
+        "num_output_tokens": 65,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0534865,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 106739,
+        "num_output_tokens": 78,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.0768015,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 153189,
+        "num_output_tokens": 138,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.086509,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 172565,
+        "num_output_tokens": 151,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.094955,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 189418,
+        "num_output_tokens": 164,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.103089,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 205647,
+        "num_output_tokens": 177,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.112344,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 224118,
+        "num_output_tokens": 190,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.121868,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 243127,
+        "num_output_tokens": 203,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.1303025,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 259957,
+        "num_output_tokens": 216,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.1390495,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 277412,
+        "num_output_tokens": 229,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.2115645,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 422082,
+        "num_output_tokens": 349,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.2204,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 439714,
+        "num_output_tokens": 362,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.2293055,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 457486,
+        "num_output_tokens": 375,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.238052,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 474940,
+        "num_output_tokens": 388,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.2467795,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 492356,
+        "num_output_tokens": 401,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.255243,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 509244,
+        "num_output_tokens": 414,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.264682,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 528083,
+        "num_output_tokens": 427,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.2727825,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 544245,
+        "num_output_tokens": 440,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.2813525,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 561346,
+        "num_output_tokens": 453,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.290257,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 579116,
+        "num_output_tokens": 466,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.2994125,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 597388,
+        "num_output_tokens": 479,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.307894,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 614312,
+        "num_output_tokens": 492,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.3172295,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 632944,
+        "num_output_tokens": 505,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.326597,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 651640,
+        "num_output_tokens": 518,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.335626,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 669659,
+        "num_output_tokens": 531,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.344304,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 686976,
+        "num_output_tokens": 544,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.354259,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 706847,
+        "num_output_tokens": 557,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.36389,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 726070,
+        "num_output_tokens": 570,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.372543,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 743337,
+        "num_output_tokens": 583,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.380705,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 759622,
+        "num_output_tokens": 596,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.388646,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 775465,
+        "num_output_tokens": 609,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.3980285,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 794191,
+        "num_output_tokens": 622,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.4076195,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 813334,
+        "num_output_tokens": 635,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.417398,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 832852,
+        "num_output_tokens": 648,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.426557,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 851131,
+        "num_output_tokens": 661,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.435444,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 868866,
+        "num_output_tokens": 674,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.4448945,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 887728,
+        "num_output_tokens": 687,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.454382,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 906664,
+        "num_output_tokens": 700,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.462876,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 923613,
+        "num_output_tokens": 713,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.4725655,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 942941,
+        "num_output_tokens": 730,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.4804985,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 958768,
+        "num_output_tokens": 743,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.489474,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 976680,
+        "num_output_tokens": 756,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.497942,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 993577,
+        "num_output_tokens": 769,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.505979,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 1009612,
+        "num_output_tokens": 782,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.5149655,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 1027546,
+        "num_output_tokens": 795,
+        "py/object": "api_usage.APIUsage"
+      },
+      {
+        "cost": 0.524251,
+        "name": "gpt-3.5-turbo-0125",
+        "num_input_tokens": 1046078,
+        "num_output_tokens": 808,
+        "py/object": "api_usage.APIUsage"
+      }
+    ],
+    "api_usage_total": {
+      "cost": 14.2861385,
+      "name": "gpt-3.5-turbo-0125",
+      "num_input_tokens": 28504708,
+      "num_output_tokens": 22523,
+      "py/object": "api_usage.APIUsage"
+    }
+  },
+  "start_time": "2024-05-08T16:29:08.839680",
+  "status": "COMPLETED",
+  "stop_time": "2024-05-08T16:39:33.276716"
+}

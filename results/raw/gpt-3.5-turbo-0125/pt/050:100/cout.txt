@@ -1,0 +1,967 @@
+INFO - tinypaper - Running command 'main'
+INFO - tinypaper - Started run with ID "108"
+/Users/karina/Documents/Coding/PyCharm/mme/src/model/model.py:19: UserWarning: Running model NOT in dry mode! This will consume API tokens and may cost money. MAKE SURE TO RUN IN DRY MODE FIRST TO GET AN ESTIMATE!
+  warnings.warn(
+  0%|          | 0/50 [00:00<?, ?it/s]  2%|▏         | 1/50 [00:08<06:34,  8.04s/it]WARNING - root - Finished call to 'agent.Agent.play' after 1.022(s), this was the 1st time calling it.
+INFO - root - Retrying agent.Agent.play in 0.0 seconds as it raised UnexpectedAnswerException: expected 1 or 2, got Qual.
+  4%|▍         | 2/50 [00:32<14:06, 17.63s/it]  6%|▌         | 3/50 [00:45<12:11, 15.56s/it]  8%|▊         | 4/50 [01:02<12:24, 16.18s/it] 10%|█         | 5/50 [01:10<09:50, 13.13s/it] 12%|█▏        | 6/50 [01:18<08:23, 11.45s/it] 14%|█▍        | 7/50 [01:27<07:31, 10.51s/it] 16%|█▌        | 8/50 [01:36<07:05, 10.12s/it] 18%|█▊        | 9/50 [01:43<06:22,  9.32s/it] 20%|██        | 10/50 [01:51<05:51,  8.78s/it] 22%|██▏       | 11/50 [02:01<05:51,  9.02s/it] 24%|██▍       | 12/50 [02:11<05:57,  9.42s/it] 26%|██▌       | 13/50 [02:21<05:51,  9.51s/it] 28%|██▊       | 14/50 [02:29<05:29,  9.14s/it] 30%|███       | 15/50 [02:37<05:13,  8.94s/it] 32%|███▏      | 16/50 [02:46<04:59,  8.80s/it] 34%|███▍      | 17/50 [02:56<04:59,  9.08s/it] 36%|███▌      | 18/50 [03:04<04:42,  8.84s/it] 38%|███▊      | 19/50 [03:12<04:23,  8.50s/it] 40%|████      | 20/50 [03:19<04:09,  8.33s/it] 42%|████▏     | 21/50 [03:29<04:11,  8.68s/it] 44%|████▍     | 22/50 [03:37<03:56,  8.43s/it] 46%|████▌     | 23/50 [03:44<03:39,  8.13s/it] 48%|████▊     | 24/50 [03:53<03:36,  8.32s/it] 50%|█████     | 25/50 [04:01<03:24,  8.17s/it] 52%|█████▏    | 26/50 [04:10<03:26,  8.60s/it] 54%|█████▍    | 27/50 [04:19<03:20,  8.70s/it] 56%|█████▌    | 28/50 [04:28<03:08,  8.58s/it] 58%|█████▊    | 29/50 [04:45<03:58, 11.33s/it] 60%|██████    | 30/50 [04:54<03:29, 10.46s/it] 62%|██████▏   | 31/50 [05:02<03:03,  9.64s/it] 64%|██████▍   | 32/50 [05:10<02:48,  9.38s/it] 66%|██████▌   | 33/50 [05:20<02:41,  9.52s/it] 68%|██████▊   | 34/50 [05:33<02:45, 10.35s/it] 70%|███████   | 35/50 [05:40<02:23,  9.60s/it] 72%|███████▏  | 36/50 [05:48<02:07,  9.09s/it] 74%|███████▍  | 37/50 [06:05<02:27, 11.35s/it] 76%|███████▌  | 38/50 [06:13<02:04, 10.34s/it] 78%|███████▊  | 39/50 [06:31<02:18, 12.56s/it] 80%|████████  | 40/50 [06:40<01:56, 11.64s/it] 82%|████████▏ | 41/50 [06:50<01:39, 11.09s/it] 84%|████████▍ | 42/50 [06:58<01:21, 10.20s/it] 86%|████████▌ | 43/50 [08:03<03:05, 26.48s/it]INFO - openai._base_client - Retrying request to /chat/completions in 0.786494 seconds
+INFO - openai._base_client - Retrying request to /chat/completions in 1.704030 seconds
+Traceback (most recent call last):
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 69, in map_httpcore_exceptions
+    yield
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 233, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 216, in handle_request
+    raise exc from None
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 196, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 99, in handle_request
+    raise exc
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 76, in handle_request
+    stream = self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 122, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_backends/sync.py", line 205, in connect_tcp
+    with map_exceptions(exc_map):
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 918, in _request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 1015, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 232, in handle_request
+    with map_httpcore_exceptions():
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 86, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/karina/Documents/Coding/PyCharm/mme/scripts/experiments/run.py", line 16, in _run_session
+    result = agent.play(session)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 314, in iter
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 26, in play
+    answer = self._prompt(self._make_prompt(scenario))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 38, in _prompt
+    result = self._model.prompt(prompt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/model/openai.py", line 47, in prompt
+    message = self._fetch()
+              ^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 314, in iter
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/sacred/config/captured_function.py", line 42, in captured_function
+    result = wrapped(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/model/openai.py", line 93, in _fetch
+    response = self._openai.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_utils/_utils.py", line 275, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/resources/chat/completions.py", line 663, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1200, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 889, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 927, in _request
+    return self._retry_request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1013, in _retry_request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 927, in _request
+    return self._retry_request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1013, in _retry_request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 937, in _request
+    raise APITimeoutError(request=request) from err
+openai.APITimeoutError: Request timed out.
+ 88%|████████▊ | 44/50 [08:59<03:33, 35.54s/it]INFO - openai._base_client - Retrying request to /chat/completions in 0.932160 seconds
+INFO - openai._base_client - Retrying request to /chat/completions in 1.638146 seconds
+Traceback (most recent call last):
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 69, in map_httpcore_exceptions
+    yield
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 233, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 216, in handle_request
+    raise exc from None
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 196, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 99, in handle_request
+    raise exc
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 76, in handle_request
+    stream = self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 122, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_backends/sync.py", line 205, in connect_tcp
+    with map_exceptions(exc_map):
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 918, in _request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 1015, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 232, in handle_request
+    with map_httpcore_exceptions():
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 86, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/karina/Documents/Coding/PyCharm/mme/scripts/experiments/run.py", line 16, in _run_session
+    result = agent.play(session)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 314, in iter
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 26, in play
+    answer = self._prompt(self._make_prompt(scenario))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 38, in _prompt
+    result = self._model.prompt(prompt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/model/openai.py", line 47, in prompt
+    message = self._fetch()
+              ^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 314, in iter
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/sacred/config/captured_function.py", line 42, in captured_function
+    result = wrapped(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/model/openai.py", line 93, in _fetch
+    response = self._openai.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_utils/_utils.py", line 275, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/resources/chat/completions.py", line 663, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1200, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 889, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 927, in _request
+    return self._retry_request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1013, in _retry_request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 927, in _request
+    return self._retry_request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1013, in _retry_request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 937, in _request
+    raise APITimeoutError(request=request) from err
+openai.APITimeoutError: Request timed out.
+ 90%|█████████ | 45/50 [09:32<02:53, 34.68s/it]INFO - openai._base_client - Retrying request to /chat/completions in 0.966674 seconds
+INFO - openai._base_client - Retrying request to /chat/completions in 1.708484 seconds
+Traceback (most recent call last):
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 69, in map_httpcore_exceptions
+    yield
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 233, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 216, in handle_request
+    raise exc from None
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 196, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 99, in handle_request
+    raise exc
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 76, in handle_request
+    stream = self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 122, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_backends/sync.py", line 205, in connect_tcp
+    with map_exceptions(exc_map):
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 918, in _request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 1015, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 232, in handle_request
+    with map_httpcore_exceptions():
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 86, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/karina/Documents/Coding/PyCharm/mme/scripts/experiments/run.py", line 16, in _run_session
+    result = agent.play(session)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 314, in iter
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 26, in play
+    answer = self._prompt(self._make_prompt(scenario))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 38, in _prompt
+    result = self._model.prompt(prompt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/model/openai.py", line 47, in prompt
+    message = self._fetch()
+              ^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 314, in iter
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/sacred/config/captured_function.py", line 42, in captured_function
+    result = wrapped(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/model/openai.py", line 93, in _fetch
+    response = self._openai.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_utils/_utils.py", line 275, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/resources/chat/completions.py", line 663, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1200, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 889, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 927, in _request
+    return self._retry_request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1013, in _retry_request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 927, in _request
+    return self._retry_request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1013, in _retry_request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 937, in _request
+    raise APITimeoutError(request=request) from err
+openai.APITimeoutError: Request timed out.
+ 92%|█████████▏| 46/50 [10:19<02:33, 38.41s/it]INFO - openai._base_client - Retrying request to /chat/completions in 0.829636 seconds
+INFO - openai._base_client - Retrying request to /chat/completions in 1.552356 seconds
+Traceback (most recent call last):
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 69, in map_httpcore_exceptions
+    yield
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 233, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 216, in handle_request
+    raise exc from None
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 196, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 99, in handle_request
+    raise exc
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 76, in handle_request
+    stream = self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 122, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_backends/sync.py", line 205, in connect_tcp
+    with map_exceptions(exc_map):
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 918, in _request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 1015, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 232, in handle_request
+    with map_httpcore_exceptions():
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 86, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/karina/Documents/Coding/PyCharm/mme/scripts/experiments/run.py", line 16, in _run_session
+    result = agent.play(session)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 314, in iter
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 26, in play
+    answer = self._prompt(self._make_prompt(scenario))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 38, in _prompt
+    result = self._model.prompt(prompt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/model/openai.py", line 47, in prompt
+    message = self._fetch()
+              ^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 314, in iter
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/sacred/config/captured_function.py", line 42, in captured_function
+    result = wrapped(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/model/openai.py", line 93, in _fetch
+    response = self._openai.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_utils/_utils.py", line 275, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/resources/chat/completions.py", line 663, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1200, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 889, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 927, in _request
+    return self._retry_request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1013, in _retry_request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 927, in _request
+    return self._retry_request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1013, in _retry_request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 937, in _request
+    raise APITimeoutError(request=request) from err
+openai.APITimeoutError: Request timed out.
+ 94%|█████████▍| 47/50 [10:51<01:49, 36.64s/it]INFO - openai._base_client - Retrying request to /chat/completions in 0.799377 seconds
+INFO - openai._base_client - Retrying request to /chat/completions in 1.633707 seconds
+Traceback (most recent call last):
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 69, in map_httpcore_exceptions
+    yield
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 233, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 216, in handle_request
+    raise exc from None
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 196, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 99, in handle_request
+    raise exc
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 76, in handle_request
+    stream = self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 122, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_backends/sync.py", line 205, in connect_tcp
+    with map_exceptions(exc_map):
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 918, in _request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 1015, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 232, in handle_request
+    with map_httpcore_exceptions():
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 86, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/karina/Documents/Coding/PyCharm/mme/scripts/experiments/run.py", line 16, in _run_session
+    result = agent.play(session)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 314, in iter
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 26, in play
+    answer = self._prompt(self._make_prompt(scenario))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 38, in _prompt
+    result = self._model.prompt(prompt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/model/openai.py", line 47, in prompt
+    message = self._fetch()
+              ^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 314, in iter
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/sacred/config/captured_function.py", line 42, in captured_function
+    result = wrapped(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/model/openai.py", line 93, in _fetch
+    response = self._openai.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_utils/_utils.py", line 275, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/resources/chat/completions.py", line 663, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1200, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 889, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 927, in _request
+    return self._retry_request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1013, in _retry_request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 927, in _request
+    return self._retry_request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1013, in _retry_request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 937, in _request
+    raise APITimeoutError(request=request) from err
+openai.APITimeoutError: Request timed out.
+ 96%|█████████▌| 48/50 [11:40<01:20, 40.16s/it]INFO - openai._base_client - Retrying request to /chat/completions in 0.832086 seconds
+INFO - openai._base_client - Retrying request to /chat/completions in 1.540690 seconds
+Traceback (most recent call last):
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 69, in map_httpcore_exceptions
+    yield
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 233, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 216, in handle_request
+    raise exc from None
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 196, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 99, in handle_request
+    raise exc
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 76, in handle_request
+    stream = self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 122, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_backends/sync.py", line 205, in connect_tcp
+    with map_exceptions(exc_map):
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 918, in _request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 1015, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 232, in handle_request
+    with map_httpcore_exceptions():
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 86, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/karina/Documents/Coding/PyCharm/mme/scripts/experiments/run.py", line 16, in _run_session
+    result = agent.play(session)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 314, in iter
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 26, in play
+    answer = self._prompt(self._make_prompt(scenario))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 38, in _prompt
+    result = self._model.prompt(prompt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/model/openai.py", line 47, in prompt
+    message = self._fetch()
+              ^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 314, in iter
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/sacred/config/captured_function.py", line 42, in captured_function
+    result = wrapped(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/model/openai.py", line 93, in _fetch
+    response = self._openai.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_utils/_utils.py", line 275, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/resources/chat/completions.py", line 663, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1200, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 889, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 927, in _request
+    return self._retry_request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1013, in _retry_request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 927, in _request
+    return self._retry_request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1013, in _retry_request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 937, in _request
+    raise APITimeoutError(request=request) from err
+openai.APITimeoutError: Request timed out.
+ 98%|█████████▊| 49/50 [12:12<00:37, 37.86s/it]INFO - openai._base_client - Retrying request to /chat/completions in 0.780201 seconds
+INFO - openai._base_client - Retrying request to /chat/completions in 1.918171 seconds
+Traceback (most recent call last):
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 69, in map_httpcore_exceptions
+    yield
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 233, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 216, in handle_request
+    raise exc from None
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 196, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 99, in handle_request
+    raise exc
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 76, in handle_request
+    stream = self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 122, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_backends/sync.py", line 205, in connect_tcp
+    with map_exceptions(exc_map):
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 918, in _request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 1015, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 232, in handle_request
+    with map_httpcore_exceptions():
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 86, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/karina/Documents/Coding/PyCharm/mme/scripts/experiments/run.py", line 16, in _run_session
+    result = agent.play(session)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 314, in iter
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 26, in play
+    answer = self._prompt(self._make_prompt(scenario))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 38, in _prompt
+    result = self._model.prompt(prompt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/model/openai.py", line 47, in prompt
+    message = self._fetch()
+              ^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 314, in iter
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/sacred/config/captured_function.py", line 42, in captured_function
+    result = wrapped(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/Documents/Coding/PyCharm/mme/src/model/openai.py", line 93, in _fetch
+    response = self._openai.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_utils/_utils.py", line 275, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/resources/chat/completions.py", line 663, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1200, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 889, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 927, in _request
+    return self._retry_request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1013, in _retry_request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 927, in _request
+    return self._retry_request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1013, in _retry_request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 937, in _request
+    raise APITimeoutError(request=request) from err
+openai.APITimeoutError: Request timed out.
+100%|██████████| 50/50 [12:45<00:00, 36.34s/it]100%|██████████| 50/50 [12:45<00:00, 15.31s/it]
+INFO - tinypaper - Result: {'answers': [[1, 2, 2, 2, 1, 2, 2, 2, 2, 2, 1, 1, 2], [2, 1, 1, 1, 1, 2, 1, 2, 1, 1, 2, 2, 2], [1, 2, 1, 1, 2, 1, 2, 1, 2, 2, 1, 2, 1], [1, 1, 2, 2, 1, 1, 1, 2, 2, 1, 1, 2, 1], [1, 1, 1, 1, 2, 2, 2, 1, 1, 2, 2, 2, 2], [2, 2, 2, 2, 2, 1, 1, 2, 2, 1, 1, 1, 1], [2, 2, 2, 2, 2, 1, 1, 2, 1, 1, 1, 2, 1], [2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 1, 1, 2], [1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 2, 2, 2], [2, 1, 2, 1, 1, 1, 1, 2, 2, 1, 2, 2, 1], [2, 2, 2, 1, 1, 1, 2, 2, 1, 2, 2, 1, 1], [2, 2, 2, 1, 1, 1, 2, 1, 2, 1, 2, 2, 1], [1, 1, 1, 1, 2, 2, 2, 2, 2, 1, 1, 2, 2], [1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1], [1, 2, 2, 1, 1, 2, 1, 2, 1, 1, 2, 2, 1], [1, 2, 2, 1, 1, 2, 2, 1, 2, 2, 2, 1, 1], [2, 1, 1, 2, 1, 1, 2, 1, 2, 1, 1, 1, 1], [2, 2, 2, 2, 1, 1, 1, 2, 2, 1, 2, 2, 2], [2, 2, 2, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2], [1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 2], [1, 1, 2, 1, 2, 1, 2, 2, 2, 2, 2, 2, 2], [2, 2, 2, 1, 1, 2, 2, 2, 1, 1, 2, 2, 1], [2, 1, 1, 2, 1, 1, 2, 2, 1, 2, 2, 1, 1], [2, 1, 2, 2, 1, 1, 2, 2, 1, 1, 1, 1, 1], [2, 2, 2, 1, 1, 2, 2, 2, 1, 2, 2, 1, 1], [2, 2, 2, 2, 1, 2, 2, 1, 2, 1, 1, 1, 1], [1, 2, 1, 1, 1, 1, 1, 2, 1, 2, 2, 1, 2], [2, 2, 1, 1, 2, 2, 2, 2, 1, 2, 1, 2, 1], [1, 1, 2, 2, 1, 2, 2, 2, 1, 2, 2, 2, 2], [1, 2, 2, 1, 2, 2, 1, 1, 1, 2, 1, 2, 2], [1, 2, 2, 2, 1, 1, 1, 1, 2, 1, 1, 2, 2], [2, 2, 1, 1, 2, 1, 2, 2, 1, 1, 2, 1, 1], [2, 2, 2, 2, 2, 2, 1, 1, 1, 2, 1, 2, 2], [1, 1, 2, 1, 2, 1, 2, 1, 2, 2, 1, 1, 1], [2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 2, 1], [2, 2, 2, 1, 2, 1, 2, 2, 2, 1, 2, 2, 2], [1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1, 2, 1], [2, 1, 2, 2, 1, 1, 2, 2, 1, 2, 2, 1, 1], [1, 1, 2, 1, 1, 2, 1, 1, 2, 1, 2, 1, 1], [2, 1, 1, 2, 1, 1, 1, 2, 2, 1, 1, 1, 2], [2, 2, 2, 2, 1, 2, 1, 1, 2, 2, 2, 2, 1], [2, 2, 2, 1, 1, 1, 2, 2, 2, 2, 1, 1, 1], [1, 1, 1, 2, 2, 2, 2, 2, 2, 1, 1, 2, 1], 'Traceback (most recent call last):\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 69, in map_httpcore_exceptions\n    yield\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 233, in handle_request\n    resp = self._pool.handle_request(req)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 216, in handle_request\n    raise exc from None\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 196, in handle_request\n    response = connection.handle_request(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 99, in handle_request\n    raise exc\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 76, in handle_request\n    stream = self._connect(request)\n             ^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 122, in _connect\n    stream = self._network_backend.connect_tcp(**kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_backends/sync.py", line 205, in connect_tcp\n    with map_exceptions(exc_map):\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/contextlib.py", line 158, in __exit__\n    self.gen.throw(typ, value, traceback)\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions\n    raise to_exc(exc) from exc\nhttpcore.ConnectTimeout: timed out\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 918, in _request\n    response = self._client.send(\n               ^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 914, in send\n    response = self._send_handling_auth(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 942, in _send_handling_auth\n    response = self._send_handling_redirects(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 979, in _send_handling_redirects\n    response = self._send_single_request(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 1015, in _send_single_request\n    response = transport.handle_request(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 232, in handle_request\n    with map_httpcore_exceptions():\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/contextlib.py", line 158, in __exit__\n    self.gen.throw(typ, value, traceback)\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 86, in map_httpcore_exceptions\n    raise mapped_exc(message) from exc\nhttpx.ConnectTimeout: timed out\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File "/Users/karina/Documents/Coding/PyCharm/mme/scripts/experiments/run.py", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 314, in iter\n    return fut.result()\n           ^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 449, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result\n    raise self._exception\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 38, in _prompt\n    result = self._model.prompt(prompt)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/Documents/Coding/PyCharm/mme/src/model/openai.py", line 47, in prompt\n    message = self._fetch()\n              ^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 314, in iter\n    return fut.result()\n           ^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 449, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result\n    raise self._exception\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/sacred/config/captured_function.py", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/Documents/Coding/PyCharm/mme/src/model/openai.py", line 93, in _fetch\n    response = self._openai.chat.completions.create(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_utils/_utils.py", line 275, in wrapper\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/resources/chat/completions.py", line 663, in create\n    return self._post(\n           ^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1200, in post\n    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 889, in request\n    return self._request(\n           ^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 927, in _request\n    return self._retry_request(\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1013, in _retry_request\n    return self._request(\n           ^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 927, in _request\n    return self._retry_request(\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1013, in _retry_request\n    return self._request(\n           ^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 937, in _request\n    raise APITimeoutError(request=request) from err\nopenai.APITimeoutError: Request timed out.\n', 'Traceback (most recent call last):\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 69, in map_httpcore_exceptions\n    yield\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 233, in handle_request\n    resp = self._pool.handle_request(req)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 216, in handle_request\n    raise exc from None\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 196, in handle_request\n    response = connection.handle_request(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 99, in handle_request\n    raise exc\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 76, in handle_request\n    stream = self._connect(request)\n             ^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 122, in _connect\n    stream = self._network_backend.connect_tcp(**kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_backends/sync.py", line 205, in connect_tcp\n    with map_exceptions(exc_map):\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/contextlib.py", line 158, in __exit__\n    self.gen.throw(typ, value, traceback)\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions\n    raise to_exc(exc) from exc\nhttpcore.ConnectTimeout: timed out\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 918, in _request\n    response = self._client.send(\n               ^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 914, in send\n    response = self._send_handling_auth(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 942, in _send_handling_auth\n    response = self._send_handling_redirects(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 979, in _send_handling_redirects\n    response = self._send_single_request(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 1015, in _send_single_request\n    response = transport.handle_request(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 232, in handle_request\n    with map_httpcore_exceptions():\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/contextlib.py", line 158, in __exit__\n    self.gen.throw(typ, value, traceback)\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 86, in map_httpcore_exceptions\n    raise mapped_exc(message) from exc\nhttpx.ConnectTimeout: timed out\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File "/Users/karina/Documents/Coding/PyCharm/mme/scripts/experiments/run.py", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 314, in iter\n    return fut.result()\n           ^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 449, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result\n    raise self._exception\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 38, in _prompt\n    result = self._model.prompt(prompt)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/Documents/Coding/PyCharm/mme/src/model/openai.py", line 47, in prompt\n    message = self._fetch()\n              ^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 314, in iter\n    return fut.result()\n           ^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 449, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result\n    raise self._exception\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/sacred/config/captured_function.py", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/Documents/Coding/PyCharm/mme/src/model/openai.py", line 93, in _fetch\n    response = self._openai.chat.completions.create(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_utils/_utils.py", line 275, in wrapper\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/resources/chat/completions.py", line 663, in create\n    return self._post(\n           ^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1200, in post\n    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 889, in request\n    return self._request(\n           ^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 927, in _request\n    return self._retry_request(\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1013, in _retry_request\n    return self._request(\n           ^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 927, in _request\n    return self._retry_request(\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1013, in _retry_request\n    return self._request(\n           ^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 937, in _request\n    raise APITimeoutError(request=request) from err\nopenai.APITimeoutError: Request timed out.\n', 'Traceback (most recent call last):\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 69, in map_httpcore_exceptions\n    yield\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 233, in handle_request\n    resp = self._pool.handle_request(req)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 216, in handle_request\n    raise exc from None\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 196, in handle_request\n    response = connection.handle_request(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 99, in handle_request\n    raise exc\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 76, in handle_request\n    stream = self._connect(request)\n             ^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 122, in _connect\n    stream = self._network_backend.connect_tcp(**kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_backends/sync.py", line 205, in connect_tcp\n    with map_exceptions(exc_map):\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/contextlib.py", line 158, in __exit__\n    self.gen.throw(typ, value, traceback)\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions\n    raise to_exc(exc) from exc\nhttpcore.ConnectTimeout: timed out\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 918, in _request\n    response = self._client.send(\n               ^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 914, in send\n    response = self._send_handling_auth(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 942, in _send_handling_auth\n    response = self._send_handling_redirects(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 979, in _send_handling_redirects\n    response = self._send_single_request(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 1015, in _send_single_request\n    response = transport.handle_request(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 232, in handle_request\n    with map_httpcore_exceptions():\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/contextlib.py", line 158, in __exit__\n    self.gen.throw(typ, value, traceback)\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 86, in map_httpcore_exceptions\n    raise mapped_exc(message) from exc\nhttpx.ConnectTimeout: timed out\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File "/Users/karina/Documents/Coding/PyCharm/mme/scripts/experiments/run.py", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 314, in iter\n    return fut.result()\n           ^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 449, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result\n    raise self._exception\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 38, in _prompt\n    result = self._model.prompt(prompt)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/Documents/Coding/PyCharm/mme/src/model/openai.py", line 47, in prompt\n    message = self._fetch()\n              ^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 314, in iter\n    return fut.result()\n           ^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 449, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result\n    raise self._exception\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/sacred/config/captured_function.py", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/Documents/Coding/PyCharm/mme/src/model/openai.py", line 93, in _fetch\n    response = self._openai.chat.completions.create(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_utils/_utils.py", line 275, in wrapper\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/resources/chat/completions.py", line 663, in create\n    return self._post(\n           ^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1200, in post\n    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 889, in request\n    return self._request(\n           ^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 927, in _request\n    return self._retry_request(\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1013, in _retry_request\n    return self._request(\n           ^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 927, in _request\n    return self._retry_request(\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1013, in _retry_request\n    return self._request(\n           ^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 937, in _request\n    raise APITimeoutError(request=request) from err\nopenai.APITimeoutError: Request timed out.\n', 'Traceback (most recent call last):\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 69, in map_httpcore_exceptions\n    yield\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 233, in handle_request\n    resp = self._pool.handle_request(req)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 216, in handle_request\n    raise exc from None\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 196, in handle_request\n    response = connection.handle_request(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 99, in handle_request\n    raise exc\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 76, in handle_request\n    stream = self._connect(request)\n             ^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 122, in _connect\n    stream = self._network_backend.connect_tcp(**kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_backends/sync.py", line 205, in connect_tcp\n    with map_exceptions(exc_map):\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/contextlib.py", line 158, in __exit__\n    self.gen.throw(typ, value, traceback)\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions\n    raise to_exc(exc) from exc\nhttpcore.ConnectTimeout: timed out\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 918, in _request\n    response = self._client.send(\n               ^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 914, in send\n    response = self._send_handling_auth(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 942, in _send_handling_auth\n    response = self._send_handling_redirects(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 979, in _send_handling_redirects\n    response = self._send_single_request(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 1015, in _send_single_request\n    response = transport.handle_request(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 232, in handle_request\n    with map_httpcore_exceptions():\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/contextlib.py", line 158, in __exit__\n    self.gen.throw(typ, value, traceback)\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 86, in map_httpcore_exceptions\n    raise mapped_exc(message) from exc\nhttpx.ConnectTimeout: timed out\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File "/Users/karina/Documents/Coding/PyCharm/mme/scripts/experiments/run.py", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 314, in iter\n    return fut.result()\n           ^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 449, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result\n    raise self._exception\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 38, in _prompt\n    result = self._model.prompt(prompt)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/Documents/Coding/PyCharm/mme/src/model/openai.py", line 47, in prompt\n    message = self._fetch()\n              ^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 314, in iter\n    return fut.result()\n           ^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 449, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result\n    raise self._exception\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/sacred/config/captured_function.py", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/Documents/Coding/PyCharm/mme/src/model/openai.py", line 93, in _fetch\n    response = self._openai.chat.completions.create(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_utils/_utils.py", line 275, in wrapper\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/resources/chat/completions.py", line 663, in create\n    return self._post(\n           ^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1200, in post\n    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 889, in request\n    return self._request(\n           ^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 927, in _request\n    return self._retry_request(\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1013, in _retry_request\n    return self._request(\n           ^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 927, in _request\n    return self._retry_request(\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1013, in _retry_request\n    return self._request(\n           ^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 937, in _request\n    raise APITimeoutError(request=request) from err\nopenai.APITimeoutError: Request timed out.\n', 'Traceback (most recent call last):\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 69, in map_httpcore_exceptions\n    yield\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 233, in handle_request\n    resp = self._pool.handle_request(req)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 216, in handle_request\n    raise exc from None\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 196, in handle_request\n    response = connection.handle_request(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 99, in handle_request\n    raise exc\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 76, in handle_request\n    stream = self._connect(request)\n             ^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 122, in _connect\n    stream = self._network_backend.connect_tcp(**kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_backends/sync.py", line 205, in connect_tcp\n    with map_exceptions(exc_map):\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/contextlib.py", line 158, in __exit__\n    self.gen.throw(typ, value, traceback)\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions\n    raise to_exc(exc) from exc\nhttpcore.ConnectTimeout: timed out\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 918, in _request\n    response = self._client.send(\n               ^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 914, in send\n    response = self._send_handling_auth(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 942, in _send_handling_auth\n    response = self._send_handling_redirects(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 979, in _send_handling_redirects\n    response = self._send_single_request(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 1015, in _send_single_request\n    response = transport.handle_request(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 232, in handle_request\n    with map_httpcore_exceptions():\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/contextlib.py", line 158, in __exit__\n    self.gen.throw(typ, value, traceback)\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 86, in map_httpcore_exceptions\n    raise mapped_exc(message) from exc\nhttpx.ConnectTimeout: timed out\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File "/Users/karina/Documents/Coding/PyCharm/mme/scripts/experiments/run.py", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 314, in iter\n    return fut.result()\n           ^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 449, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result\n    raise self._exception\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 38, in _prompt\n    result = self._model.prompt(prompt)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/Documents/Coding/PyCharm/mme/src/model/openai.py", line 47, in prompt\n    message = self._fetch()\n              ^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 314, in iter\n    return fut.result()\n           ^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 449, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result\n    raise self._exception\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/sacred/config/captured_function.py", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/Documents/Coding/PyCharm/mme/src/model/openai.py", line 93, in _fetch\n    response = self._openai.chat.completions.create(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_utils/_utils.py", line 275, in wrapper\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/resources/chat/completions.py", line 663, in create\n    return self._post(\n           ^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1200, in post\n    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 889, in request\n    return self._request(\n           ^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 927, in _request\n    return self._retry_request(\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1013, in _retry_request\n    return self._request(\n           ^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 927, in _request\n    return self._retry_request(\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1013, in _retry_request\n    return self._request(\n           ^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 937, in _request\n    raise APITimeoutError(request=request) from err\nopenai.APITimeoutError: Request timed out.\n', 'Traceback (most recent call last):\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 69, in map_httpcore_exceptions\n    yield\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 233, in handle_request\n    resp = self._pool.handle_request(req)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 216, in handle_request\n    raise exc from None\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 196, in handle_request\n    response = connection.handle_request(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 99, in handle_request\n    raise exc\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 76, in handle_request\n    stream = self._connect(request)\n             ^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 122, in _connect\n    stream = self._network_backend.connect_tcp(**kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_backends/sync.py", line 205, in connect_tcp\n    with map_exceptions(exc_map):\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/contextlib.py", line 158, in __exit__\n    self.gen.throw(typ, value, traceback)\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions\n    raise to_exc(exc) from exc\nhttpcore.ConnectTimeout: timed out\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 918, in _request\n    response = self._client.send(\n               ^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 914, in send\n    response = self._send_handling_auth(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 942, in _send_handling_auth\n    response = self._send_handling_redirects(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 979, in _send_handling_redirects\n    response = self._send_single_request(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 1015, in _send_single_request\n    response = transport.handle_request(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 232, in handle_request\n    with map_httpcore_exceptions():\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/contextlib.py", line 158, in __exit__\n    self.gen.throw(typ, value, traceback)\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 86, in map_httpcore_exceptions\n    raise mapped_exc(message) from exc\nhttpx.ConnectTimeout: timed out\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File "/Users/karina/Documents/Coding/PyCharm/mme/scripts/experiments/run.py", line 16, in _run_session\n    result = agent.play(session)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 314, in iter\n    return fut.result()\n           ^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 449, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result\n    raise self._exception\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 26, in play\n    answer = self._prompt(self._make_prompt(scenario))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/Documents/Coding/PyCharm/mme/src/agent.py", line 38, in _prompt\n    result = self._model.prompt(prompt)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/Documents/Coding/PyCharm/mme/src/model/openai.py", line 47, in prompt\n    message = self._fetch()\n              ^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 289, in wrapped_f\n    return self(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 379, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 314, in iter\n    return fut.result()\n           ^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 449, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result\n    raise self._exception\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/tenacity/__init__.py", line 382, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/sacred/config/captured_function.py", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/Documents/Coding/PyCharm/mme/src/model/openai.py", line 93, in _fetch\n    response = self._openai.chat.completions.create(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_utils/_utils.py", line 275, in wrapper\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/resources/chat/completions.py", line 663, in create\n    return self._post(\n           ^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1200, in post\n    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 889, in request\n    return self._request(\n           ^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 927, in _request\n    return self._retry_request(\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1013, in _retry_request\n    return self._request(\n           ^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 927, in _request\n    return self._retry_request(\n           ^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 1013, in _retry_request\n    return self._request(\n           ^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 937, in _request\n    raise APITimeoutError(request=request) from err\nopenai.APITimeoutError: Request timed out.\n', 'Traceback (most recent call last):\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 69, in map_httpcore_exceptions\n    yield\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_transports/default.py", line 233, in handle_request\n    resp = self._pool.handle_request(req)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 216, in handle_request\n    raise exc from None\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 196, in handle_request\n    response = connection.handle_request(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 99, in handle_request\n    raise exc\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 76, in handle_request\n    stream = self._connect(request)\n             ^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 122, in _connect\n    stream = self._network_backend.connect_tcp(**kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_backends/sync.py", line 205, in connect_tcp\n    with map_exceptions(exc_map):\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/contextlib.py", line 158, in __exit__\n    self.gen.throw(typ, value, traceback)\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions\n    raise to_exc(exc) from exc\nhttpcore.ConnectTimeout: timed out\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/openai/_base_client.py", line 918, in _request\n    response = self._client.send(\n               ^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 914, in send\n    response = self._send_handling_auth(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/karina/opt/anaconda3/envs/LLMs/lib/python3.11/site-packages/httpx/_client.py", line 942, in _send_handling_auth\n    response = self._se
