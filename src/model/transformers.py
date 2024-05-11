@@ -35,8 +35,6 @@ class TransformersModel(Model):
         "Llama-2-70b-chat-hf": "meta-llama/Llama-2-70b-chat-hf",
         "Meta-Llama-3-8B-Instruct": "meta-llama/Meta-Llama-3-8B-Instruct",
         "Meta-Llama-3-70B-Instruct": "meta-llama/Meta-Llama-3-70B-Instruct",
-        "Mixtral-8x7B-Instruct-v0.1": "mistralai/Mixtral-8x7B-Instruct-v0.1",
-        "Mixtral-8x22B-Instruct-v0.1": "mistralai/Mixtral-8x22B-Instruct-v0.1",
     }
 
     SUPPORTED_MODELS = set(_model_config.keys())

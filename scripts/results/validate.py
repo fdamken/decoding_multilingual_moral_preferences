@@ -89,6 +89,8 @@ def _validate_result(model: str, language: str) -> Optional[tuple[int, list[int]
 def _validate_results() -> None:
     rerun_arguments = []
     for model in get_available_models():
+        if model == "mock":
+            continue
         if not (path_util.cleansed_experiment_results_dir / model).exists():
             _log_error(model, error="missing results")
             continue
@@ -105,12 +107,12 @@ def _validate_results() -> None:
              num_prompts_blocked,
              num_unexpected_answers,
              ) = validation_result
-            _log_error(
-             model,
-                language,
-                error=f"{len(erroneous_sessions)} erroneous sessions; {num_missing_sessions} missing sessions sessions; "
-                      f"{num_prompts_blocked} blocked prompts; {num_unexpected_answers} unexpected answers"
-             )
+            # _log_error(
+            #  model,
+            #     language,
+            #     error=f"{len(erroneous_sessions)} erroneous sessions; {num_missing_sessions} missing sessions sessions; "
+            #           f"{num_prompts_blocked} blocked prompts; {num_unexpected_answers} unexpected answers"
+            #  )
             if False and num_missing_sessions > 0:
                 cell_suffix = f" (-{num_missing_sessions})"
             else:
@@ -125,7 +127,7 @@ def _validate_results() -> None:
                     f"{','.join([str(session) for session in erroneous_sessions])}"
                 )
         table_row.append(f"{total_invalid_sessions / total_num_sessions * 100:.0f}")
-        #print(f"{model}: {' & '.join(table_row)}")
+        print(f"{model}: {' & '.join(table_row)}")
 
 
 def main() -> None:
