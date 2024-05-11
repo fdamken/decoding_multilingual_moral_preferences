@@ -113,7 +113,7 @@ def _validate_results() -> None:
             #     error=f"{len(erroneous_sessions)} erroneous sessions; {num_missing_sessions} missing sessions sessions; "
             #           f"{num_prompts_blocked} blocked prompts; {num_unexpected_answers} unexpected answers"
             #  )
-            if False and num_missing_sessions > 0:
+            if num_missing_sessions > 0:
                 cell_suffix = f" (-{num_missing_sessions})"
             else:
                 cell_suffix = ""
