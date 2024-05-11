@@ -152,10 +152,6 @@ def radar_plot(model_name, title, df, savefig=True):
                 f"{max(country_counts, key=lambda x: len(country_counts[x]))} \\\\"
             )
 
-    labels = ["Western",
-              "Eastern",
-              "Southern"]
-
     grouping = np.array(grouping)
     grouped_X = list()
     for g in range(3):
@@ -178,10 +174,6 @@ def radar_plot(model_name, title, df, savefig=True):
     min_val = clusters.min()
     clusters_adj = np.sqrt(np.square(clusters - min_val))
 
-    colors = ["black"] * 3
-
-    subtext = ["inaction", "peds.", "     females", "fit", "lawful", "higher\nstatus", "young ", "more ", "humans  "]
-
     width = 7.00137
     fig, axes = plt.subplots(
         1,
@@ -190,6 +182,15 @@ def radar_plot(model_name, title, df, savefig=True):
         subplot_kw={'projection': 'polar'}
     )
 
+    _make_radar_plot(axes, clusters_adj, fig, min_val, savefig, x_as)
+
+
+def _make_radar_plot(axes, clusters_adj, fig, min_val, savefig, x_as):
+    labels = ["Western",
+              "Eastern",
+              "Southern"]
+    colors = ["black"] * 3
+    subtext = ["inaction", "peds.", "     females", "fit", "lawful", "higher\nstatus", "young ", "more ", "humans  "]
     for i, ax in enumerate(axes.ravel()):
         ax.set_theta_offset(np.pi / 2)
         ax.set_theta_direction(-1)
@@ -204,8 +205,6 @@ def radar_plot(model_name, title, df, savefig=True):
         ax.set_yticklabels([r"$z = 0$", r"$z = 1$", ""], fontsize=3)
         ax.set_title(labels[i])
         ax.tick_params(axis="both", labelsize=9)
-
-    # fig.suptitle(title)
     fig.tight_layout()
     if savefig:
         fig.savefig("radar_plot.pdf")
